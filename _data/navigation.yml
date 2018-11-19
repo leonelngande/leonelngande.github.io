@@ -9,7 +9,9 @@
 - title: Tags
   url: /tags/
 - title: Work
-  url: /recipes/
+  url: /work/
+- title: Contact
+  url: /contact/
 # - title: Search
 #   url: /search/
 # - title: External Page
