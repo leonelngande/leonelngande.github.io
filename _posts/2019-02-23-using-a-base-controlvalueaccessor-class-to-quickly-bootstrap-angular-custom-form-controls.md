@@ -5,7 +5,7 @@ title: >-
   Using a base ControlValueAccessor class to quickly bootstrap Angular custom
   form controls
 image:
-  path: /images/uploads/angular_full_color_logo.png
+  path: ''
 tags:
   - Angular
   - ControlValueAccessor
