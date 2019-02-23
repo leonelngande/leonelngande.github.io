@@ -32,7 +32,7 @@ google_fonts:
     weights: "400,400i,700,700i"
 google_analytics: "UA-134433266-1"
 disqus:
-  shortname: # Disqus shortname, e.g. "my_disqus_shortname"
+  shortname: leonelngande-netlify-com
 twitter:
   username: "leonelngande"
 
