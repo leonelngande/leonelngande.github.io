@@ -1,5 +1,6 @@
 ---
 title: "Layout: Excerpt (Generated with Separator Tag)"
+hidden: true
 excerpt_separator: "<!--more-->"
 categories:
   - Layout

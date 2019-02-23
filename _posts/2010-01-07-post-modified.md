@@ -1,5 +1,6 @@
 ---
 title: "Post: Modified Date"
+hidden: true
 categories:
   - Post Formats
 tags:

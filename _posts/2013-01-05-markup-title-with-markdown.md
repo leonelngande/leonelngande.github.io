@@ -1,5 +1,6 @@
 ---
 title: "Markup: Title *with* **Markdown**"
+hidden: true
 categories:
   - Markdown
 tags:

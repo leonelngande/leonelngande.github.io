@@ -1,5 +1,6 @@
 ---
 title: "Post: Twitter Embed"
+hidden: true
 categories:
   - Media
 tags:

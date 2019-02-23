@@ -1,5 +1,6 @@
 ---
 title: "Post: Quote"
+hidden: true
 categories:
   - Post Formats
 tags:

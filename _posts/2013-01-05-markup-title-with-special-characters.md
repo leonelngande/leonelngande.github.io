@@ -1,5 +1,6 @@
 ---
 title: "Markup: Title with Special&nbsp;---&nbsp;Characters"
+hidden: true
 categories:
   - Markup
 tags:

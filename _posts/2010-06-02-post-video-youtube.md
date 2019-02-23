@@ -1,5 +1,6 @@
 ---
 title: "Post: Video (YouTube)"
+hidden: true
 categories:
   - Post Formats
 tags:

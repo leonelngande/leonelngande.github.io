@@ -1,5 +1,6 @@
 ---
 title: "Markup: HTML Elements and Formatting"
+hidden: true
 sub_title: "The common elements"
 categories:
   - Markup
