@@ -1,1133 +1,353 @@
-$bootstrap-sass-asset-helper: false !default;
-//
-// Variables
-// --------------------------------------------------
-
-
-//== Colors
-//
-//## Gray and brand colors for use across Bootstrap.
-
-$gray-base:              #000 !default;
-$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
-$gray-dark:              lighten($gray-base, 20%) !default;   // #333
-$gray:                   lighten($gray-base, 33.5%) !default; // #555
-$gray-light:             lighten($gray-base, 46.7%) !default; // #777
-$gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
-
-$brand-primary:         darken(#428bca, 6.5%) !default; // #337ab7
-$brand-success:         #5cb85c !default;
-$brand-info:            #5bc0de !default;
-$brand-warning:         #f0ad4e !default;
-$brand-danger:          #d9534f !default;
-
-
-//== Scaffolding
-//
-//## Settings for some of the most global styles.
-
-//** Background color for `<body>`.
-$body-bg:               #fff !default;
-//** Global text color on `<body>`.
-$text-color:            $gray-dark !default;
-
-//** Global textual link color.
-$link-color:            $brand-primary !default;
-//** Link hover color set via `darken()` function.
-$link-hover-color:      darken($link-color, 15%) !default;
-//** Link hover decoration.
-$link-hover-decoration: underline !default;
-
-
-//== Typography
-//
-//## Font, line-height, and color for body text, headings, and more.
-
-$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
-//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
-$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
-$font-family-base:        $font-family-sans-serif !default;
-
-$font-size-base:          14px !default;
-$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
-$font-size-small:         ceil(($font-size-base * .85)) !default; // ~12px
-
-$font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
-$font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
-$font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
-$font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
-$font-size-h5:            $font-size-base !default;
-$font-size-h6:            ceil(($font-size-base * .85)) !default; // ~12px
-
-//** Unit-less `line-height` for use in components like buttons.
-$line-height-base:        1.428571429 !default; // 20/14
-//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
-$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
-
-//** By default, this inherits from the `<body>`.
-$headings-font-family:    inherit !default;
-$headings-font-weight:    500 !default;
-$headings-line-height:    1.1 !default;
-$headings-color:          inherit !default;
-
-
-//== Iconography
-//
-//## Specify custom location and filename of the included Glyphicons icon font. Useful for those including Bootstrap via Bower.
-
-//** Load fonts from this directory.
-
-// [converter] If $bootstrap-sass-asset-helper if used, provide path relative to the assets load path.
-// [converter] This is because some asset helpers, such as Sprockets, do not work with file-relative paths.
-$icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "../fonts/bootstrap/") !default;
-
-//** File name for all font files.
-$icon-font-name:          "glyphicons-halflings-regular" !default;
-//** Element ID within SVG icon file.
-$icon-font-svg-id:        "glyphicons_halflingsregular" !default;
-
-
-//== Components
-//
-//## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
-
-$padding-base-vertical:     6px !default;
-$padding-base-horizontal:   12px !default;
-
-$padding-large-vertical:    10px !default;
-$padding-large-horizontal:  16px !default;
-
-$padding-small-vertical:    5px !default;
-$padding-small-horizontal:  10px !default;
-
-$padding-xs-vertical:       1px !default;
-$padding-xs-horizontal:     5px !default;
-
-$line-height-large:         1.3333333 !default; // extra decimals for Win 8.1 Chrome
-$line-height-small:         1.5 !default;
-
-$border-radius-base:        4px !default;
-$border-radius-large:       6px !default;
-$border-radius-small:       3px !default;
-
-//** Global color for active items (e.g., navs or dropdowns).
-$component-active-color:    #fff !default;
-//** Global background color for active items (e.g., navs or dropdowns).
-$component-active-bg:       $brand-primary !default;
-
-//** Width of the `border` for generating carets that indicate dropdowns.
-$caret-width-base:          4px !default;
-//** Carets increase slightly in size for larger components.
-$caret-width-large:         5px !default;
-
-
-//== Tables
-//
-//## Customizes the `.table` component with basic values, each used across all table variations.
-
-//** Padding for `<th>`s and `<td>`s.
-$table-cell-padding:            8px !default;
-//** Padding for cells in `.table-condensed`.
-$table-condensed-cell-padding:  5px !default;
-
-//** Default background color used for all tables.
-$table-bg:                      transparent !default;
-//** Background color used for `.table-striped`.
-$table-bg-accent:               #f9f9f9 !default;
-//** Background color used for `.table-hover`.
-$table-bg-hover:                #f5f5f5 !default;
-$table-bg-active:               $table-bg-hover !default;
-
-//** Border color for table and cell borders.
-$table-border-color:            #ddd !default;
-
-
-//== Buttons
-//
-//## For each of Bootstrap's buttons, define text, background and border color.
-
-$btn-font-weight:                normal !default;
-
-$btn-default-color:              #333 !default;
-$btn-default-bg:                 #fff !default;
-$btn-default-border:             #ccc !default;
-
-$btn-primary-color:              #fff !default;
-$btn-primary-bg:                 $brand-primary !default;
-$btn-primary-border:             darken($btn-primary-bg, 5%) !default;
-
-$btn-success-color:              #fff !default;
-$btn-success-bg:                 $brand-success !default;
-$btn-success-border:             darken($btn-success-bg, 5%) !default;
-
-$btn-info-color:                 #fff !default;
-$btn-info-bg:                    $brand-info !default;
-$btn-info-border:                darken($btn-info-bg, 5%) !default;
-
-$btn-warning-color:              #fff !default;
-$btn-warning-bg:                 $brand-warning !default;
-$btn-warning-border:             darken($btn-warning-bg, 5%) !default;
-
-$btn-danger-color:               #fff !default;
-$btn-danger-bg:                  $brand-danger !default;
-$btn-danger-border:              darken($btn-danger-bg, 5%) !default;
-
-$btn-link-disabled-color:        $gray-light !default;
-
-// Allows for customizing button radius independently from global border radius
-$btn-border-radius-base:         $border-radius-base !default;
-$btn-border-radius-large:        $border-radius-large !default;
-$btn-border-radius-small:        $border-radius-small !default;
-
-
-//== Forms
-//
-//##
-
-//** `<input>` background color
-$input-bg:                       #fff !default;
-//** `<input disabled>` background color
-$input-bg-disabled:              $gray-lighter !default;
-
-//** Text color for `<input>`s
-$input-color:                    $gray !default;
-//** `<input>` border color
-$input-border:                   #ccc !default;
-
-// TODO: Rename `$input-border-radius` to `$input-border-radius-base` in v4
-//** Default `.form-control` border radius
-// This has no effect on `<select>`s in some browsers, due to the limited stylability of `<select>`s in CSS.
-$input-border-radius:            $border-radius-base !default;
-//** Large `.form-control` border radius
-$input-border-radius-large:      $border-radius-large !default;
-//** Small `.form-control` border radius
-$input-border-radius-small:      $border-radius-small !default;
-
-//** Border color for inputs on focus
-$input-border-focus:             #66afe9 !default;
-
-//** Placeholder text color
-$input-color-placeholder:        #999 !default;
-
-//** Default `.form-control` height
-$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
-//** Large `.form-control` height
-$input-height-large:             (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2) !default;
-//** Small `.form-control` height
-$input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
-
-//** `.form-group` margin
-$form-group-margin-bottom:       15px !default;
-
-$legend-color:                   $gray-dark !default;
-$legend-border-color:            #e5e5e5 !default;
-
-//** Background color for textual input addons
-$input-group-addon-bg:           $gray-lighter !default;
-//** Border color for textual input addons
-$input-group-addon-border-color: $input-border !default;
-
-//** Disabled cursor for form controls and buttons.
-$cursor-disabled:                not-allowed !default;
-
-
-//== Dropdowns
-//
-//## Dropdown menu container and contents.
-
-//** Background for the dropdown menu.
-$dropdown-bg:                    #fff !default;
-//** Dropdown menu `border-color`.
-$dropdown-border:                rgba(0, 0, 0, .15) !default;
-//** Dropdown menu `border-color` **for IE8**.
-$dropdown-fallback-border:       #ccc !default;
-//** Divider color for between dropdown items.
-$dropdown-divider-bg:            #e5e5e5 !default;
-
-//** Dropdown link text color.
-$dropdown-link-color:            $gray-dark !default;
-//** Hover color for dropdown links.
-$dropdown-link-hover-color:      darken($gray-dark, 5%) !default;
-//** Hover background for dropdown links.
-$dropdown-link-hover-bg:         #f5f5f5 !default;
-
-//** Active dropdown menu item text color.
-$dropdown-link-active-color:     $component-active-color !default;
-//** Active dropdown menu item background color.
-$dropdown-link-active-bg:        $component-active-bg !default;
-
-//** Disabled dropdown menu item background color.
-$dropdown-link-disabled-color:   $gray-light !default;
-
-//** Text color for headers within dropdown menus.
-$dropdown-header-color:          $gray-light !default;
-
-//** Deprecated `$dropdown-caret-color` as of v3.1.0
-$dropdown-caret-color:           #000 !default;
-
-
-//-- Z-index master list
-//
-// Warning: Avoid customizing these values. They're used for a bird's eye view
-// of components dependent on the z-axis and are designed to all work together.
-//
-// Note: These variables are not generated into the Customizer.
-
-$zindex-navbar:            1000 !default;
-$zindex-dropdown:          1000 !default;
-$zindex-popover:           1060 !default;
-$zindex-tooltip:           1070 !default;
-$zindex-navbar-fixed:      1030 !default;
-$zindex-modal-background:  1040 !default;
-$zindex-modal:             1050 !default;
-
-
-//== Media queries breakpoints
-//
-//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
-
-// Extra small screen / phone
-//** Deprecated `$screen-xs` as of v3.0.1
-$screen-xs:                  480px !default;
-//** Deprecated `$screen-xs-min` as of v3.2.0
-$screen-xs-min:              $screen-xs !default;
-//** Deprecated `$screen-phone` as of v3.0.1
-$screen-phone:               $screen-xs-min !default;
-
-// Small screen / tablet
-//** Deprecated `$screen-sm` as of v3.0.1
-$screen-sm:                  768px !default;
-$screen-sm-min:              $screen-sm !default;
-//** Deprecated `$screen-tablet` as of v3.0.1
-$screen-tablet:              $screen-sm-min !default;
-
-// Medium screen / desktop
-//** Deprecated `$screen-md` as of v3.0.1
-$screen-md:                  992px !default;
-$screen-md-min:              $screen-md !default;
-//** Deprecated `$screen-desktop` as of v3.0.1
-$screen-desktop:             $screen-md-min !default;
-
-// Large screen / wide desktop
-//** Deprecated `$screen-lg` as of v3.0.1
-$screen-lg:                  1200px !default;
-$screen-lg-min:              $screen-lg !default;
-//** Deprecated `$screen-lg-desktop` as of v3.0.1
-$screen-lg-desktop:          $screen-lg-min !default;
-
-// So media queries don't overlap when required, provide a maximum
-$screen-xs-max:              ($screen-sm-min - 1) !default;
-$screen-sm-max:              ($screen-md-min - 1) !default;
-$screen-md-max:              ($screen-lg-min - 1) !default;
-
-
-//== Grid system
-//
-//## Define your custom responsive grid.
-
-//** Number of columns in the grid.
-$grid-columns:              12 !default;
-//** Padding between columns. Gets divided in half for the left and right.
-$grid-gutter-width:         30px !default;
-// Navbar collapse
-//** Point at which the navbar becomes uncollapsed.
-$grid-float-breakpoint:     $screen-sm-min !default;
-//** Point at which the navbar begins collapsing.
-$grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
-
-
-//== Container sizes
-//
-//## Define the maximum width of `.container` for different screen sizes.
-
-// Small screen / tablet
-$container-tablet:             (720px + $grid-gutter-width) !default;
-//** For `$screen-sm-min` and up.
-$container-sm:                 $container-tablet !default;
-
-// Medium screen / desktop
-$container-desktop:            (940px + $grid-gutter-width) !default;
-//** For `$screen-md-min` and up.
-$container-md:                 $container-desktop !default;
-
-// Large screen / wide desktop
-$container-large-desktop:      (1140px + $grid-gutter-width) !default;
-//** For `$screen-lg-min` and up.
-$container-lg:                 $container-large-desktop !default;
-
-
-//== Navbar
-//
-//##
-
-// Basics of a navbar
-$navbar-height:                    50px !default;
-$navbar-margin-bottom:             $line-height-computed !default;
-$navbar-border-radius:             $border-radius-base !default;
-$navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
-$navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
-$navbar-collapse-max-height:       340px !default;
-
-$navbar-default-color:             #777 !default;
-$navbar-default-bg:                #f8f8f8 !default;
-$navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
-
-// Navbar links
-$navbar-default-link-color:                #777 !default;
-$navbar-default-link-hover-color:          #333 !default;
-$navbar-default-link-hover-bg:             transparent !default;
-$navbar-default-link-active-color:         #555 !default;
-$navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;
-$navbar-default-link-disabled-color:       #ccc !default;
-$navbar-default-link-disabled-bg:          transparent !default;
-
-// Navbar brand label
-$navbar-default-brand-color:               $navbar-default-link-color !default;
-$navbar-default-brand-hover-color:         darken($navbar-default-brand-color, 10%) !default;
-$navbar-default-brand-hover-bg:            transparent !default;
-
-// Navbar toggle
-$navbar-default-toggle-hover-bg:           #ddd !default;
-$navbar-default-toggle-icon-bar-bg:        #888 !default;
-$navbar-default-toggle-border-color:       #ddd !default;
-
-
-//=== Inverted navbar
-// Reset inverted navbar basics
-$navbar-inverse-color:                      lighten($gray-light, 15%) !default;
-$navbar-inverse-bg:                         #222 !default;
-$navbar-inverse-border:                     darken($navbar-inverse-bg, 10%) !default;
-
-// Inverted navbar links
-$navbar-inverse-link-color:                 lighten($gray-light, 15%) !default;
-$navbar-inverse-link-hover-color:           #fff !default;
-$navbar-inverse-link-hover-bg:              transparent !default;
-$navbar-inverse-link-active-color:          $navbar-inverse-link-hover-color !default;
-$navbar-inverse-link-active-bg:             darken($navbar-inverse-bg, 10%) !default;
-$navbar-inverse-link-disabled-color:        #444 !default;
-$navbar-inverse-link-disabled-bg:           transparent !default;
-
-// Inverted navbar brand label
-$navbar-inverse-brand-color:                $navbar-inverse-link-color !default;
-$navbar-inverse-brand-hover-color:          #fff !default;
-$navbar-inverse-brand-hover-bg:             transparent !default;
-
-// Inverted navbar toggle
-$navbar-inverse-toggle-hover-bg:            #333 !default;
-$navbar-inverse-toggle-icon-bar-bg:         #fff !default;
-$navbar-inverse-toggle-border-color:        #333 !default;
-
-
-//== Navs
-//
-//##
-
-//=== Shared nav styles
-$nav-link-padding:                          10px 15px !default;
-$nav-link-hover-bg:                         $gray-lighter !default;
-
-$nav-disabled-link-color:                   $gray-light !default;
-$nav-disabled-link-hover-color:             $gray-light !default;
-
-//== Tabs
-$nav-tabs-border-color:                     #ddd !default;
-
-$nav-tabs-link-hover-border-color:          $gray-lighter !default;
-
-$nav-tabs-active-link-hover-bg:             $body-bg !default;
-$nav-tabs-active-link-hover-color:          $gray !default;
-$nav-tabs-active-link-hover-border-color:   #ddd !default;
-
-$nav-tabs-justified-link-border-color:            #ddd !default;
-$nav-tabs-justified-active-link-border-color:     $body-bg !default;
-
-//== Pills
-$nav-pills-border-radius:                   $border-radius-base !default;
-$nav-pills-active-link-hover-bg:            $component-active-bg !default;
-$nav-pills-active-link-hover-color:         $component-active-color !default;
-
-
-//== Pagination
-//
-//##
-
-$pagination-color:                     $link-color !default;
-$pagination-bg:                        #fff !default;
-$pagination-border:                    #ddd !default;
-
-$pagination-hover-color:               $link-hover-color !default;
-$pagination-hover-bg:                  $gray-lighter !default;
-$pagination-hover-border:              #ddd !default;
-
-$pagination-active-color:              #fff !default;
-$pagination-active-bg:                 $brand-primary !default;
-$pagination-active-border:             $brand-primary !default;
-
-$pagination-disabled-color:            $gray-light !default;
-$pagination-disabled-bg:               #fff !default;
-$pagination-disabled-border:           #ddd !default;
-
-
-//== Pager
-//
-//##
-
-$pager-bg:                             $pagination-bg !default;
-$pager-border:                         $pagination-border !default;
-$pager-border-radius:                  15px !default;
-
-$pager-hover-bg:                       $pagination-hover-bg !default;
-
-$pager-active-bg:                      $pagination-active-bg !default;
-$pager-active-color:                   $pagination-active-color !default;
-
-$pager-disabled-color:                 $pagination-disabled-color !default;
-
-
-//== Jumbotron
-//
-//##
-
-$jumbotron-padding:              30px !default;
-$jumbotron-color:                inherit !default;
-$jumbotron-bg:                   $gray-lighter !default;
-$jumbotron-heading-color:        inherit !default;
-$jumbotron-font-size:            ceil(($font-size-base * 1.5)) !default;
-$jumbotron-heading-font-size:    ceil(($font-size-base * 4.5)) !default;
-
-
-//== Form states and alerts
-//
-//## Define colors for form feedback states and, by default, alerts.
-
-$state-success-text:             #3c763d !default;
-$state-success-bg:               #dff0d8 !default;
-$state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%) !default;
-
-$state-info-text:                #31708f !default;
-$state-info-bg:                  #d9edf7 !default;
-$state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%) !default;
-
-$state-warning-text:             #8a6d3b !default;
-$state-warning-bg:               #fcf8e3 !default;
-$state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) !default;
-
-$state-danger-text:              #a94442 !default;
-$state-danger-bg:                #f2dede !default;
-$state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
-
-
-//== Tooltips
-//
-//##
-
-//** Tooltip max width
-$tooltip-max-width:           200px !default;
-//** Tooltip text color
-$tooltip-color:               #fff !default;
-//** Tooltip background color
-$tooltip-bg:                  #000 !default;
-$tooltip-opacity:             .9 !default;
-
-//** Tooltip arrow width
-$tooltip-arrow-width:         5px !default;
-//** Tooltip arrow color
-$tooltip-arrow-color:         $tooltip-bg !default;
-
-
-//== Popovers
-//
-//##
-
-//** Popover body background color
-$popover-bg:                          #fff !default;
-//** Popover maximum width
-$popover-max-width:                   276px !default;
-//** Popover border color
-$popover-border-color:                rgba(0, 0, 0, .2) !default;
-//** Popover fallback border color
-$popover-fallback-border-color:       #ccc !default;
-
-//** Popover title background color
-$popover-title-bg:                    darken($popover-bg, 3%) !default;
-
-//** Popover arrow width
-$popover-arrow-width:                 10px !default;
-//** Popover arrow color
-$popover-arrow-color:                 $popover-bg !default;
-
-//** Popover outer arrow width
-$popover-arrow-outer-width:           ($popover-arrow-width + 1) !default;
-//** Popover outer arrow color
-$popover-arrow-outer-color:           fade_in($popover-border-color, 0.05) !default;
-//** Popover outer arrow fallback color
-$popover-arrow-outer-fallback-color:  darken($popover-fallback-border-color, 20%) !default;
-
-
-//== Labels
-//
-//##
-
-//** Default label background color
-$label-default-bg:            $gray-light !default;
-//** Primary label background color
-$label-primary-bg:            $brand-primary !default;
-//** Success label background color
-$label-success-bg:            $brand-success !default;
-//** Info label background color
-$label-info-bg:               $brand-info !default;
-//** Warning label background color
-$label-warning-bg:            $brand-warning !default;
-//** Danger label background color
-$label-danger-bg:             $brand-danger !default;
-
-//** Default label text color
-$label-color:                 #fff !default;
-//** Default text color of a linked label
-$label-link-hover-color:      #fff !default;
-
-
-//== Modals
-//
-//##
-
-//** Padding applied to the modal body
-$modal-inner-padding:         15px !default;
-
-//** Padding applied to the modal title
-$modal-title-padding:         15px !default;
-//** Modal title line-height
-$modal-title-line-height:     $line-height-base !default;
-
-//** Background color of modal content area
-$modal-content-bg:                             #fff !default;
-//** Modal content border color
-$modal-content-border-color:                   rgba(0, 0, 0, .2) !default;
-//** Modal content border color **for IE8**
-$modal-content-fallback-border-color:          #999 !default;
-
-//** Modal backdrop background color
-$modal-backdrop-bg:           #000 !default;
-//** Modal backdrop opacity
-$modal-backdrop-opacity:      .5 !default;
-//** Modal header border color
-$modal-header-border-color:   #e5e5e5 !default;
-//** Modal footer border color
-$modal-footer-border-color:   $modal-header-border-color !default;
-
-$modal-lg:                    900px !default;
-$modal-md:                    600px !default;
-$modal-sm:                    300px !default;
-
-
-//== Alerts
-//
-//## Define alert colors, border radius, and padding.
-
-$alert-padding:               15px !default;
-$alert-border-radius:         $border-radius-base !default;
-$alert-link-font-weight:      bold !default;
-
-$alert-success-bg:            $state-success-bg !default;
-$alert-success-text:          $state-success-text !default;
-$alert-success-border:        $state-success-border !default;
-
-$alert-info-bg:               $state-info-bg !default;
-$alert-info-text:             $state-info-text !default;
-$alert-info-border:           $state-info-border !default;
-
-$alert-warning-bg:            $state-warning-bg !default;
-$alert-warning-text:          $state-warning-text !default;
-$alert-warning-border:        $state-warning-border !default;
-
-$alert-danger-bg:             $state-danger-bg !default;
-$alert-danger-text:           $state-danger-text !default;
-$alert-danger-border:         $state-danger-border !default;
-
-
-//== Progress bars
-//
-//##
-
-//** Background color of the whole progress component
-$progress-bg:                 #f5f5f5 !default;
-//** Progress bar text color
-$progress-bar-color:          #fff !default;
-//** Variable for setting rounded corners on progress bar.
-$progress-border-radius:      $border-radius-base !default;
-
-//** Default progress bar color
-$progress-bar-bg:             $brand-primary !default;
-//** Success progress bar color
-$progress-bar-success-bg:     $brand-success !default;
-//** Warning progress bar color
-$progress-bar-warning-bg:     $brand-warning !default;
-//** Danger progress bar color
-$progress-bar-danger-bg:      $brand-danger !default;
-//** Info progress bar color
-$progress-bar-info-bg:        $brand-info !default;
-
-
-//== List group
-//
-//##
-
-//** Background color on `.list-group-item`
-$list-group-bg:                 #fff !default;
-//** `.list-group-item` border color
-$list-group-border:             #ddd !default;
-//** List group border radius
-$list-group-border-radius:      $border-radius-base !default;
-
-//** Background color of single list items on hover
-$list-group-hover-bg:           #f5f5f5 !default;
-//** Text color of active list items
-$list-group-active-color:       $component-active-color !default;
-//** Background color of active list items
-$list-group-active-bg:          $component-active-bg !default;
-//** Border color of active list elements
-$list-group-active-border:      $list-group-active-bg !default;
-//** Text color for content within active list items
-$list-group-active-text-color:  lighten($list-group-active-bg, 40%) !default;
-
-//** Text color of disabled list items
-$list-group-disabled-color:      $gray-light !default;
-//** Background color of disabled list items
-$list-group-disabled-bg:         $gray-lighter !default;
-//** Text color for content within disabled list items
-$list-group-disabled-text-color: $list-group-disabled-color !default;
-
-$list-group-link-color:         #555 !default;
-$list-group-link-hover-color:   $list-group-link-color !default;
-$list-group-link-heading-color: #333 !default;
-
-
-//== Panels
-//
-//##
-
-$panel-bg:                    #fff !default;
-$panel-body-padding:          15px !default;
-$panel-heading-padding:       10px 15px !default;
-$panel-footer-padding:        $panel-heading-padding !default;
-$panel-border-radius:         $border-radius-base !default;
-
-//** Border color for elements within panels
-$panel-inner-border:          #ddd !default;
-$panel-footer-bg:             #f5f5f5 !default;
-
-$panel-default-text:          $gray-dark !default;
-$panel-default-border:        #ddd !default;
-$panel-default-heading-bg:    #f5f5f5 !default;
-
-$panel-primary-text:          #fff !default;
-$panel-primary-border:        $brand-primary !default;
-$panel-primary-heading-bg:    $brand-primary !default;
-
-$panel-success-text:          $state-success-text !default;
-$panel-success-border:        $state-success-border !default;
-$panel-success-heading-bg:    $state-success-bg !default;
-
-$panel-info-text:             $state-info-text !default;
-$panel-info-border:           $state-info-border !default;
-$panel-info-heading-bg:       $state-info-bg !default;
-
-$panel-warning-text:          $state-warning-text !default;
-$panel-warning-border:        $state-warning-border !default;
-$panel-warning-heading-bg:    $state-warning-bg !default;
-
-$panel-danger-text:           $state-danger-text !default;
-$panel-danger-border:         $state-danger-border !default;
-$panel-danger-heading-bg:     $state-danger-bg !default;
-
-
-//== Thumbnails
-//
-//##
-
-//** Padding around the thumbnail image
-$thumbnail-padding:           4px !default;
-//** Thumbnail background color
-$thumbnail-bg:                $body-bg !default;
-//** Thumbnail border color
-$thumbnail-border:            #ddd !default;
-//** Thumbnail border radius
-$thumbnail-border-radius:     $border-radius-base !default;
-
-//** Custom text color for thumbnail captions
-$thumbnail-caption-color:     $text-color !default;
-//** Padding around the thumbnail caption
-$thumbnail-caption-padding:   9px !default;
-
-
-//== Wells
-//
-//##
-
-$well-bg:                     #f5f5f5 !default;
-$well-border:                 darken($well-bg, 7%) !default;
-
-
-//== Badges
-//
-//##
-
-$badge-color:                 #fff !default;
-//** Linked badge text color on hover
-$badge-link-hover-color:      #fff !default;
-$badge-bg:                    $gray-light !default;
-
-//** Badge text color in active nav link
-$badge-active-color:          $link-color !default;
-//** Badge background color in active nav link
-$badge-active-bg:             #fff !default;
-
-$badge-font-weight:           bold !default;
-$badge-line-height:           1 !default;
-$badge-border-radius:         10px !default;
-
-
-//== Breadcrumbs
-//
-//##
-
-$breadcrumb-padding-vertical:   8px !default;
-$breadcrumb-padding-horizontal: 15px !default;
-//** Breadcrumb background color
-$breadcrumb-bg:                 #f5f5f5 !default;
-//** Breadcrumb text color
-$breadcrumb-color:              #ccc !default;
-//** Text color of current page in the breadcrumb
-$breadcrumb-active-color:       $gray-light !default;
-//** Textual separator for between breadcrumb elements
-$breadcrumb-separator:          "/" !default;
-
-
-//== Carousel
-//
-//##
-
-$carousel-text-shadow:                        0 1px 2px rgba(0, 0, 0, .6) !default;
-
-$carousel-control-color:                      #fff !default;
-$carousel-control-width:                      15% !default;
-$carousel-control-opacity:                    .5 !default;
-$carousel-control-font-size:                  20px !default;
-
-$carousel-indicator-active-bg:                #fff !default;
-$carousel-indicator-border-color:             #fff !default;
-
-$carousel-caption-color:                      #fff !default;
-
-
-//== Close
-//
-//##
-
-$close-font-weight:           bold !default;
-$close-color:                 #000 !default;
-$close-text-shadow:           0 1px 0 #fff !default;
-
-
-//== Code
-//
-//##
-
-$code-color:                  #c7254e !default;
-$code-bg:                     #f9f2f4 !default;
-
-$kbd-color:                   #fff !default;
-$kbd-bg:                      #333 !default;
-
-$pre-bg:                      #f5f5f5 !default;
-$pre-color:                   $gray-dark !default;
-$pre-border-color:            #ccc !default;
-$pre-scrollable-max-height:   340px !default;
-
-
-//== Type
-//
-//##
-
-//** Horizontal offset for forms and lists.
-$component-offset-horizontal: 180px !default;
-//** Text muted color
-$text-muted:                  $gray-light !default;
-//** Abbreviations and acronyms border color
-$abbr-border-color:           $gray-light !default;
-//** Headings small color
-$headings-small-color:        $gray-light !default;
-//** Blockquote small color
-$blockquote-small-color:      $gray-light !default;
-//** Blockquote font size
-$blockquote-font-size:        ($font-size-base * 1.25) !default;
-//** Blockquote border color
-$blockquote-border-color:     $gray-lighter !default;
-//** Page header border color
-$page-header-border-color:    $gray-lighter !default;
-//** Width of horizontal description list titles
-$dl-horizontal-offset:        $component-offset-horizontal !default;
-//** Point at which .dl-horizontal becomes horizontal
-$dl-horizontal-breakpoint:    $grid-float-breakpoint !default;
-//** Horizontal line color.
-$hr-border:                   $gray-lighter !default;
-
-
-
-
-//
-// Forms
-// --------------------------------------------------
-
-
-// Normalize non-controls
-//
-// Restyle and baseline non-control form elements.
-
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
 fieldset {
-  // Chrome and Firefox set a `min-width: min-content;` on fieldsets,
-  // so we reset that to ensure it behaves more like a standard block element.
-  // See https://github.com/twbs/bootstrap/issues/12359.
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333333;
+  background-color: #ffffff;
+}
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: #23527c;
+  text-decoration: underline;
+}
+a:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+figure {
+  margin: 0;
+}
+img {
+  vertical-align: middle;
+}
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.img-rounded {
+  border-radius: 6px;
+}
+.img-thumbnail {
+  padding: 4px;
+  line-height: 1.42857143;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+.img-circle {
+  border-radius: 50%;
+}
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eeeeee;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+[role="button"] {
+  cursor: pointer;
+}
+fieldset {
   min-width: 0;
   padding: 0;
   margin: 0;
   border: 0;
 }
-
 legend {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: $line-height-computed;
-  font-size: ($font-size-base * 1.5);
+  margin-bottom: 20px;
+  font-size: 21px;
   line-height: inherit;
-  color: $legend-color;
+  color: #333333;
   border: 0;
-  border-bottom: 1px solid $legend-border-color;
+  border-bottom: 1px solid #e5e5e5;
 }
-
 label {
   display: inline-block;
-  max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
+  max-width: 100%;
   margin-bottom: 5px;
   font-weight: 700;
 }
-
-
-// Normalize form controls
-//
-// While most of our form styles require extra classes, some basic normalization
-// is required to ensure optimum display with or without those classes to better
-// address browser inconsistencies.
-
 input[type="search"] {
-  // Override content-box in Normalize (* isn't specific enough)
-  @include box-sizing(border-box);
-
-  // Search inputs in iOS
-  //
-  // This overrides the extra rounded corners on search inputs in iOS so that our
-  // `.form-control` class can properly style them. Note that this cannot simply
-  // be added to `.form-control` as it's not specific enough. For details, see
-  // https://github.com/twbs/bootstrap/issues/11586.
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-appearance: none;
   appearance: none;
 }
-
-// Position radios and checkboxes better
 input[type="radio"],
 input[type="checkbox"] {
   margin: 4px 0 0;
-  margin-top: 1px \9; // IE8-9
+  margin-top: 1px \9;
   line-height: normal;
-
-  // Apply same disabled cursor tweak as for inputs
-  // Some special care is needed because <label>s don't inherit their parent's `cursor`.
-  //
-  // Note: Neither radios nor checkboxes can be readonly.
-  &[disabled],
-  &.disabled,
-  fieldset[disabled] & {
-    cursor: $cursor-disabled;
-  }
 }
-
+input[type="radio"][disabled],
+input[type="checkbox"][disabled],
+input[type="radio"].disabled,
+input[type="checkbox"].disabled,
+fieldset[disabled] input[type="radio"],
+fieldset[disabled] input[type="checkbox"] {
+  cursor: not-allowed;
+}
 input[type="file"] {
   display: block;
 }
-
-// Make range inputs behave like textual form controls
 input[type="range"] {
   display: block;
   width: 100%;
 }
-
-// Make multiple select elements height not fixed
 select[multiple],
 select[size] {
   height: auto;
 }
-
-// Focus for file, radio, and checkbox
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  @include tab-focus;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
 }
-
-// Adjust output element
 output {
   display: block;
-  padding-top: ($padding-base-vertical + 1);
-  font-size: $font-size-base;
-  line-height: $line-height-base;
-  color: $input-color;
+  padding-top: 7px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555555;
 }
-
-
-// Common form controls
-//
-// Shared size and type resets for form controls. Apply `.form-control` to any
-// of the following form controls:
-//
-// select
-// textarea
-// input[type="text"]
-// input[type="password"]
-// input[type="datetime"]
-// input[type="datetime-local"]
-// input[type="date"]
-// input[type="month"]
-// input[type="time"]
-// input[type="week"]
-// input[type="number"]
-// input[type="email"]
-// input[type="url"]
-// input[type="search"]
-// input[type="tel"]
-// input[type="color"]
-
 .form-control {
   display: block;
   width: 100%;
-  height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
-  padding: $padding-base-vertical $padding-base-horizontal;
-  font-size: $font-size-base;
-  line-height: $line-height-base;
-  color: $input-color;
-  background-color: $input-bg;
-  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  border: 1px solid $input-border;
-  border-radius: $input-border-radius; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
-  @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, .075));
-  @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
-
-  // Customize the `:focus` state to imitate native WebKit styles.
-  @include form-control-focus;
-
-  // Placeholder
-  @include placeholder;
-
-  // Unstyle the caret on `<select>`s in IE10+.
-  &::-ms-expand {
-    background-color: transparent;
-    border: 0;
-  }
-
-  // Disabled and read-only inputs
-  //
-  // HTML5 says that controls under a fieldset > legend:first-child won't be
-  // disabled if the fieldset is disabled. Due to implementation difficulty, we
-  // don't honor that edge case; we style them as disabled anyway.
-  &[disabled],
-  &[readonly],
-  fieldset[disabled] & {
-    background-color: $input-bg-disabled;
-    opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
-  }
-
-  &[disabled],
-  fieldset[disabled] & {
-    cursor: $cursor-disabled;
-  }
-
-  // [converter] extracted textarea& to textarea.form-control
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
-
-// Reset height for `textarea`s
+.form-control:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.form-control::-moz-placeholder {
+  color: #999999;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+  color: #999999;
+}
+.form-control::-webkit-input-placeholder {
+  color: #999999;
+}
+.form-control::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+.form-control[disabled],
+fieldset[disabled] .form-control {
+  cursor: not-allowed;
+}
 textarea.form-control {
   height: auto;
 }
-
-
-// Special styles for iOS temporal inputs
-//
-// In Mobile Safari, setting `display: block` on temporal inputs causes the
-// text within the input to become vertically misaligned. As a workaround, we
-// set a pixel line-height that matches the given height of the input, but only
-// for Safari. See https://bugs.webkit.org/show_bug.cgi?id=139848
-//
-// Note that as of 9.3, iOS doesn't support `week`.
-
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
-  input[type="date"],
-  input[type="time"],
-  input[type="datetime-local"],
-  input[type="month"] {
-    &.form-control {
-      line-height: $input-height-base;
-    }
-
-    &.input-sm,
-    .input-group-sm & {
-      line-height: $input-height-small;
-    }
-
-    &.input-lg,
-    .input-group-lg & {
-      line-height: $input-height-large;
-    }
+  input[type="date"].form-control,
+  input[type="time"].form-control,
+  input[type="datetime-local"].form-control,
+  input[type="month"].form-control {
+    line-height: 34px;
+  }
+  input[type="date"].input-sm,
+  input[type="time"].input-sm,
+  input[type="datetime-local"].input-sm,
+  input[type="month"].input-sm,
+  .input-group-sm input[type="date"],
+  .input-group-sm input[type="time"],
+  .input-group-sm input[type="datetime-local"],
+  .input-group-sm input[type="month"] {
+    line-height: 30px;
+  }
+  input[type="date"].input-lg,
+  input[type="time"].input-lg,
+  input[type="datetime-local"].input-lg,
+  input[type="month"].input-lg,
+  .input-group-lg input[type="date"],
+  .input-group-lg input[type="time"],
+  .input-group-lg input[type="datetime-local"],
+  .input-group-lg input[type="month"] {
+    line-height: 46px;
   }
 }
-
-
-// Form groups
-//
-// Designed to help with the organization and spacing of vertical forms. For
-// horizontal forms, use the predefined grid classes.
-
 .form-group {
-  margin-bottom: $form-group-margin-bottom;
+  margin-bottom: 15px;
 }
-
-
-// Checkboxes and radios
-//
-// Indent the labels to position radios/checkboxes as hanging controls.
-
 .radio,
 .checkbox {
   position: relative;
   display: block;
   margin-top: 10px;
   margin-bottom: 10px;
-
-  // These are used on elements with <label> descendants
-  &.disabled,
-  fieldset[disabled] & {
-    label {
-      cursor: $cursor-disabled;
-    }
-  }
-
-  label {
-    min-height: $line-height-computed; // Ensure the input doesn't jump when there is no text
-    padding-left: 20px;
-    margin-bottom: 0;
-    font-weight: 400;
-    cursor: pointer;
-  }
+}
+.radio.disabled label,
+.checkbox.disabled label,
+fieldset[disabled] .radio label,
+fieldset[disabled] .checkbox label {
+  cursor: not-allowed;
+}
+.radio label,
+.checkbox label {
+  min-height: 20px;
+  padding-left: 20px;
+  margin-bottom: 0;
+  font-weight: 400;
+  cursor: pointer;
 }
 .radio input[type="radio"],
 .radio-inline input[type="radio"],
@@ -1137,13 +357,10 @@ textarea.form-control {
   margin-top: 4px \9;
   margin-left: -20px;
 }
-
 .radio + .radio,
 .checkbox + .checkbox {
-  margin-top: -5px; // Move up sibling radios or checkboxes for tighter spacing
+  margin-top: -5px;
 }
-
-// Radios and checkboxes on same line
 .radio-inline,
 .checkbox-inline {
   position: relative;
@@ -1153,333 +370,433 @@ textarea.form-control {
   font-weight: 400;
   vertical-align: middle;
   cursor: pointer;
-
-  // These are used directly on <label>s
-  &.disabled,
-  fieldset[disabled] & {
-    cursor: $cursor-disabled;
-  }
+}
+.radio-inline.disabled,
+.checkbox-inline.disabled,
+fieldset[disabled] .radio-inline,
+fieldset[disabled] .checkbox-inline {
+  cursor: not-allowed;
 }
 .radio-inline + .radio-inline,
 .checkbox-inline + .checkbox-inline {
   margin-top: 0;
-  margin-left: 10px; // space out consecutive inline controls
+  margin-left: 10px;
 }
-
-
-// Static form control text
-//
-// Apply class to a `p` element to make any string of text align with labels in
-// a horizontal form layout.
-
 .form-control-static {
-  min-height: ($line-height-computed + $font-size-base);
-  // Size it appropriately next to real form controls
-  padding-top: ($padding-base-vertical + 1);
-  padding-bottom: ($padding-base-vertical + 1);
-  // Remove default margin from `p`
+  min-height: 34px;
+  padding-top: 7px;
+  padding-bottom: 7px;
   margin-bottom: 0;
-
-  &.input-lg,
-  &.input-sm {
-    padding-right: 0;
-    padding-left: 0;
-  }
 }
-
-
-// Form control sizing
-//
-// Build on `.form-control` with modifier classes to decrease or increase the
-// height and font-size of form controls.
-//
-// The `.form-group-* form-control` variations are sadly duplicated to avoid the
-// issue documented in https://github.com/twbs/bootstrap/issues/15074.
-
-@include input-size('.input-sm', $input-height-small, $padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $input-border-radius-small);
-.form-group-sm {
-  .form-control {
-    height: $input-height-small;
-    padding: $padding-small-vertical $padding-small-horizontal;
-    font-size: $font-size-small;
-    line-height: $line-height-small;
-    border-radius: $input-border-radius-small;
-  }
-  select.form-control {
-    height: $input-height-small;
-    line-height: $input-height-small;
-  }
-  textarea.form-control,
-  select[multiple].form-control {
-    height: auto;
-  }
-  .form-control-static {
-    height: $input-height-small;
-    min-height: ($line-height-computed + $font-size-small);
-    padding: ($padding-small-vertical + 1) $padding-small-horizontal;
-    font-size: $font-size-small;
-    line-height: $line-height-small;
-  }
+.form-control-static.input-lg,
+.form-control-static.input-sm {
+  padding-right: 0;
+  padding-left: 0;
 }
-
-@include input-size('.input-lg', $input-height-large, $padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $input-border-radius-large);
-.form-group-lg {
-  .form-control {
-    height: $input-height-large;
-    padding: $padding-large-vertical $padding-large-horizontal;
-    font-size: $font-size-large;
-    line-height: $line-height-large;
-    border-radius: $input-border-radius-large;
-  }
-  select.form-control {
-    height: $input-height-large;
-    line-height: $input-height-large;
-  }
-  textarea.form-control,
-  select[multiple].form-control {
-    height: auto;
-  }
-  .form-control-static {
-    height: $input-height-large;
-    min-height: ($line-height-computed + $font-size-large);
-    padding: ($padding-large-vertical + 1) $padding-large-horizontal;
-    font-size: $font-size-large;
-    line-height: $line-height-large;
-  }
+.input-sm {
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
 }
-
-
-// Form control feedback states
-//
-// Apply contextual and semantic states to individual form controls.
-
+select.input-sm {
+  height: 30px;
+  line-height: 30px;
+}
+textarea.input-sm,
+select[multiple].input-sm {
+  height: auto;
+}
+.form-group-sm .form-control {
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.form-group-sm select.form-control {
+  height: 30px;
+  line-height: 30px;
+}
+.form-group-sm textarea.form-control,
+.form-group-sm select[multiple].form-control {
+  height: auto;
+}
+.form-group-sm .form-control-static {
+  height: 30px;
+  min-height: 32px;
+  padding: 6px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.input-lg {
+  height: 46px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+}
+select.input-lg {
+  height: 46px;
+  line-height: 46px;
+}
+textarea.input-lg,
+select[multiple].input-lg {
+  height: auto;
+}
+.form-group-lg .form-control {
+  height: 46px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+}
+.form-group-lg select.form-control {
+  height: 46px;
+  line-height: 46px;
+}
+.form-group-lg textarea.form-control,
+.form-group-lg select[multiple].form-control {
+  height: auto;
+}
+.form-group-lg .form-control-static {
+  height: 46px;
+  min-height: 38px;
+  padding: 11px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+}
 .has-feedback {
-  // Enable absolute positioning
   position: relative;
-
-  // Ensure icons don't overlap text
-  .form-control {
-    padding-right: ($input-height-base * 1.25);
-  }
 }
-// Feedback icon (requires .glyphicon classes)
+.has-feedback .form-control {
+  padding-right: 42.5px;
+}
 .form-control-feedback {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 2; // Ensure icon is above input groups
+  z-index: 2;
   display: block;
-  width: $input-height-base;
-  height: $input-height-base;
-  line-height: $input-height-base;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
   text-align: center;
   pointer-events: none;
 }
 .input-lg + .form-control-feedback,
 .input-group-lg + .form-control-feedback,
 .form-group-lg .form-control + .form-control-feedback {
-  width: $input-height-large;
-  height: $input-height-large;
-  line-height: $input-height-large;
+  width: 46px;
+  height: 46px;
+  line-height: 46px;
 }
 .input-sm + .form-control-feedback,
 .input-group-sm + .form-control-feedback,
 .form-group-sm .form-control + .form-control-feedback {
-  width: $input-height-small;
-  height: $input-height-small;
-  line-height: $input-height-small;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
 }
-
-// Feedback states
-.has-success {
-  @include form-control-validation($state-success-text, $state-success-text, $state-success-bg);
+.has-success .help-block,
+.has-success .control-label,
+.has-success .radio,
+.has-success .checkbox,
+.has-success .radio-inline,
+.has-success .checkbox-inline,
+.has-success.radio label,
+.has-success.checkbox label,
+.has-success.radio-inline label,
+.has-success.checkbox-inline label {
+  color: #3c763d;
 }
-.has-warning {
-  @include form-control-validation($state-warning-text, $state-warning-text, $state-warning-bg);
+.has-success .form-control {
+  border-color: #3c763d;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
-.has-error {
-  @include form-control-validation($state-danger-text, $state-danger-text, $state-danger-bg);
+.has-success .form-control:focus {
+  border-color: #2b542c;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
 }
-
-// Reposition feedback icon if input has visible label above
-.has-feedback label {
-
-  & ~ .form-control-feedback {
-    top: ($line-height-computed + 5); // Height of the `label` and its margin
+.has-success .input-group-addon {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #3c763d;
+}
+.has-success .form-control-feedback {
+  color: #3c763d;
+}
+.has-warning .help-block,
+.has-warning .control-label,
+.has-warning .radio,
+.has-warning .checkbox,
+.has-warning .radio-inline,
+.has-warning .checkbox-inline,
+.has-warning.radio label,
+.has-warning.checkbox label,
+.has-warning.radio-inline label,
+.has-warning.checkbox-inline label {
+  color: #8a6d3b;
+}
+.has-warning .form-control {
+  border-color: #8a6d3b;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.has-warning .form-control:focus {
+  border-color: #66512c;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
+}
+.has-warning .input-group-addon {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #8a6d3b;
+}
+.has-warning .form-control-feedback {
+  color: #8a6d3b;
+}
+.has-error .help-block,
+.has-error .control-label,
+.has-error .radio,
+.has-error .checkbox,
+.has-error .radio-inline,
+.has-error .checkbox-inline,
+.has-error.radio label,
+.has-error.checkbox label,
+.has-error.radio-inline label,
+.has-error.checkbox-inline label {
+  color: #a94442;
+}
+.has-error .form-control {
+  border-color: #a94442;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.has-error .form-control:focus {
+  border-color: #843534;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+}
+.has-error .input-group-addon {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #a94442;
+}
+.has-error .form-control-feedback {
+  color: #a94442;
+}
+.has-feedback label ~ .form-control-feedback {
+  top: 25px;
+}
+.has-feedback label.sr-only ~ .form-control-feedback {
+  top: 0;
+}
+.help-block {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #737373;
+}
+@media (min-width: 768px) {
+  .form-inline .form-group {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
   }
-  &.sr-only ~ .form-control-feedback {
+  .form-inline .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+  }
+  .form-inline .form-control-static {
+    display: inline-block;
+  }
+  .form-inline .input-group {
+    display: inline-table;
+    vertical-align: middle;
+  }
+  .form-inline .input-group .input-group-addon,
+  .form-inline .input-group .input-group-btn,
+  .form-inline .input-group .form-control {
+    width: auto;
+  }
+  .form-inline .input-group > .form-control {
+    width: 100%;
+  }
+  .form-inline .control-label {
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  .form-inline .radio,
+  .form-inline .checkbox {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  .form-inline .radio label,
+  .form-inline .checkbox label {
+    padding-left: 0;
+  }
+  .form-inline .radio input[type="radio"],
+  .form-inline .checkbox input[type="checkbox"] {
+    position: relative;
+    margin-left: 0;
+  }
+  .form-inline .has-feedback .form-control-feedback {
     top: 0;
   }
 }
-
-
-// Help text
-//
-// Apply to any element you wish to create light text for placement immediately
-// below a form control. Use for general help, formatting, or instructional text.
-
-.help-block {
-  display: block; // account for any element using help-block
-  margin-top: 5px;
-  margin-bottom: 10px;
-  color: lighten($text-color, 25%); // lighten the text some for contrast
+.form-horizontal .radio,
+.form-horizontal .checkbox,
+.form-horizontal .radio-inline,
+.form-horizontal .checkbox-inline {
+  padding-top: 7px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
-
-
-// Inline forms
-//
-// Make forms appear inline(-block) by adding the `.form-inline` class. Inline
-// forms begin stacked on extra small (mobile) devices and then go inline when
-// viewports reach <768px.
-//
-// Requires wrapping inputs and labels with `.form-group` for proper display of
-// default HTML form controls and our custom form controls (e.g., input groups).
-//
-// Heads up! This is mixin-ed into `.navbar-form` in navbars.less.
-
-// [converter] extracted from `.form-inline` for libsass compatibility
-@mixin form-inline {
-
-  // Kick in the inline
-  @media (min-width: $screen-sm-min) {
-    // Inline-block all the things for "inline"
-    .form-group {
-      display: inline-block;
-      margin-bottom: 0;
-      vertical-align: middle;
-    }
-
-    // In navbar-form, allow folks to *not* use `.form-group`
-    .form-control {
-      display: inline-block;
-      width: auto; // Prevent labels from stacking above inputs in `.form-group`
-      vertical-align: middle;
-    }
-
-    // Make static controls behave like regular ones
-    .form-control-static {
-      display: inline-block;
-    }
-
-    .input-group {
-      display: inline-table;
-      vertical-align: middle;
-
-      .input-group-addon,
-      .input-group-btn,
-      .form-control {
-        width: auto;
-      }
-    }
-
-    // Input groups need that 100% width though
-    .input-group > .form-control {
-      width: 100%;
-    }
-
-    .control-label {
-      margin-bottom: 0;
-      vertical-align: middle;
-    }
-
-    // Remove default margin on radios/checkboxes that were used for stacking, and
-    // then undo the floating of radios and checkboxes to match.
-    .radio,
-    .checkbox {
-      display: inline-block;
-      margin-top: 0;
-      margin-bottom: 0;
-      vertical-align: middle;
-
-      label {
-        padding-left: 0;
-      }
-    }
-    .radio input[type="radio"],
-    .checkbox input[type="checkbox"] {
-      position: relative;
-      margin-left: 0;
-    }
-
-    // Re-override the feedback icon.
-    .has-feedback .form-control-feedback {
-      top: 0;
-    }
-  }
+.form-horizontal .radio,
+.form-horizontal .checkbox {
+  min-height: 27px;
 }
-// [converter] extracted as `@mixin form-inline` for libsass compatibility
-.form-inline {
-  @include form-inline;
+.form-horizontal .form-group {
+  margin-right: -15px;
+  margin-left: -15px;
 }
-
-
-
-// Horizontal forms
-//
-// Horizontal forms are built on grid classes and allow you to create forms with
-// labels on the left and inputs on the right.
-
-.form-horizontal {
-
-  // Consistent vertical alignment of radios and checkboxes
-  //
-  // Labels also get some reset styles, but that is scoped to a media query below.
-  .radio,
-  .checkbox,
-  .radio-inline,
-  .checkbox-inline {
-    padding-top: ($padding-base-vertical + 1); // Default padding plus a border
-    margin-top: 0;
+@media (min-width: 768px) {
+  .form-horizontal .control-label {
+    padding-top: 7px;
     margin-bottom: 0;
+    text-align: right;
   }
-  // Account for padding we're adding to ensure the alignment and of help text
-  // and other content below items
-  .radio,
-  .checkbox {
-    min-height: ($line-height-computed + ($padding-base-vertical + 1));
+}
+.form-horizontal .has-feedback .form-control-feedback {
+  right: 15px;
+}
+@media (min-width: 768px) {
+  .form-horizontal .form-group-lg .control-label {
+    padding-top: 11px;
+    font-size: 18px;
   }
-
-  // Make form groups behave like rows
-  .form-group {
-    @include make-row;
+}
+@media (min-width: 768px) {
+  .form-horizontal .form-group-sm .control-label {
+    padding-top: 6px;
+    font-size: 12px;
   }
-
-  // Reset spacing and right align labels, but scope to media queries so that
-  // labels on narrow viewports stack the same as a default form example.
-  @media (min-width: $screen-sm-min) {
-    .control-label {
-      padding-top: ($padding-base-vertical + 1); // Default padding plus a border
-      margin-bottom: 0;
-      text-align: right;
-    }
-  }
-
-  // Validation states
-  //
-  // Reposition the icon because it's now within a grid column and columns have
-  // `position: relative;` on them. Also accounts for the grid gutter padding.
-  .has-feedback .form-control-feedback {
-    right: floor(($grid-gutter-width / 2));
-  }
-
-  // Form group sizes
-  //
-  // Quick utility class for applying `.input-lg` and `.input-sm` styles to the
-  // inputs and labels within a `.form-group`.
-  .form-group-lg {
-    @media (min-width: $screen-sm-min) {
-      .control-label {
-        padding-top: ($padding-large-vertical + 1);
-        font-size: $font-size-large;
-      }
-    }
-  }
-  .form-group-sm {
-    @media (min-width: $screen-sm-min) {
-      .control-label {
-        padding-top: ($padding-small-vertical + 1);
-        font-size: $font-size-small;
-      }
-    }
-  }
+}
+.label {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  color: #ffffff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+}
+a.label:hover,
+a.label:focus {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.label:empty {
+  display: none;
+}
+.btn .label {
+  position: relative;
+  top: -1px;
+}
+.label-default {
+  background-color: #777777;
+}
+.label-default[href]:hover,
+.label-default[href]:focus {
+  background-color: #5e5e5e;
+}
+.label-primary {
+  background-color: #337ab7;
+}
+.label-primary[href]:hover,
+.label-primary[href]:focus {
+  background-color: #286090;
+}
+.label-success {
+  background-color: #5cb85c;
+}
+.label-success[href]:hover,
+.label-success[href]:focus {
+  background-color: #449d44;
+}
+.label-info {
+  background-color: #5bc0de;
+}
+.label-info[href]:hover,
+.label-info[href]:focus {
+  background-color: #31b0d5;
+}
+.label-warning {
+  background-color: #f0ad4e;
+}
+.label-warning[href]:hover,
+.label-warning[href]:focus {
+  background-color: #ec971f;
+}
+.label-danger {
+  background-color: #d9534f;
+}
+.label-danger[href]:hover,
+.label-danger[href]:focus {
+  background-color: #c9302c;
+}
+.clearfix:before,
+.clearfix:after,
+.form-horizontal .form-group:before,
+.form-horizontal .form-group:after {
+  display: table;
+  content: " ";
+}
+.clearfix:after,
+.form-horizontal .form-group:after {
+  clear: both;
+}
+.center-block {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.invisible {
+  visibility: hidden;
+}
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.hidden {
+  display: none !important;
+}
+.affix {
+  position: fixed;
 }
