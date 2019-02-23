@@ -3,7 +3,7 @@ layout: post
 hidden: false
 title: Why you should use trackBy with Angular's *ngFor loop
 image:
-  path: /images/uploads/angular-400x200.jpg
+  path: ''
   thumbnail: Angular logo
 tags:
   - Angular
