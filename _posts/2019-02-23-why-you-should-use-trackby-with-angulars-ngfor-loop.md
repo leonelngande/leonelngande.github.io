@@ -2,8 +2,13 @@
 layout: post
 hidden: false
 title: Why you should use trackBy with Angular's *ngFor loop
-image: {}
-tags: []
+image:
+  path: /images/uploads/angular-400x200.jpg
+  thumbnail: Angular logo
+tags:
+  - Angular
+  - '*ngFor'
+  - trackBy
 ---
 > trackBy is a function which will return a unique identifier for each item in the array provided to *ngFor. 
 >
