@@ -2,6 +2,7 @@
 title: "Layout: Author Override"
 author: Billy Rick
 hidden: true
+published: false
 excerpt: "A post to test author overrides using a data file."
 ---
 

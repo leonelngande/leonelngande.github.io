@@ -1,6 +1,7 @@
 ---
 title: "Hidden Post"
 hidden: true
+published: false
 last_modified_at:
 ---
 

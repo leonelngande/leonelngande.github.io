@@ -1,6 +1,7 @@
 ---
 title: "Markup: Text Alignment and Transformations"
 hidden: true
+published: false
 categories:
   - Markup
 tags:

@@ -1,6 +1,7 @@
 ---
 title: "Post: Video (YouTube)"
 hidden: true
+published: false
 categories:
   - Post Formats
 tags:

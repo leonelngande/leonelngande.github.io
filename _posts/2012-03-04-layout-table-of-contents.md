@@ -2,6 +2,7 @@
 title: "Layout: Post with Table Of Contents"
 category: Layout
 hidden: true
+published: false
 tags:
   - table of contents
 ---
