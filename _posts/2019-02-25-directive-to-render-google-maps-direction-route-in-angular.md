@@ -1,9 +1,16 @@
 ---
 layout: post
 hidden: false
-title: Directive to render Google Maps direction route in Angular
+title: Using a directive to render Google Maps directions in Angular
 image: {}
-tags: []
+tags:
+  - Angular
+  - Directive
+  - Google Maps
+  - AGM
+  - Directions Service
+  - Directions Renderer
+  - Waypoints
 ---
 A few months back while working on a location based taxi calling app, I had to build in functionality to render the route from the user's location to the selected or searched listing on the map. 
 
