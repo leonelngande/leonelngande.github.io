@@ -2,7 +2,6 @@
 layout: post
 hidden: false
 title: Angular 2+ Google Places Autocomplete directive
-image: {}
 tags: []
 ---
 ```
