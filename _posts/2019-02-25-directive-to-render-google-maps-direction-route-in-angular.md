@@ -2,7 +2,6 @@
 layout: post
 hidden: false
 title: Using a directive to render Google Maps directions in Angular
-image: {}
 tags:
   - Angular
   - Directive

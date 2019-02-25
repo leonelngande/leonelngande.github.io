@@ -18,14 +18,14 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Hidden", name: "hidden", widget: "boolean", default: false}
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - label: "Featured Image"
-        name: "image"
-        widget: "object"
-        required: false
-        fields:
-          - {label: "Image", name: "path", widget: "image", required: false}
-          - {label: "Thumbnail", name: "thumbnail", widget: "string", required: false}
-          - {label: "Caption", name: "caption", widget: "string", required: false}
+#      - label: "Featured Image"
+#        name: "image"
+#        widget: "object"
+#        required: false
+#        fields:
+#          - {label: "Image", name: "path", widget: "image", required: false}
+#          - {label: "Thumbnail", name: "thumbnail", widget: "string", required: false}
+#          - {label: "Caption", name: "caption", widget: "string", required: false}
 #      - {label: "Categories", name: "categories", widget: "string", required: false}
       - label: "Tags"
         name: "tags"
