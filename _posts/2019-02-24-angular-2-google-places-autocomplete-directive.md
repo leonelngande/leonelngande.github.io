@@ -74,7 +74,8 @@ export class GooglePlacesDirective implements OnInit {
 _In component html_
 
 ```
-setAddress(addrObj) {    // Here you can update the form control with the new address value
+setAddress(addrObj) {    
+    // Here you can update the form control with the new address value
     console.log(addrObj);
 }
 ```
