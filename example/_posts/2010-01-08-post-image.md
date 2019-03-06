@@ -1,5 +1,7 @@
 ---
 title: "Post: Image"
+hidden: true
+published: false
 image: /images/so-simple-sample-image-3.jpg
 categories:
   - Post Formats
