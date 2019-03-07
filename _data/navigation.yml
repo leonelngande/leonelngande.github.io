@@ -8,8 +8,8 @@
 #   url: /categories/
 - title: Tags
   url: /tags/
-- title: Work
-  url: /work/
+#- title: Work
+#  url: /work/
 - title: Contact
   url: /contact/
 - title: Search
