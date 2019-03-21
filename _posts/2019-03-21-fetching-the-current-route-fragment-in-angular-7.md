@@ -143,12 +143,10 @@ And the course list html file in which an id is set for each course category (ex
 </ng-template>
 ```
 
-
-
 So we listen to changes in the route fragment, find it's id on the page, and if it exists, we use the utility function to scroll to the id.
 
+Here's a live implementation <https://www.xamcademy.com/courses/list#exam2>
+
 If you found a bug or have any question, please do mention in the comments section.
-
-
 
 Happy coding!
