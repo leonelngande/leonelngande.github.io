@@ -4,6 +4,44 @@ hidden: false
 title: Setting Up ServerSideDatasource for agGrid Angular with Pagination
 tags: []
 ---
+😫, agGrid. If you've been facing issues properly setting up agGrid Angular for server-side data fetching, filtering, etc, then you're not alone.
+
+After a few tries I finally got it working, the trigger being these function from their [Infinite Scroll example](https://www.ag-grid.com/javascript-grid-server-side-model-infinite/) which shows how to pick up request parameters passed from the grid.
+
+```
+function ServerSideDatasource(server) {
+  return {
+    getRows(params) {
+      setTimeout(function() {
+        var response = server.getResponse(params.request);
+        if (response.success) {
+          params.successCallback(response.rows, response.lastRow);
+        } else {
+          params.failCallback();
+        }
+      }, 500);
+    }
+  };
+}
+
+function FakeServer(allData) {
+  return {
+    getResponse(request) {
+      console.log("asking for rows: " + request.startRow + " to " + request.endRow);
+      var rowsThisPage = allData.slice(request.startRow, request.endRow);
+      var lastRow = allData.length <= request.endRow ? data.length : -1;
+      return {
+        success: true,
+        rows: rowsThisPage,
+        lastRow: lastRow
+      };
+    }
+  };
+}
+```
+
+So here's what I did:
+
 ```
 public onReady($event) {
         this.gridOptions = {
