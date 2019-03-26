@@ -7,8 +7,10 @@ entries_layout: grid
 
 Hi, am Leonel, an ailurophile (😸 🐈) and Angular Developer in Silicon Mountain, Buea.
 
-When not building web applications and services for my clients, I put time into building and improving [Xamcademy](https://xamcademy.com), my attempt at helping students better revise for exams.
+When not building web applications and services for my clients, I put time into building and improving [Xamcademy](https://xamcademy.com), my attempt at helping students better revise for examinations.
 
-Feedback is welcome! It's still in active development. I also write on my experiences working with Angular and as a developer here.
+Feedback is welcome! It's still in active development. 
+
+I also write on my experiences working with Angular and as a developer here.
 
 Want to get in touch or have a project you'd like to discuss? Feel free to reach out to me on [Twitter](https://twitter.com/leonelngande), [LinkedIn](https://www.upwork.com/o/profiles/users/_~01b729f550597fbf1c/), [Upwork](https://www.upwork.com/o/profiles/users/_~01b729f550597fbf1c/), or by filling out the form below 👇.
