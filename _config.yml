@@ -43,6 +43,11 @@ liquid:
 # Build settings
 permalink: /:categories/:title/
 markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
 feed:
   path: atom.xml
 
