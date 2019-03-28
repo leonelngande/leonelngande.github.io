@@ -2,11 +2,11 @@
 layout: post
 hidden: false
 title: >-
-  Using RXJS's share() Operator to Prevent Firing New HTTP Requests for Angular
+  Using RXJS's shareReplay() Operator to Prevent Firing New HTTP Requests for
   Template Subscriptions
 tags:
   - RxJs
-  - share() Operator
+  - shareReplay
   - Angular
   - Form Arrays
 ---
@@ -234,21 +234,23 @@ This however triggers the creation and subscription to a new phoneLabels$ observ
 </app-dropdown>
 ```
 
-Adding the `share()` RxJs operator to the observable removes this behaviour. The operator returns a new Observable that multicasts (shares) the original Observable.
+Adding the `shareReplay` RxJs operator to the observable removes this behaviour. 
+
+This operator is a specialization of `replay` that connects to a source observable and multicasts through a `ReplaySubject` constructed with the specified arguments.
 
 For a more in-depth look into it's functioning, look [here](https://blog.angularindepth.com/rxjs-understanding-the-publish-and-share-operators-16ea2f446635).
 
 So here's how my observables look after this update.
 
 ```typescript
-this.categoryOptions$ = this.contactsService.categoryList().pipe(share());
-this.countryOptions$ = this.countryService.fetchAll().pipe(share());
-this.programOptions$ = this.contactsService.programsList(this.guids.PROGRAMS_CONTACT).pipe(share());
-this.bucketOptions$ = this.contactsService.bucketList().pipe(share());
-this.socialLabels$ = this.contactsService.labelsList(this.guids.SOCIAL_LABELS).pipe(share());
-this.phoneLabels$ = this.contactsService.labelsList(this.guids.PHONE_LABELS).pipe(share());
-this.emailLabels$ = this.contactsService.labelsList(this.guids.EMAIL_LABELS).pipe(share());
-this.websiteLabels$ = this.contactsService.labelsList(this.guids.WEBSITE_LABELS).pipe(share());
-this.addressLabels$ = this.contactsService.labelsList(this.guids.ADDRESS_LABELS).pipe(share());
-this.recurringEventLabels$ = this.contactsService.labelsList(this.guids.RECURRING_EVENT_LABELS).pipe(share());
+this.categoryOptions$ = this.contactsService.categoryList().pipe(shareReplay());
+this.countryOptions$ = this.countryService.fetchAll().pipe(shareReplay());
+this.programOptions$ = this.contactsService.programsList(this.guids.PROGRAMS_CONTACT).pipe(shareReplay());
+this.bucketOptions$ = this.contactsService.bucketList().pipe(shareReplay());
+this.socialLabels$ = this.contactsService.labelsList(this.guids.SOCIAL_LABELS).pipe(shareReplay());
+this.phoneLabels$ = this.contactsService.labelsList(this.guids.PHONE_LABELS).pipe(shareReplay());
+this.emailLabels$ = this.contactsService.labelsList(this.guids.EMAIL_LABELS).pipe(shareReplay());
+this.websiteLabels$ = this.contactsService.labelsList(this.guids.WEBSITE_LABELS).pipe(shareReplay());
+this.addressLabels$ = this.contactsService.labelsList(this.guids.ADDRESS_LABELS).pipe(shareReplay());
+this.recurringEventLabels$ = this.contactsService.labelsList(this.guids.RECURRING_EVENT_LABELS).pipe(shareReplay());
 ```
