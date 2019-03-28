@@ -17,7 +17,7 @@ The Angular project used Sebastian Holstein's open source [angular-google-maps](
 
 To make it possible to add the directions render to any other google map I worked with, I wrote this directive.
 
-```
+```typescript
 import {Directive, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {GoogleMapsAPIWrapper} from '@agm/core';
 
@@ -110,7 +110,7 @@ That looks like a lot, but i've put in comments where necessary to guide you. Th
 
 Here's an example usage with an agm map:
 
-```
+```typescript
 <agm-map appDirectionsMap [showDirection]="this.displayDirections"
          [origin]="origin"
          [destination]="destination"
@@ -128,7 +128,7 @@ Here's an example usage with an agm map:
 
 _map.component.html_
 
-```
+```typescript
 import {Component} from '@angular/core';
 import {ILatLng} from '../../directives/directions-map.directive';
 
@@ -156,6 +156,6 @@ export class MapComponent {
 
 _map.component.ts_
 
-So there you go. Unfortunately I can't set up a live example given it'll require a google maps api key which now requires billing enabled by default. But if you have any questions or found a bug, or even a better implementation, please do post in the comments section.
+So there you go. If you have any questions or found a bug, or even a better implementation, please do post in the comments section.
 
 Happy coding!

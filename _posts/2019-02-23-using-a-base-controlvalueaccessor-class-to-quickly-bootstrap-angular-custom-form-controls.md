@@ -13,7 +13,7 @@ Having created a good number of custom form controls in Angular, it always felt 
 
 A few days back while pulling my hair out trying to make a custom form control component (control is a FormArray) work with a form, I came across this jewel by [Nick Arthur plays Life](https://medium.com/@narthur157/custom-angular-reactive-forms-what-i-wish-i-knew-v5-6-5b1c2f8e1974):
 
-```
+```typescript
 import { ControlValueAccessor } from '@angular/forms';
 
 export class BaseControlValueAccessor<T> implements ControlValueAccessor {
@@ -42,13 +42,13 @@ The class above simply implements Angular's ControlValueAccessor interface, maki
 
 You equally have to pass in (when extending) the type of value (generic `T`) your custom form control works with, `string`, `number`, `array`, etc. This makes sure the proper value is passed in and written to the input.
 
-```
+```typescript
 public writeValue(obj: T): void { this.value = obj; }
 ```
 
 Here's a sample usage:
 
-```
+```typescript
 import { Component, forwardRef } from '@angular/core';
 import {NG_VALUE_ACCESSOR} from '@angular/forms';
 import {BaseControlValueAccessor} from '../../BaseControlValueAccessor';
@@ -87,9 +87,14 @@ export class CheckComponent extends BaseControlValueAccessor<boolean> {
 
 Don't forget to call `super()` in your custom form control component's constructor.
 
-```
-constructor(private formBuilder: FormBuilder) {
-    super();
+```typescript
+export class SomeFormComponent extends BaseControlValueAccessor<boolean> {
+    
+    constructor(private formBuilder: FormBuilder) {
+        super();
+    }
+    
+    // ...
 }
 ```
 

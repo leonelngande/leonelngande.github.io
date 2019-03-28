@@ -20,7 +20,7 @@ So I settled on fetching the fragment from an injected ActivatedRoute and manual
 
 Here's my courses list ts file.
 
-```
+```typescript
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {IExam} from '../../../@core/models/exam';
@@ -71,7 +71,7 @@ export class CoursesListComponent implements OnInit, OnDestroy {
 
 And the course list html file in which an id is set for each course category (exam) which can be scrolled to.
 
-```
+```typescript
 <div class="container">
   <div class="text-center">
     <h3>All Courses/Subjects</h3>

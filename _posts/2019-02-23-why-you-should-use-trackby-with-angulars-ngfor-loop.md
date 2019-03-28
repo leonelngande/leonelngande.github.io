@@ -25,7 +25,7 @@ I took the approach of fetching all necessary data in the parent component (Ques
 
 The ReactionSelectComponent emits an onSelect event, which the response and response list components pick up so it bubble up to the question overview component.
 
-```
+```typescript
 import {Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
 import {IReactionType} from '../../@core/models/reaction.model';
 import {NbPopoverDirective, NbPosition} from '@nebular/theme';
@@ -61,7 +61,7 @@ _reaction-select.component.ts_
 
 __
 
-```
+```typescript
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {IComment} from '../../../@core/models/comment';
 import {IReaction, IReactionEvent, IReactionType, ReactionType} from '../../../@core/models/reaction.model';
@@ -95,13 +95,14 @@ export class ResponseComponent {
   getCount(reaction: IReaction, reactions: IReaction[]): number {
     return reactions && reactions.filter(single => single.type === reaction.type).length;
   }
+}
 ```
 
 _response.component.ts_
 
 __
 
-```
+```typescript
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {IComment} from '../../../@core/models/comment';
 import {IReactionEvent} from '../../../@core/models/reaction.model';
@@ -137,10 +138,12 @@ Therefore, on every comment or reaction event, the data is posted and the commen
 
 The problem is this creates a situation where the comments in view dissappear for a moment and then reappear as Angular re-renders the comments list component. This is also quite ineficient.
 
-```
+```typescript
 <xc-response *ngFor="let response of responses"
              (onReaction)="react($event)"
-             [response]="response"></xc-response>
+             [response]="response">
+             
+</xc-response>
 ```
 
 _response-list.component.html without trackBy_ 
@@ -149,10 +152,12 @@ _response-list.component.html without trackBy_
 
 This is where `trackBy` comes in to save the day. 
 
-```
+```typescript
 <xc-response *ngFor="let response of responses; trackBy: trackByFn"
              (onReaction)="react($event)"
-             [response]="response"></xc-response>
+             [response]="response">
+             
+</xc-response>
 ```
 
 _response-list.component.html with trackBy_ 

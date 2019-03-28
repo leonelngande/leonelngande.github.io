@@ -4,7 +4,7 @@ hidden: false
 title: Angular 2+ Google Places Autocomplete directive
 tags: []
 ---
-```
+```typescript
 /// <reference types="@types/googlemaps" />
 import { Directive, ElementRef, OnInit, Output, EventEmitter } from '@angular/core';
 
@@ -61,7 +61,7 @@ export class GooglePlacesDirective implements OnInit {
 
 ## Usage
 
-```
+```typescript
 <input 
     type="text"
     class="google-place-input"
@@ -72,7 +72,7 @@ export class GooglePlacesDirective implements OnInit {
 
 _In component html_
 
-```
+```typescript
 setAddress(addrObj) {    
     // Here you can update the form control with the new address value
     console.log(addrObj);
