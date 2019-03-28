@@ -4,7 +4,11 @@ hidden: false
 title: >-
   Using RXJS's share() Operator to Prevent Firing New HTTP Requests for Angular
   Template Subscriptions
-tags: []
+tags:
+  - RxJs
+  - share() Operator
+  - Angular
+  - Form Arrays
 ---
 Just read this[ article](https://blog.angularindepth.com/rxjs-understanding-the-publish-and-share-operators-16ea2f446635) by [Nicholas Jamieson](https://blog.angularindepth.com/@cartant) which gave me a whole lot of new insights into how RxJs operator functions are written. I encourage you to have a look.
 
@@ -230,7 +234,7 @@ This however triggers the creation and subscription to a new phoneLabels$ observ
 </app-dropdown>
 ```
 
-Adding the `share()` RxJs operator to the observable removes this behaviour. The operator creates a new Subject and subscribes it to the source observable.
+Adding the `share()` RxJs operator to the observable removes this behaviour. The operator returns a new Observable that multicasts (shares) the original Observable.
 
 For a more in-depth look into it's functioning, look [here](https://blog.angularindepth.com/rxjs-understanding-the-publish-and-share-operators-16ea2f446635).
 
