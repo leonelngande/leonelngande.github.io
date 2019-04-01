@@ -23,7 +23,13 @@ tags: []
 
 
 
-```
+```typescript
+bucketOptions$: Observable<Array<IServerDropdownOption>>;
+
+ngOnInit() {
+  this.bucketOptions$ = this.contactsService.bucketList().pipe(shareReplay());
+}
+
 updateOptionSelection(optionsList$: Observable<Array<IServerDropdownOption>>, $event: IOptionMultiSelectBox) {
   optionsList$ = optionsList$.pipe(
     map(options => {
