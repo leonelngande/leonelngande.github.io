@@ -1,4 +1,4 @@
-<form class="form" name="contact" method="POST" netlify>
+<form class="form" name="contact" data-netlify-recaptcha="true" method="POST" netlify>
 
     <div class="form-group">
         <label for="name">Name</label>
@@ -27,6 +27,10 @@
         <textarea name="message" id="message" placeholder="Write your message here"
                   class="form-control"
                   rows="7" required></textarea>
+    </div>
+
+    <div class="form-group">
+        <div data-netlify-recaptcha="true"></div>
     </div>
 
     <div class="form-group">
