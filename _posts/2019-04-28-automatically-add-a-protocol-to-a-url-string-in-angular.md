@@ -2,7 +2,9 @@
 layout: post
 hidden: false
 title: Automatically Add a Protocol to a Url String in Angular
-tags: []
+tags:
+  - Angular
+  - Url Protocol
 ---
 This little utility function can help you easily determine if a url string contains a protocol and add one if missing.
 
