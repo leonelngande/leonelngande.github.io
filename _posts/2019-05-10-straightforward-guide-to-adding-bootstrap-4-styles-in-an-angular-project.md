@@ -2,7 +2,10 @@
 layout: post
 hidden: false
 title: Straightforward Guide to Adding Bootstrap 4 Styles in an Angular Project
-tags: []
+tags:
+  - Angular
+  - Bootstrap 4
+  - SCSS
 ---
 FYI, this is a to the point guide on adding and Bootstrap 4 styles (scss) to an Angular project.
 
