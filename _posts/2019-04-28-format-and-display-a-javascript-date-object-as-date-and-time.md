@@ -2,7 +2,10 @@
 layout: post
 hidden: false
 title: Format and Display a Javascript Date Object as Date and Time
-tags: []
+tags:
+  - Javascript
+  - Date and Time Formatting
+  - Javascript Date Object
 ---
 Say we have the following Javascript date object and would like to display it as date and time.
 
