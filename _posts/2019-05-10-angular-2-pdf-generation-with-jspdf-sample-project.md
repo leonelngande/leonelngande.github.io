@@ -5,7 +5,7 @@ title: Angular 2+ PDF Generation with jsPDF - Sample Project
 tags:
   - Angular
   - jsPDF
-  - PDF Generation
+  - PDF Generation with Angular
 ---
 I may flesh this out with a detailed post later, but if you have any questions or encounter any issues feel free to reach out to me.
 
