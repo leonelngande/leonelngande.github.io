@@ -13,7 +13,7 @@ This assumes you've already [setup API authentication](https://medium.com/modulr
 
 I've put together the following steps mainly as some sort of future reference, so please pardon the brevity 🙏.
 
-1. Make sure your user model implements the [`CanResetPassword` interface](https://laravel.com/docs/5.7/passwords#resetting-database).
+* Make sure your user model implements the [`CanResetPassword` interface](https://laravel.com/docs/5.7/passwords#resetting-database).
 
 ```php
 use Illuminate\Contracts\Auth\CanResetPassword;
@@ -28,7 +28,7 @@ class User extends Authenticatable implements CanResetPassword
 }
 ```
 
-2. Customize your  ResetPasswordController to use the guard of your choice by [overriding](https://laravel.com/docs/5.7/passwords#password-customization) the guard method on the controller. Since we're dealing with an API (like in my case), we customize to use the api guard defined in config/auth.php.
+* Customize your  ResetPasswordController to use the guard of your choice by [overriding](https://laravel.com/docs/5.7/passwords#password-customization) the guard method on the controller. Since we're dealing with an API (like in my case), we customize to use the api guard defined in config/auth.php.
 
 ```php
 namespace App\Http\Controllers\API\Auth;
@@ -84,7 +84,7 @@ Route::group([
 });
 ```
 
-3. If you'd like to customize the notification email, and more likely the action url in the email sent to the user, then overide the sendPasswordResetNotification method of the CanResetPassword trait as below.
+* If you'd like to customize the notification email, and more likely the action url in the email sent to the user, then overide the sendPasswordResetNotification method of the CanResetPassword trait as below.
 
 ```php
 use App\Notifications\PasswordResetRequest;
@@ -111,7 +111,7 @@ class User extends Authenticatable implements CanResetPassword
 }
 ```
 
-4. Update your ForgotPasswordController to look something like this:
+* Update your ForgotPasswordController to look something like this:
 
 ```php
 use App\Http\Controllers\Controller;
