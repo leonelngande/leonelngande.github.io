@@ -165,4 +165,6 @@ What changes is the use of the __invoke function on the controller, turning it i
 
 Now Laravel will take care of sending the reset password link to your users. Will link this to the next article which will detail the steps after the user clicks on the email link.
 
+For any clarifications, questions, or corrections, please post in the comments below. 
+
 Happy coding!
