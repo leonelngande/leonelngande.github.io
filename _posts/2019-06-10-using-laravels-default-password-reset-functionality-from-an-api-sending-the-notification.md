@@ -1,6 +1,7 @@
 ---
 layout: post
-hidden: true
+hidden: false
+published: false
 title: >-
   Using Laravel's Default Password Reset Functionality from an API - Sending the
   Notification

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'Fix: Angular Route Resolver Receiving Data But Still Preventing Navigation
   To Route'
 hidden: false
@@ -6,11 +7,9 @@ image:
   path: "/images/angular-banner-large.jpg"
   thumbnail: ''
   caption: Angular logo banner image
-categories: []
 tags:
-- Router Resolver
-- Angular
-last_modified_at: 
+  - Angular
+  - Router Resolver
 
 ---
 Ever had this issue where for some reason you can't navigate to a route even though everything seems ok, and the route's data resolvers are all executing?
