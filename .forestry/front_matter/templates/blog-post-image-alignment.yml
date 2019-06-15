@@ -30,3 +30,5 @@ fields:
 - type: datetime
   name: last_modified_at
   label: last_modified_at
+pages:
+- _posts/fix-angular-route-resolver-receiving-data-but-still-preventing-navigation-to-route.md
