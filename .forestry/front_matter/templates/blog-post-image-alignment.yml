@@ -32,3 +32,4 @@ fields:
   label: last_modified_at
 pages:
 - _posts/fix-angular-route-resolver-receiving-data-but-still-preventing-navigation-to-route.md
+- _posts/fix-angular-route-resolver-receiving-data-but-still-preventing-navigation-to-route.md
