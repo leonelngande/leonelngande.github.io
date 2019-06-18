@@ -31,5 +31,6 @@ fields:
   name: last_modified_at
   label: last_modified_at
 pages:
+- _posts/using-javascript-s-array-reduce-to-dynamically-create-an-object-from-input-arrays.md
 - _posts/fix-angular-route-resolver-receiving-data-but-still-preventing-navigation-to-route.md
 - _posts/fix-angular-route-resolver-receiving-data-but-still-preventing-navigation-to-route.md
