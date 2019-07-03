@@ -1,0 +1,32 @@
+---
+label: Blog post
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: boolean
+  name: hidden
+  label: hidden
+- type: field_group
+  name: image
+  label: image
+  fields:
+  - type: file
+    name: path
+    label: path
+  - type: text
+    name: thumbnail
+    label: thumbnail
+  - type: text
+    name: caption
+    label: caption
+- type: list
+  name: categories
+  label: categories
+- type: list
+  name: tags
+  label: tags
+- type: text
+  name: last_modified_at
+  label: last_modified_at
