@@ -6,9 +6,7 @@ tags:
   - Angular
   - html time
 ---
-> <time \[dateTime]="someTime">
-> {{ someTime }}
-> </time>
+> <time \[dateTime]="someTime">{{ someTime }}</time>
 
 So had to use the html time element today in an Angular component template and ran into this error:
 
