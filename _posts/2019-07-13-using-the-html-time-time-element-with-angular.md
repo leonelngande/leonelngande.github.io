@@ -6,7 +6,9 @@ tags:
   - Angular
   - html time
 ---
-> <time \[dateTime]="someTime">{{ someTime }}</time>
+> <time \[dateTime]="someTime">
+> {{ someTime }}
+> </time>
 
 So had to use the html time element today in an Angular component template and ran into this error:
 
@@ -24,7 +26,7 @@ Here's what my template looked like:
 
 I was baffled, I confirmed on [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time) that the time element has a datetime attribute. Further investigation brought me to [this issue in the Angular repository](https://github.com/angular/angular/issues/26255).
 
-There [Alexey Zuev](<Alexey Zuev>) explains:
+There [Alexey Zuev](https://twitter.com/yurzui?lang=en) explains:
 
 I would say that Angular properly uses time tag.
 
@@ -40,7 +42,7 @@ while <time> tag with dateTime property is:
 <time [dateTime]="time">{{time}}</time>
 ```
 
-So the take-way point here is the difference between the attribute name and the property name as illustrated by [Pawel Kozlowski](twitter.com/pkozlowski_os) (a comment on the issue mentioned above):
+So the take-way point here is the difference between the attribute name and the property name as illustrated by [Pawel Kozlowski](https://twitter.com/pkozlowski_os?lang=en) (a comment on the issue mentioned above):
 
 * attribute name is `datetime`: [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time
   ](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time)
