@@ -20,7 +20,7 @@ Here's what my template looked like:
 
 ```typescript
 <time datetime="{{comment.updated_at}}">
-  {{ comment.updated_at | date }}
+  {{ comment.updated_at }}
 </time>
 ```
 
@@ -52,6 +52,6 @@ So here's how my template ended up looking:
 
 ```typescript
 <time [dateTime]="comment.updated_at">
-  {{ comment.updated_at | date }}
+  {{ comment.updated_at }}
 </time>
 ```
