@@ -138,7 +138,7 @@ Therefore, on every comment or reaction event, the data is posted and the commen
 
 The problem is this creates a situation where the comments in view dissappear for a moment and then reappear as Angular re-renders the comments list component. This is also quite ineficient.
 
-```typescript
+```html
 <xc-response *ngFor="let response of responses"
              (onReaction)="react($event)"
              [response]="response">
@@ -152,7 +152,7 @@ _response-list.component.html without trackBy_
 
 This is where `trackBy` comes in to save the day. 
 
-```typescript
+```html
 <xc-response *ngFor="let response of responses; trackBy: trackByFn"
              (onReaction)="react($event)"
              [response]="response">

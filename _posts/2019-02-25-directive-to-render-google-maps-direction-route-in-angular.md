@@ -110,7 +110,7 @@ That looks like a lot, but i've put in comments where necessary to guide you. Th
 
 Here's an example usage with an agm map:
 
-```typescript
+```html
 <agm-map appDirectionsMap [showDirection]="this.displayDirections"
          [origin]="origin"
          [destination]="destination"

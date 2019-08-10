@@ -61,7 +61,7 @@ export class GooglePlacesDirective implements OnInit {
 
 ## Usage
 
-```typescript
+```html
 <input 
     type="text"
     class="google-place-input"

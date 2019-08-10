@@ -34,7 +34,7 @@ FYI, this can only be used in a browser environment given we're leveraging nativ
 
 A good use case for this functionality is stopping your application's base url from being prepended to external urls you use on anchor tags.
 
-```typescript
+```html
 <a href="www.mysite.com" target="_blank">My Site</a>
 ```
 

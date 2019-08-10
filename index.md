@@ -1,6 +1,6 @@
 ---
 layout: home
-limit: 10
+posts_limit: 20
 show_excerpts: true
-entries_layout: grid
+entries_layout: list
 ---

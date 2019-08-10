@@ -173,7 +173,7 @@ createLabeledPhoneInput(data?: ILabeledPhoneInput): FormGroup {
 
 Here's what the template for the phones form array looks like.
 
-```typescript
+```html
 <!-- PHONE -->
 <div class="row">
     <div class="col-md-12">
@@ -225,7 +225,7 @@ On clicking the `Add` button, the `addFormArrayGroup(createLabeledPhoneInput(), 
 
 This however triggers the creation and subscription to a new phoneLabels$ observable for the phone type dropdown options. This is the behaviour I don't want given it triggers an http request to fetch the options.
 
-```typescript
+```html
 <app-dropdown formControlName="type"
               placeholder="Select label"
               (click)="$event.stopPropagation();"

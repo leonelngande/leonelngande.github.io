@@ -32,7 +32,7 @@ this.form = this.formBuilder.group({
 
 Which did the trick, however... now my IDE bring up an error in the html template file:
 
-```typescript
+```html
 <form novalidate [formGroup]="form" (submit)="submit(form.value)"></form>
 
 <!-- Error message: Type FormGroupTyped<MyTypedInterface> is not assignable to type FormGroup -->

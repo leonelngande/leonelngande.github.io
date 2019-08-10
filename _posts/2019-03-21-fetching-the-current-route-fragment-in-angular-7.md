@@ -24,7 +24,6 @@ Here's my courses list ts file.
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {IExam} from '../../../@core/models/exam';
-import {takeWhile} from 'rxjs/operators';
 
 @Component({
   selector: 'xc-courses-list',
@@ -41,9 +40,8 @@ export class CoursesListComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.exams = this.route.snapshot.data.exams;
 
-    this.route.fragment.pipe(
-      takeWhile(_ => this.alive),
-    ).subscribe((fragment: string) => {
+    this.route.fragment
+    .subscribe((fragment: string) => {
       this.scrollToAnchor(fragment);
     });
   }
@@ -71,7 +69,7 @@ export class CoursesListComponent implements OnInit, OnDestroy {
 
 And the course list html file in which an id is set for each course category (exam) which can be scrolled to.
 
-```typescript
+```html
 <div class="container">
   <div class="text-center">
     <h3>All Courses/Subjects</h3>
