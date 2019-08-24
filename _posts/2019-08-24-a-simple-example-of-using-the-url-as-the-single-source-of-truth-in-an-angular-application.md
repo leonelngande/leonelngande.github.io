@@ -14,7 +14,7 @@ What we'll be building is a search bar component that pushes the search input to
 
 Here's a link to the [live demo](https://leonelngande.github.io/material-icons-offline/) as well as a link to the [Github repository](https://github.com/leonelngande/material-icons-offline).
 
-// Add working demo gif here
+![Working demo](/images/uploads/search.gif)
 
 Let's get started with the search bar component.
 
