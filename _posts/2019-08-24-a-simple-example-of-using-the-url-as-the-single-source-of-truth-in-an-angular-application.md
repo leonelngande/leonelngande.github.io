@@ -8,11 +8,11 @@ tags:
   - Angular
   - State Management
 ---
-Lately i've been trying to apply the concept of using the url as the single source of truth in Angular application I work on, and today I wrote some functionality that perfectly demonstrates this.
+Lately i've been trying to apply the concept of using the url as the single source of truth in Angular applications I work on. Today I wrote some functionality demonstrates this quite well.
 
-What we'll be building is an application with a search bar that pushes the search input to the url as a query parameter, and a sidebar for category selection which equally pushes the currently selected category to the url as a query parameter. 
+What we'll be building is a search bar component that pushes the search input to the url as a query parameter and on page reload, retrieves this value to restore the previous state. 
 
-Here's a link to the live demo as well as a link to the Github repository if you want to dive right into the code.
+Here's a link to the [live demo](https://leonelngande.github.io/material-icons-offline/) as well as a link to the [Github repository](https://github.com/leonelngande/material-icons-offline).
 
 // Add working demo gif here
 
