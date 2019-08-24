@@ -80,4 +80,6 @@ export class SearchBarComponent implements OnInit {
 
 Above, we're using Angular's two-way data binding to store the search input's value in `searchValue`. We equally have button to clear the search input when necessary.
 
- The interesting part is where we push the search value to the url in `updateSearchQueryParam` on model change. The function takes in the search value and uses the Angular Router to navigate to the current route with new query params, which will not reload the page, but will update query params.
+ The interesting part is where we push the search value to the url in `updateSearchQueryParam` on model change. The function takes in the search value and uses the Angular Router to navigate to the current route, adding or updating the `search` query parameter with the new searchValue, and without reloading the page.
+
+Here's a breakdown for each of the navigation extras passed to `router.navigate`:
