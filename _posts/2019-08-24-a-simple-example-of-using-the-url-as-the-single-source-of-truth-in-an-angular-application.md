@@ -6,7 +6,7 @@ tags:
   - Angular
   - State Management
 ---
-Lately i've been trying to apply the concept of using the url as the single source of truth in Angular applications I work on. Today I wrote some functionality demonstrates this quite well.
+Lately i've been trying to apply the concept of using the url as the single source of truth in Angular applications I work on. Today I wrote some functionality that demonstrates this quite well.
 
 What we'll be building is a search bar component that pushes the search input to the url as a query parameter and on page reload, retrieves this value to restore the previous search state. 
 
