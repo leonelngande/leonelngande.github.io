@@ -78,6 +78,6 @@ export class SearchBarComponent implements OnInit {
 </form>
 ```
 
-Above, we're using Angular's two-way data binding to store the user's search value in `searchValue`. The interesting part is where on model change, we push the search value to the url in `updateSearchQueryParam`.
+Above, we're using Angular's two-way data binding to store the search input's value in `searchValue`. We equally have button to reset the search input The interesting part is where on model change, we push the search value to the url in `updateSearchQueryParam`.
 
 The function takes in the search value, and then uses the Angular Router to navigate to the current route with new query params, which will not reload the page, but will update query params.
