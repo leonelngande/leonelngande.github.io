@@ -1,9 +1,7 @@
 ---
 layout: post
 hidden: false
-title: >-
-  A Simple Example of Using the Url as the Single Source of Truth in an Angular
-  Application
+title: Using the Url as the Single Source of Truth in an Angular Application
 tags:
   - Angular
   - State Management
