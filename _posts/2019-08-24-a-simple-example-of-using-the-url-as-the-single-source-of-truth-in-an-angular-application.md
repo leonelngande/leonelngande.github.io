@@ -8,7 +8,7 @@ tags:
   - Angular
   - State Management
 ---
-Lately i've been trying to apply the concept of using the url as a single source of truth in Angular application I work on, and today I wrote some functionality that perfectly demonstrates this.
+Lately i've been trying to apply the concept of using the url as the single source of truth in Angular application I work on, and today I wrote some functionality that perfectly demonstrates this.
 
 What we'll be building is an application with a search bar that pushes the search input to the url as a query parameter, and a sidebar for category selection which equally pushes the currently selected category to the url as a query parameter. 
 
