@@ -39,3 +39,19 @@ Which did the trick, however... now my IDE bring up an error in the html templat
 ```
 
 I can live with this for now until the Angular Team adds strong typing to Reactive Forms, given am aware of the cause. Please share your thoughts in the comments below, or on [Twitter](https://twitter.com/leonelngande).
+
+Update September 4th, 2019:
+
+I found  an easy workaround for the template error. Simple create a getter that returns the typed form cast as a FormGroup, which would cause Angular to complain no more in the template.
+
+```typescript
+  get untypedForm() {
+    return this.form as FormGroup;
+  }
+```
+
+```html
+<form novalidate [formGroup]="untypedForm" (submit)="submit(form.value)"></form>
+
+<!-- No more error message in form template -->
+```
