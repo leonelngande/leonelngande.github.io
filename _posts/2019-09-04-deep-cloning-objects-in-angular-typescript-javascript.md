@@ -24,7 +24,7 @@ Object destructuring with the spread operator (i.e. Object.assign) for objects `
 
 I am currently taking the [Angular Architecture and Best Practices](https://www.pluralsight.com/courses/angular-architecture-best-practices) course on Pluralsight and [@DanWahlin](https://twitter.com/DanWahlin) (it's author) mentions a really cool and lightweight library for achieving just this: [clone](https://github.com/pvorb/clone).
 
-It's a single javascript file, no dependencies and at the time of writing has over 607M downloads!
+It offers foolproof deep cloning of objects, arrays, numbers, strings, maps, sets, promises, etc. in JavaScript, has 0 dependencies and at the time of writing has over 607M downloads!
 
 To install it, simple run `npm install clone`, just follow the [readme](https://github.com/pvorb/clone) for more usage notes 🙂.
 
@@ -52,7 +52,5 @@ And a (quite trivial) usage example:
         const cloneOfObjectA = this.clonerService.deepClone(this.objectA);
     }
 ```
-
-
 
 Hopefully this helps in your deep cloning adventures, happy coding!
