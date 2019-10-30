@@ -11,6 +11,10 @@ While working on [Xamcademy](https://xamcademy.com), I've had the need to extrac
 
 **1 - Extracting the Validation Errors**
 
+For reference, here's a sample error response:
+
+![Laravel API response for invalid form request](/images/uploads/user-edit-error-response.png)
+
 Here's the utility function:
 
 ```typescript
@@ -294,6 +298,8 @@ Let's now see what the template for this component can look like.
 </form>
 ```
 
-FYI, using Bootstrap 4 as CSS framework.
+FYI, using Bootstrap 4 as CSS framework. Here's a preview for the errors in the error response image at the start of the post.
 
-With that we conclude this blog post, and hope this is useful to you in some way 🙌.
+![Error messages preview](/images/uploads/error-messages-preview.png)
+
+With that we've come to the end of this blog post, and hope this is useful to you in some way 🙌.
