@@ -216,4 +216,8 @@ Checkout the [demo application](https://leonelngande.github.io/angular-retry-fai
 
 ![preview of retry buttons](/images/uploads/screenshot_2019-11-25-retry-failed-requests-from-ui-2-.png)
 
-Also notice as soon as you reconnect to the internet, the offline icon and text are hidden. Clicking on the `Try Again` button re-triggers the (appropriate) http request and should it succeed, the Try Again button button is hidden.
+Also notice as soon as you reconnect to the internet, the offline icon and text are hidden.
+
+![preview of hidden offline text and icon](/images/uploads/screenshot_2019-11-25-retry-failed-requests-from-ui-3-.png)
+
+Clicking on the `Try Again` button re-triggers the (appropriate) http request and should it succeed, the Try Again button button is hidden.
