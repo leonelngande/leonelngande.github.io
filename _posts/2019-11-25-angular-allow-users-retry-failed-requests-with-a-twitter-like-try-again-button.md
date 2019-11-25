@@ -4,10 +4,6 @@ hidden: false
 title: >-
   Angular: Allow Users Retry Failed Requests With A Twitter-Like Try Again
   Button
-image: 
-  path: /images/uploads/screencapture-twitter-home-2019-11-25-19_17_03.png
-  thumbnail: /images/uploads/screencapture-twitter-home-2019-11-25-19_17_03.png
-  caption: "Twitter homepage with internet disconnected"
 tags:
   - Angular
   - Retry Failed Requests
@@ -103,8 +99,6 @@ In the template, we display a `message`, as well as a `Try Again` button which w
 **3. Use the component to retry failed requests** 
 
 For this demo, we're going to fetch Post and Todo items using the [JSONPlaceholder](https://jsonplaceholder.typicode.com/guide.html) API. We'll display them in seperate 'boxes' in the UI, adding our above retry button for each resource.
-
-![preview of posts and todos boxes](/images/uploads/screenshot_2019-11-25-retry-failed-requests-from-ui-1-.png)
 
 ```typescript
 import {Component, OnInit} from '@angular/core';
@@ -216,12 +210,4 @@ export class AppComponent implements OnInit {
 
 In the component, we keep track of failed requests with `fetchPostsFailed` and `fetchTodosFailed` for posts and todos respectively. We then use them in the template to determine if a request has failed and show the retry button.
 
-Checkout the [demo application](https://leonelngande.github.io/angular-retry-failed-requests-from-ui/), and while on the page, disconnect from the internet, then click any of the `Reload` buttons to see the Try Again button appear.
-
-![preview of retry buttons](/images/uploads/screenshot_2019-11-25-retry-failed-requests-from-ui-2-.png)
-
-Also notice as soon as you reconnect to the internet, the offline icon and text are hidden.
-
-![preview of hidden offline text and icon](/images/uploads/screenshot_2019-11-25-retry-failed-requests-from-ui-3-.png)
-
-Clicking on the `Try Again` button re-triggers the (appropriate) http request and should it succeed, the Try Again button button is hidden.
+Checkout the [demo application](https://leonelngande.github.io/angular-retry-failed-requests-from-ui/), and while on the page, disconnect from the internet, then click any of the `Reload` buttons to see the Try Again button appear. Also notice as soon as you reconnect to the internet, the offline icon and text are hidden. Clicking on the `Try Again` button re-triggers the (appropriate) http request and should it succeed, the Try Again button button is hidden.
