@@ -4,6 +4,10 @@ hidden: false
 title: >-
   Angular: Allow Users Retry Failed Requests With A Twitter-Like Try Again
   Button
+image: 
+  path: /images/uploads/screencapture-twitter-home-2019-11-25-19_17_03.png
+  thumbnail: /images/uploads/screencapture-twitter-home-2019-11-25-19_17_03.png
+  caption: "Twitter homepage with internet disconnected"
 tags:
   - Angular
   - Retry Failed Requests

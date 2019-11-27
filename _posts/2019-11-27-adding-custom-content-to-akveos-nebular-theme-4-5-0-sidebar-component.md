@@ -2,6 +2,10 @@
 layout: post
 hidden: false
 title: Adding Custom Content To Akveo's @nebular/theme 4.5.0 Sidebar Component
+image: 
+  path: /images/uploads/akveo-nebular.jpg
+  thumbnail: /images/uploads/akveo-nebular.jpg
+  caption: "Akveo Nebular 4.0"
 tags:
   - Angular
   - Nebular UI Kit
@@ -70,8 +74,10 @@ Notice my `xc-footer` in the above sample. I was trying to add a footer to the s
 
 ```css
 nb-menu {
-  // Assuming here the footer (xc-footer) is directly below nb-menu
-  // Push the footer a good distance below the menu.
+  /**
+    * Assuming here the footer (xc-footer) is directly below nb-menu
+    * Push the footer a good distance below the menu.
+    */
   padding-bottom: 3.5rem;
 }
 ```
