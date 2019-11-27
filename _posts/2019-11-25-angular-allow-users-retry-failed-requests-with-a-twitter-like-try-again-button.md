@@ -11,6 +11,7 @@ image:
 tags:
   - Angular
   - Retry Failed Requests
+author: Leonel Elimpe
 ---
 While using the Twitter web app, I noticed it displays a `Try Again` button for failed requests in different sections of the user interface. This allows the user retry each failed request without affecting the rest of the application, quite neat.
 

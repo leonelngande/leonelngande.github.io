@@ -7,7 +7,7 @@ tags:
   - Array.reduce()
   - Object Creation
   - Functional Programming
-
+author: Leonel Elimpe
 ---
 So I had this situation today where data to be exported had to be dynamically assigned Header Names (Excel export). Am using the Infragistics Angular [Excel Exporter](https://www.infragistics.com/products/ignite-ui-angular/angular/components/exporter_excel.html).
 

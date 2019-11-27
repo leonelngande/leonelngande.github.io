@@ -5,6 +5,7 @@ title: Using the Url as the Single Source of Truth in an Angular Application
 tags:
   - Angular
   - State Management
+author: Leonel Elimpe
 ---
 Lately i've been trying to apply the concept of using the url as the single source of truth in Angular applications I work on. Today I wrote some functionality that demonstrates this quite well.
 

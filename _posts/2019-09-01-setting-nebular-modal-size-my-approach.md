@@ -6,6 +6,7 @@ tags:
   - Angular
   - Nebular
   - NbDialogService
+author: Leonel Elimpe
 ---
 I've had this longstanding issue with setting the size of modals created with [NbDialogService](https://akveo.github.io/nebular/docs/components/dialog/overview#nbdialogservice).
 

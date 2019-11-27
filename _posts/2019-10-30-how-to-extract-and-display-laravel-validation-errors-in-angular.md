@@ -6,6 +6,7 @@ tags:
   - Angular
   - Laravel
   - Laravel Validation Errors
+author: Leonel Elimpe
 ---
 While working on [Xamcademy](https://xamcademy.com), I've had the need to extract and display form validation errors returned by the Xamcademy API which is powered by [Laravel](https://laravel.com). I wrote a utility function a while back which I forgot about, and remembered while trying to write something similar today.
 

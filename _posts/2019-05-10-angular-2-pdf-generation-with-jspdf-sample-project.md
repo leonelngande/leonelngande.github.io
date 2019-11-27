@@ -6,6 +6,7 @@ tags:
   - Angular
   - jsPDF
   - PDF Generation with Angular
+author: Leonel Elimpe
 ---
 I may flesh this out with a detailed post later, but if you have any questions or encounter any issues feel free to reach out to me.
 

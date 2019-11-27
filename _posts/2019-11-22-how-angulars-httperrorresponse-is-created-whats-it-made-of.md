@@ -5,6 +5,7 @@ title: 'How Angular''s HttpErrorResponse is Created, What''s It Made Of?'
 tags:
   - Angular
   - HttpErrorResponse
+author: Leonel Elimpe
 ---
 This is mostly pulled from [this article](https://www.tektutorialshub.com/angular/angular-http-error-handling/) I recently read on [Angular Http Error Handling](https://www.tektutorialshub.com/angular/angular-http-error-handling/), full credits to it's original author [TEKTUTORIALSHUB](https://www.tektutorialshub.com/).
 

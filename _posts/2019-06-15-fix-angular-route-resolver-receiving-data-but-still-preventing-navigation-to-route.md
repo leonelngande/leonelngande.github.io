@@ -6,7 +6,7 @@ hidden: false
 tags:
   - Angular
   - Router Resolver
-
+author: Leonel Elimpe
 ---
 Ever had this issue where for some reason you can't navigate to a route even though everything seems ok, and the route's data resolvers are all executing?
 

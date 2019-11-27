@@ -6,6 +6,7 @@ tags:
   - Angular
   - '*ngFor'
   - trackBy
+author: Leonel Elimpe
 ---
 > trackBy is a function which will return a unique identifier for each item in the array provided to *ngFor. 
 >

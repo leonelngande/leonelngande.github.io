@@ -6,6 +6,7 @@ tags:
   - Angular
   - Bootstrap 4
   - SCSS
+author: Leonel Elimpe
 ---
 FYI, this is a to the point guide on adding and Bootstrap 4 styles (scss) to an Angular project.
 

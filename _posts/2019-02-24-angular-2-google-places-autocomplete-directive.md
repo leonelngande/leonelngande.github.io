@@ -2,7 +2,11 @@
 layout: post
 hidden: false
 title: Angular 2+ Google Places Autocomplete directive
-tags: []
+tags:
+  - Angular
+  - Google Places Autocomplete
+  - Directives
+author: Leonel Elimpe
 ---
 ```typescript
 /// <reference types="@types/googlemaps" />

@@ -6,6 +6,7 @@ title: Using the html `<time></time>` element with Angular
 tags:
   - Angular
   - html time
+author: Leonel Elimpe
 ---
 > `<time [dateTime]="'2019-08-09 16:22:20'">8/9/2019</time>`
 

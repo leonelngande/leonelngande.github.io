@@ -6,6 +6,7 @@ tags:
   - Angular
   - Proxy Redirect
   - Angular CLI
+author: Leonel Elimpe
 ---
 Wouldn't it be great if instead of doing `ng serve --proxy-config proxy.conf.js` you simply use `ng serve` and the Angular CLI takes care of the proxy redirect command? Well, you can.
 

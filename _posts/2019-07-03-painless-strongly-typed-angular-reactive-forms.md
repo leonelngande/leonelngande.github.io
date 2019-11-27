@@ -5,6 +5,7 @@ tags:
   - Angular
   - Strongly Typed Reactive Forms
   - Reactive Forms
+author: Leonel Elimpe
 ---
 A few days back while looking into strongly typing reactive forms in Angular, I came across [this post](https://alex-klaus.com/stongly-typed-angular-forms/) by [Alex Klaus](https://twitter.com/_AlexKlaus). Given reactive forms don't currently support strong typing (see issues [\#13721](https://github.com/angular/angular/issues/13721) and [\#17000](https://github.com/angular/angular/issues/17000)), he suggests making use of [Daniele Morosinotto](https://twitter.com/dmorosinotto) solution which involves leveraging Typescript declaration files (`*.d.ts`) .
 

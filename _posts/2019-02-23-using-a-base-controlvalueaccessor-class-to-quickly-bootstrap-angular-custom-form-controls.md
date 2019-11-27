@@ -8,6 +8,7 @@ tags:
   - Angular
   - ControlValueAccessor
   - Custom Form Control
+author: Leonel Elimpe
 ---
 Having created a good number of custom form controls in Angular, it always felt repetitive implementing the ControlValueAccessor interface in each custom component.
 

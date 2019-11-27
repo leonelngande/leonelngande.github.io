@@ -10,6 +10,7 @@ tags:
   - Directions Service
   - Directions Renderer
   - Waypoints
+author: Leonel Elimpe
 ---
 A few months back while working on a location based taxi calling app, I had to build in functionality to render the route from the user's location to the selected or searched listing on the map. 
 

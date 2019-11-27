@@ -7,6 +7,7 @@ tags:
   - Deep Cloning Objects
   - Typescript
   - Javascript
+author: Leonel Elimpe
 ---
 Some of the techniques for cloning objects in Javascript are either using [object destructuring](https://javascript.info/destructuring-assignment) or a combination of [JSON.stringify()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) and [JSON.parse()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse).
 

@@ -6,6 +6,7 @@ tags:
   - Angular
   - agGrid
   - agGrid Checkbox Selection
+author: Leonel Elimpe
 ---
 From the agGrid [documentation](https://www.ag-grid.com/javascript-grid-selection/#header-checkbox-selection), 
 

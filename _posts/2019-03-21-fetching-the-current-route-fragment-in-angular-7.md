@@ -5,6 +5,7 @@ title: Fetching the Current Route Fragment in Angular 7
 tags:
   - Angular
   - Fragment Navigation
+author: Leonel Elimpe
 ---
 I've spent a few hours trying to get fragment navigation working properly for a use case on Xamcademy (https://xamcademy.com).
 

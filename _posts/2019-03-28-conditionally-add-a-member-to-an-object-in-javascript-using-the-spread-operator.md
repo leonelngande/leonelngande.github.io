@@ -7,6 +7,7 @@ title: >-
 tags:
   - Spread Operator
   - Javascript
+author: Leonel Elimpe
 ---
 Say you have an object you'd like to conditionally add a member to, here's a neat little trick to do it with the spread operator.
 
