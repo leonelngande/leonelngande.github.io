@@ -20,7 +20,7 @@ title: "Leonel Elimpe"
 description: "Angular Developer specialized in creating data-rich UI's/applications."
 baseurl: # the subpath of your site, e.g. "/blog"
 url: "https://www.leonelngande.com"# the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-logo: "assets/images/profile.jpg"
+logo: "assets/images/ngande-consulting.png"
 date_format: "%B %-d, %Y"
 read_time: true
 words_per_minute: # 200
