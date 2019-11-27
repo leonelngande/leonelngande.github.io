@@ -10,6 +10,7 @@ tags:
   - Angular
   - Nebular UI Kit
   - nb-sidebar
+author: Leonel Elimpe
 ---
 So I've been working with Akveo's [Nebular UI Kit](https://akveo.github.io/nebular/) for a while now and it's been a real issue adding custom content to `nb-sidebar`.
 

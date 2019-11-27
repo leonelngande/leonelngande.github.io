@@ -9,6 +9,12 @@ Leonel Elimpe:
     - title: Twitter
       url: https://twitter.com/leonelngande
       icon: fab fa-twitter-square
+    - title: LinkedIn
+      url: https://www.linkedin.com/in/leonel-elimpe/
+      icon: fab fa-linkedin
+    - title: Mail
+      url: mailto:leonelngande@leonelngande.com
+      icon: fas fa-envelope-square
 
 Cornelius Fiddlebone:
   name: Cornelius Fiddlebone
