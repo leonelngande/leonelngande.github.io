@@ -17,7 +17,7 @@
 remote_theme: mmistakes/so-simple-theme
 locale: en-US
 title: "Leonel Elimpe"
-description: "Angular Developer specialized in creating data-rich UI's/applications."
+description: "I Help Business Actors Build Angular Apps."
 baseurl: # the subpath of your site, e.g. "/blog"
 url: "https://www.leonelngande.com"# the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 logo: "assets/images/ngande-consulting.png"
@@ -105,6 +105,18 @@ author:
 
 # Footer Links
 footer_links:
+  - title: Twitter
+    url: https://twitter.com/leonelngande
+    icon: fab fa-twitter-square
+  - title: LinkedIn
+    url: https://www.linkedin.com/in/leonel-elimpe/
+    icon: fab fa-linkedin
+#  - title: "leonelngande's DEV Profile"
+#    url: https://dev.to/leonelngande
+#    icon: fab fa-dev
+  - title: Mail
+    url: mailto:info@leonelngande.com
+    icon: fas fa-envelope-square
   - title: Feed
     url: atom.xml
     icon: fas fa-rss-square
