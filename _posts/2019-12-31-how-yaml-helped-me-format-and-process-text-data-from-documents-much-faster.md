@@ -29,11 +29,11 @@ Summarily,
 * `Exam Providers` are exam issuing bodies (like the Cameroon General Certificate of Education Board). Each exam provider can issue many exams, e.g the Cameroon GCE Advanced Level and Ordinary Level examinations.
 * `Exam`s may or may not belong to exam providers, and can have many `Courses`. Courses here represent the various subjects in an exam, e.g Biology, Chemistry, Computer Science, and Physics subjects in the Cameroon GCE Advanced Level Examination.
 
-  `Courses` can have many `Exam Session`s, which represent the various times the exam was written (e.g in 2017, 2018, and 2019).
+* `Courses` can have many `Exam Session`s, which represent the various times the exam was written (e.g in 2017, 2018, and 2019).
 
-  `Exam Session`s can have many `Exam Section`s, which represent various sections in the exam questions paper, e.g Section A, Section B, and Section C in the above document.
+* `Exam Session`s can have many `Exam Section`s, which represent various sections in the exam questions paper, e.g Section A, Section B, and Section C in the above document.
 
-  E`xam Section`s can contain sub `Exam Section`s. They can have many `Exam Section Question`s as well as a `Question Type`.
+* `Exam Section`s can contain sub `Exam Section`s. They can have many `Exam Section Question`s as well as a `Question Type`.
 
 #### Initial Solution to storing this data for later processing.
 
