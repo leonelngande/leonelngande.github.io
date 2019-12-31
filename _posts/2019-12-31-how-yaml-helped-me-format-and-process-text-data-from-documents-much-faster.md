@@ -2,6 +2,9 @@
 layout: post
 hidden: false
 title: How YAML Helped Me Format and Process Text Data From Documents Much Faster
+image: 
+  path: /images/uploads/yaml-icon-cover.png
+  thumbnail: /images/uploads/yaml-icon-cover.png
 tags:
   - YAML
   - Text Processing
