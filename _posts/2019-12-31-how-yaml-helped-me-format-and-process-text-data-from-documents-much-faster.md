@@ -14,7 +14,11 @@ I'm working on a site which requires extraction of text data (past questions) fr
 
 A typical question paper looks like this PDF document: 
 
-ADD PDF DOCUMENT HERE
+<object data="https://www.leonelngande.com/uploads/economics-gce-advanced-level-paper-2-2015.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="https://www.leonelngande.com/uploads/economics-gce-advanced-level-paper-2-2015.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://www.leonelngande.com/uploads/economics-gce-advanced-level-paper-2-2015.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
 
 And the database schema looks something like this:
 
@@ -86,7 +90,6 @@ Section: SECTION C
 9. What factors will a manager take into consideration when setting the price of a product? (20 marks)
 
 10. Examine the benefits and costs of multinational companies to the economy of Cameroon. (20 marks)
-
 ```
 
 The idea was to read each line of the file, identify what it represents by scanning for specific keys in the line, as well as what it falls under by counting the number of tabs in relation to it's parent.
@@ -372,7 +375,6 @@ class ImportYamlExamDocument extends Command
         return $question;
     }
 }
-
 ```
 
 #### Final thoughts.
