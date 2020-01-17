@@ -1,8 +1,10 @@
 ---
 layout: post
 hidden: false
-title: How I Inject/Pass Additional Parameters Into Angular Services
-tags: []
+title: How I Inject/Pass Additional Parameters Into Angular Service Constructors
+tags:
+  - Angular
+  - Dependency Injection
 ---
 I haven't had a use case before for passing additional parameters to an Angular service so didn't look much into it. Also I've seen @Inject used in a lot of codebases but only understood today how to properly use it.
 
@@ -14,7 +16,6 @@ Let's say we're writing a service which requires the id of a specific element in
 
 ```typescript
 import {Inject, Injectable} from '@angular/core';
-
 
 @Injectable({
   providedIn: 'root'
@@ -48,7 +49,6 @@ How do we go about properly passing in the id to the service? Here's how.
 
 ```typescript
 import {Inject, Injectable} from '@angular/core';
-
 
 @Injectable({
   providedIn: 'root'
