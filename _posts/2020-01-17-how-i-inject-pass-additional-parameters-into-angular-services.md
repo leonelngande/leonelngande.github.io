@@ -2,6 +2,9 @@
 layout: post
 hidden: false
 title: Passing Additional Parameters To An Angular Service
+image: 
+  path: /images/uploads/angular-cover-inverted.png
+  thumbnail: /images/uploads/angular-cover-inverted.png
 tags:
   - Angular
   - Dependency Injection
