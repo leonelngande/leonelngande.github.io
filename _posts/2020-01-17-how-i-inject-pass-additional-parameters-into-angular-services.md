@@ -35,12 +35,12 @@ Our example component:
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-example',
   template: `
     <div id="recaptcha-container"></div>
   `,
 })
-export class AppComponent {
+export class ExampleComponent {
 
   constructor() { }
 
