@@ -262,12 +262,12 @@ Let's now see what the template for this component can look like.
     
     <div *ngIf="formStatus.canShowErrors()" class="alert alert-danger" role="alert">
       <div><strong>Oops!</strong></div>
-      <div *ngFor="let error of formStatus.errors">{{ error }}</div>
+      <div *ngFor="let error of formStatus.errors">{% raw %}{{ error }}{% endraw %}</div>
     </div>
     
     <div *ngIf="formStatus.canShowSuccess()" class="alert alert-success" role="alert">
       <div><strong>Success!</strong></div>
-      <div *ngFor="let message of formStatus.messages">{{ message }}</div>
+      <div *ngFor="let message of formStatus.messages">{% raw %}{{ message }}{% endraw %}</div>
     </div>
     
   </ng-container>
