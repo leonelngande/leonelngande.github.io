@@ -9,7 +9,7 @@ tags:
 ---
 The past couple of weeks I've been adding new functionality to an API and today began updating the Angular front-end application to reflect these changes.
 
-Am just now realizing how much work I have writing interfaces, services, etc (makes one think more about automation). Luckily I found this library for auto generating typescript interfaces directly from the MySQL database, [Schemats](github.com/sweetiq/schemats).
+Am just now realizing how much work I have writing interfaces, services, etc (makes one think more about automation). Luckily I found this library for auto generating typescript interfaces directly from the MySQL database, [Schemats](https://github.com/sweetiq/schemats).
 
 Using Schemats, you can generate TypeScript interface definitions from (Postgres, MySQL) SQL database schema automatically.
 
