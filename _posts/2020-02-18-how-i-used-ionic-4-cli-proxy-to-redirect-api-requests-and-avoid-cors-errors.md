@@ -11,6 +11,8 @@ I recently refactored an Ionic Angular app that previously made use of jQuery to
 
 I went ahead and created the file `src/proxy.conf.json` and updated `angular.json` to incorporate the new proxy settings (more [here](https://angular.io/guide/build#proxying-to-a-backend-server)).
 
+First up creating `src/proxy.conf.json`.
+
 ```json
 {
   "/api/*": {
@@ -20,11 +22,13 @@ I went ahead and created the file `src/proxy.conf.json` and updated `angular.jso
     "pathRewrite": {"^/api" : ""}
   }
 }
-// src/proxy.conf.json
+
 ```
 
+Then updating `angular.json` by including the above proxy configuration.
+
 ```json
-// ...
+
 "architect": {
   "serve": {
     "builder": "@angular-devkit/build-angular:dev-server",
@@ -32,8 +36,7 @@ I went ahead and created the file `src/proxy.conf.json` and updated `angular.jso
       "browserTarget": "app:build",
       "proxyConfig": "src/proxy.conf.json"
     },
-// ...
-// angular.json
+
 ```
 
 I then adapted my service to the new proxy setting as below, replacing the previously used full api path with just /api).
@@ -61,7 +64,6 @@ export class JourneysService {
       ) as Observable<JourneyName>;
   }
 }
-
 ```
 
 To my surprise I still got the CORS error after testing. A couple more minutes searching Google and I found out Ionic has it's own CLI proxy - [Service Proxies](https://ionicframework.com/docs/v3/cli/configuring.html#service-proxies), meaning it doesn't use that of Angular under the hood. Ok.
@@ -83,7 +85,6 @@ Went ahead and configured it as follows inside `ionic.config.json`:
     }
   ]
 }
-
 ```
 
 Now it should work! :-) Ran `ionic serve`, didn't work, was still getting the CORS error as proxy redirect was for some reason not being triggered. Then tried `ionic serve --proxy-config src/proxy.conf.json`, still didn't work.
