@@ -7,7 +7,7 @@ tags:
   - Angular
   - API Redirect
 ---
-I recently refactored an Ionic Angular app that previously made use of jQuery to fetch data and update the view 😔. Having moved the API calls into dedicated services, all API requests we're blocked by the browser given the different origins (localhost vs external api url).
+I recently refactored an Ionic Angular app that previously made use of jQuery to fetch data and update the view 😔. Having moved the API calls into dedicated services, all API requests were blocked by the browser given the different origins (localhost vs external api url).
 
 I went ahead and created the file `src/proxy.conf.json` and updated `angular.json` to incorporate the new proxy settings (more [here](https://angular.io/guide/build#proxying-to-a-backend-server)).
 
