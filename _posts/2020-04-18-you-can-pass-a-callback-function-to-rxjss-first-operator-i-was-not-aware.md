@@ -11,8 +11,7 @@ My typical use-case for RxJS first() operator is to emit only the first item of 
 I recently found out you can pass in an optional callback function (predicate) just for this.
 
 > <b>[First](http://reactivex.io/documentation/operators/first.html)</b>\
-> <i>emit only the first item (or the first item that meets some condition) emitted by an Observable</i>.\
-> signature: `first(predicate: function, select: function)`
+> <i>emit only the first item (or the first item that meets some condition) emitted by an Observable</i>.
 
 `predicate` is a function you write to evaluate an expression and return true or false. You can have a look at it's source [here](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/first.ts).
 
