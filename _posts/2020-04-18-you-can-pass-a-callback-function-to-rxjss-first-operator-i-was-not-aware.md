@@ -2,6 +2,9 @@
 layout: post
 hidden: false
 title: You can pass a callback function to RxJS's first() operator, I was not aware!
+image:
+  path: /images/uploads/rxjs-first-operator-predicate-function-illustration.png
+  caption: rxjs first operator - predicate function illustration
 tags:
   - RxJS
   - Javascript
