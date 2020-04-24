@@ -3,6 +3,9 @@ layout: post
 hidden: false
 title: Configure Proxy Redirect with Scully - The Static Site Generator for
   Angular apps
+image:
+  path: /images/uploads/scullyio-proxy-configuration-cover.png
+  caption: ScullyIO proxy configuration cover
 tags:
   - ScullyIO
   - Angular
@@ -34,7 +37,7 @@ Scully uses the same config format as [webpackDevServer](https://webpack.js.org/
 }
 ```
 
-What this means is we can pass our Angular app's already existent proxy configuration file and pass it to Scully, ensuring requests are properly redirected as Scully prerenders our pages.
+What this means is we can take our Angular app's already existent proxy configuration file and pass it to Scully, ensuring requests are properly redirected as Scully prerenders our routes.
 
 We can point Scully to our proxy configuration file in two ways.
 
