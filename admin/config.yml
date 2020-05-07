@@ -20,6 +20,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Series", name: "series", widget: "string", required: false}
       - {label: "Series Description", name: "series_description", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Author", name: "author", widget: "string" default: "Leonel Elimpe"}
       - label: "Featured Image"
         name: "image"
         widget: "object"
