@@ -1,10 +1,11 @@
 ---
 layout: post
 hidden: false
-title: >-
-  Debugging ScullyIO Rendering and Network Errors with help the help
+title: Debugging ScullyIO Rendering and Network Errors with the help of
   puppeteerLaunchOptions
-tags: []
+tags:
+  - Angular
+  - ScullyIO
 ---
 With my Angular app's Scully build broken due to proxy redirect issues, I was very happy today discovering we can control the underlying mechanism of rendering the pages to some degree.
 
@@ -23,9 +24,18 @@ exports.config = {
   projectName: "xamcademy",
   outDir: './dist/static',
 
+  /* ADD THESE */
   puppeteerLaunchOptions: {
     slowMo: 4000,
     devtools: true,
   },
 };
 ```
+
+Of course we have to use the [\--showBrowser](https://github.com/scullyio/scully/blob/master/docs/scully-cmd-line.md#showbrowser) option with the scully build command so we see the effect of the puppeteer launch options.
+
+So run your scully build command adding the showBrowser option: `npm run scully --showBrowser`. You'll now notice the addition of the Chrome devtools to each page scully is prerendering, as well as a noticeable slowdown of each page's rendering.
+
+With this slowdown, you have enough time to switch to the network tab and inspect the requests, hopefully finding the cause of the errors.
+
+Of course you can adjust the duration of the slowdown by increasing or reducing the value of `slowMo` above. That's it for this post, happy bug fixing!
