@@ -54,13 +54,13 @@ Putting it all together, we could have the following page structure.
 
 Now the fun part, using our above breakdown to create actual pages and components in Angular. We'll create a routable (lazy loaded) module page components out of the pages, and re-usable standard components out of the web parts.
 
-
-
 ### <a name="page-components"></a>Creating the pages
 
 With the Angular CLI, page components are routable components. To create our above pages, we'll run the following commands:
 
 When you create a page with the Angular CLI, 
+
+// TODO: Build a full app with instructions at this point, step by step. Like on the chrome extension with angular blog post. Show how to create a routable module, then a page component within that module. do this for each of our above pages. Then create standalone components as per Angular 9 (no registration in modules) for each of our web parts above.
 
 ### <a name="standard-components"></a>Creating the re-usable components
 
