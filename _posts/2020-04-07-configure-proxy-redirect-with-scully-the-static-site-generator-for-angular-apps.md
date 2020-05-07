@@ -9,6 +9,7 @@ image:
 tags:
   - ScullyIO
   - Angular
+author: Leonel Elimpe
 ---
 * [Introduction](#introduction) 
 * [Proxy Configuration with Scully](#proxy-configuration)

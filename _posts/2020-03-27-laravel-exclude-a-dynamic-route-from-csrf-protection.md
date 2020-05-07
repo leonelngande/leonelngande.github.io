@@ -5,6 +5,7 @@ title: 'Laravel: Exclude a Dynamic Route From CSRF Protection'
 tags:
   - Laravel
   - CSRF
+author: Leonel Elimpe
 ---
 Let's say you have the following dynamic web route and would like to [exclude it](https://laravel.com/docs/6.x/csrf#csrf-excluding-uris) from [csrf protection](https://laravel.com/docs/6.x/csrf) in your Laravel application:
 

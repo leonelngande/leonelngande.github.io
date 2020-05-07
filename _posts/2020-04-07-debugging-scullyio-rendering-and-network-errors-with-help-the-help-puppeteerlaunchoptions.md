@@ -6,6 +6,7 @@ title: Debugging ScullyIO Rendering and Network Errors with the help of
 tags:
   - Angular
   - ScullyIO
+author: Leonel Elimpe
 ---
 With my Angular app's Scully build broken due to proxy redirect issues, I was very happy today discovering we can control the underlying mechanism of rendering the pages to some degree.
 

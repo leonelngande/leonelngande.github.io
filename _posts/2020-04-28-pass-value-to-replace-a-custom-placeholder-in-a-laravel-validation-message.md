@@ -5,6 +5,7 @@ title: Pass Value to Replace a Custom Placeholder in a Laravel Validation Messag
 tags:
   - Laravel
   - PHP
+author: Leonel Elimpe
 ---
 Say you have the following validation message in the `custom` array of your language file - `resources/lang/xx/validation.php` - (or another location depending on your use case).
 

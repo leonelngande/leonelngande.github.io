@@ -6,6 +6,7 @@ tags:
   - Typescript
   - Databases
   - Automation
+author: Leonel Elimpe
 ---
 The past couple of weeks I've been adding new functionality to an API and today began updating the Angular front-end application to reflect these changes.
 

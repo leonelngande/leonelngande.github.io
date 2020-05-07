@@ -4,7 +4,10 @@ hidden: false
 title: >-
   Detect The Carrier/Mobile Network Of A Phone Number With Javascript, PHP,
   Java, C++, Ruby, etc
-tags: []
+tags:
+  - PHP
+  - Javascript
+author: Leonel Elimpe
 ---
 For a long time I've struggled with this problem, determining the Mobile Network a given phone number belongs to. Today I found out Google's [libphonenumber](https://github.com/google/libphonenumber) library (or any of it's [third party ports for other languages](https://github.com/google/libphonenumber#third-party-ports)) have this functionality built in.
 

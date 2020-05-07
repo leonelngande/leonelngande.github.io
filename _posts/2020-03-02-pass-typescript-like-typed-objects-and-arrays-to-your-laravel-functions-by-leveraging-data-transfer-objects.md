@@ -9,6 +9,7 @@ tags:
   - DTOs
   - PHP
   - Typescript
+author: Leonel Elimpe
 ---
 When working on a PHP codebase, one thing I really miss from the Typescript world is the ability to pass properly typed objects and array into functions.
 

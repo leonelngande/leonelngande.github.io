@@ -8,6 +8,7 @@ image:
 tags:
   - YAML
   - Text Processing
+author: Leonel Elimpe
 ---
 I'll start by saying YAML is awesome! It's like that thing you've been looking for but never knew existed, at least for my use case.
 

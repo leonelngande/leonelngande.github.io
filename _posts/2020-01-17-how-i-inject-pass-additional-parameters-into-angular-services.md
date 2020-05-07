@@ -9,6 +9,7 @@ tags:
   - Angular
   - Dependency Injection
   - Injection Token
+author: Leonel Elimpe
 ---
 If you want to pass additional parameters to an Angular service, what you are looking for is @Inject decorator. It helps you pass your parameters to the service through Angular's dependency injection mechanism.
 

@@ -5,6 +5,7 @@ title: Generating Unique Phone Numbers for Testing Purposes
 tags:
   - Testing
   - PHP
+author: Leonel Elimpe
 ---
 * [Background](#background)
 * [PHP Example](#in-php)

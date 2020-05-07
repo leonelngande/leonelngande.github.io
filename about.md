@@ -5,9 +5,11 @@ permalink: /about/
 entries_layout: grid
 ---
 
-Hey! I'm Leonel, an ailurophile (😸 🐈) and Front-end Developer focused on Angular.
+Hey! I'm Leonel, a cat lover 🐈 and Front-end Developer focused on Angular.
 
-I primarily work with business actors to build and deploy Angular applications (currently open for projects 🙂).
+I primarily focus on helping SMEs fully leverage the Angular platform in driving business value through web and mobile applications.
+
+I enjoy working with Angular, Ionic, the Google Maps Javascript API, Firebase, PWAs, RxJS, and Typescript. 
 
 When not working on client projects, I put time into building and improving [Xamcademy](https://xamcademy.com), my attempt at helping students better revise for examinations.
 

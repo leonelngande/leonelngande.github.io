@@ -17,7 +17,7 @@
 remote_theme: mmistakes/so-simple-theme
 locale: en-US
 title: "Leonel Elimpe"
-description: "I Help Business Actors Build Angular Apps."
+description: "Front-end Developer Focused on Angular."
 baseurl: # the subpath of your site, e.g. "/blog"
 url: "https://www.leonelngande.com"# the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 logo: "assets/images/ngande-consulting.png"

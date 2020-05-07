@@ -8,6 +8,7 @@ tags:
   - Angular
   - Renderer2
   - RendererFactory2
+author: Leonel Elimpe
 ---
 Here's how to dynamically create a `div`, set it's `id` property, and append it to the `body` element in an Angular service or component. I'll use the example of creating a recaptcha container div on the fly.
 

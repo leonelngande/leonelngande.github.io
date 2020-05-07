@@ -6,6 +6,7 @@ tags:
   - Ionic
   - Angular
   - API Redirect
+author: Leonel Elimpe
 ---
 I recently refactored an Ionic Angular app that previously made use of jQuery to fetch data and update the view 😔. Having moved the API calls into dedicated services, all API requests were blocked by the browser given the different origins (localhost vs external api url).
 

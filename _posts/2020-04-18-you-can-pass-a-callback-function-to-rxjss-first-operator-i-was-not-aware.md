@@ -8,6 +8,7 @@ image:
 tags:
   - RxJS
   - Javascript
+author: Leonel Elimpe
 ---
 My typical use-case for RxJS first() operator is to emit only the first item of an observable stream. What if you want the first value based on a certain condition instead? 
 
