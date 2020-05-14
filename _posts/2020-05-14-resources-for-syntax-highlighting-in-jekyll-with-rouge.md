@@ -41,3 +41,7 @@ Listed below are all available styles.
 * pastie
 * thankful_eyes
 * tulip
+
+To apply one of the styles, for example `monokai.sublime`, run the command:
+
+`rougify style monokai.sublime > syntax.css`
