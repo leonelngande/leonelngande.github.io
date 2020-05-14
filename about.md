@@ -5,9 +5,9 @@ permalink: /about/
 entries_layout: grid
 ---
 
-Hey! I'm Leonel, a cat lover 🐈 and Front-end Developer focused on Angular.
+Hey! am Leonel, a cat lover 🐈 and Front-end Developer.
 
-I primarily focus on helping SMEs fully leverage the Angular platform in driving business value through web and mobile applications.
+I primarily focus on helping small and medium sized enterprises fully leverage the Angular platform in driving business value through web and mobile applications.
 
 I enjoy working with Angular, Ionic, the Google Maps Javascript API, Firebase, PWAs, RxJS, and Typescript. 
 

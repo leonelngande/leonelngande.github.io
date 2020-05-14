@@ -20,7 +20,7 @@ title: "Leonel Elimpe"
 description: "Front-end Developer Focused on Angular."
 baseurl: # the subpath of your site, e.g. "/blog"
 url: "https://www.leonelngande.com"# the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-logo: "assets/images/ngande-consulting.png"
+logo: "/assets/images/profile.jpg"
 date_format: "%B %-d, %Y"
 read_time: true
 words_per_minute: # 200
@@ -35,6 +35,7 @@ disqus:
   shortname: leonelngande
 twitter:
   username: "leonelngande"
+  card: summary
 
 # Liquid
 liquid:
@@ -92,6 +93,12 @@ defaults:
     values:
       layout: post
       share: true
+  - scope:
+      path: ""
+      type: posts
+    values:
+      image:
+        path: /images/uploads/ngande-consulting-linkedin-cover.png
 
 # Site Author
 author:

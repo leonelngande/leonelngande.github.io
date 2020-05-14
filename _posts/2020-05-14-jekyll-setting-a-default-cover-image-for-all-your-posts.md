@@ -9,14 +9,14 @@ tags:
 ---
 This post assumes you're currently able to add an `image` to your post front matter, for example:
 
-```
+```yaml
 ---
 layout: post
 title: Example post title
 image: /assets/images/lorem-ipsum.png
 tags:
-  - Tag 1
-  - Tag 2
+  - A Tag 
+  - Another Tag
 author: Lorem Ipsum
 ---
 ```
@@ -25,7 +25,7 @@ A default cover image in this context refers to an image that appears above your
 
 To set a default cover image for all your posts, open the config.yml file at the root of your project, and add the following entry to the `defaults` front matter:
 
-```
+```yaml
 # ...
 
 # Front Matter Defaults

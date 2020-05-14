@@ -6,10 +6,11 @@ author: Leonel Elimpe
 tags:
   - Netlify CMS
   - Blogging
+  - Jekyll
 ---
 To specify a default value for Netlify CMS's `string` widget, add the `default` property to it's definition and assign it a value, as follows:
 
-```
+```yaml
 # ...
 
 collections:
