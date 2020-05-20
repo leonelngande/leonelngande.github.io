@@ -13,7 +13,7 @@ tags:
 ---
 ## Demo and source code
 
-You can view a working demo [here](leonelngande.github.io/lazy-loaded-ionic-5-image-cropping-modal-component/), as well as the source code on [Github](https://github.com/leonelngande/lazy-loaded-ionic-5-image-cropping-modal-component).
+You can view a working demo [here](https://leonelngande.github.io/lazy-loaded-ionic-5-image-cropping-modal-component/home), as well as the source code on [Github](https://github.com/leonelngande/lazy-loaded-ionic-5-image-cropping-modal-component).
 
 ## Introduction
 
