@@ -4,6 +4,9 @@ hidden: false
 title: Creating a Lazy Loaded Image Cropping Modal Component with Ionic 5 and
   ngx-image-cropper
 author: Leonel Elimpe
+image:
+  path: /images/uploads/image-cropper-cover.png
+  thumbnail: /images/uploads/image-cropper-cover.png
 tags:
   - Ionic
   - Angular
