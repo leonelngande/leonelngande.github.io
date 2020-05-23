@@ -1,7 +1,7 @@
 ---
 layout: post
 hidden: false
-title: Laravel Middleware to Set App Locale to Passed In Parameter Value
+title: Laravel Middleware to Set App Locale to Passed In Value
 author: Leonel Elimpe
 tags:
   - Laravel
