@@ -100,7 +100,8 @@ class CreateReviewController extends Controller
 {
     public function __construct()
     {
-      //
+        $lang = 'fr'; // You may add logic to dynamically get the lang key here
+        $this->middleware("setLocale:$lang");
     }
 
     /**
@@ -109,15 +110,11 @@ class CreateReviewController extends Controller
      * @return \Response
      */
     public function __invoke(Request $request)
-    {
-        $lang = 'fr'; // You may add logic to dynamically get the lang key here
-        $this->middleware("setLocale:$lang");
-        
-        // Other controller logic and response follow ..
+    {   
+        // Controller logic and response ..
     }
 
 }
-
 ```
 
 ## Tests
