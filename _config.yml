@@ -17,7 +17,7 @@
 remote_theme: mmistakes/so-simple-theme
 locale: en-US
 title: "Leonel Elimpe"
-description: "I'm a Cameroon 🇨🇲 based freelance web developer currently focusing on Angular."
+description: "I'm a Cameroon 🇨🇲 based freelance web developer currently focused on Angular."
 baseurl: # the subpath of your site, e.g. "/blog"
 url: "https://www.leonelngande.com"# the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 logo: "/assets/images/profile.jpg"
