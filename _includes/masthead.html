@@ -15,4 +15,9 @@
       <p class="site-description animated fadeIn" itemprop="description">{{ site.description }}</p>
     {% endunless %}
   </div>
+
+  {% if page.url == '/' %}
+    {% include social-icons.html %}
+  {% endif %}
+
 </header><!-- /.masthead -->
