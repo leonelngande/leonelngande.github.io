@@ -17,7 +17,7 @@
 remote_theme: mmistakes/so-simple-theme
 locale: en-US
 title: "Leonel Elimpe"
-description: "Front-end Developer Focused on Angular."
+description: "I'm a Cameroon 🇨🇲 based freelance web developer currently focusing on Angular."
 baseurl: # the subpath of your site, e.g. "/blog"
 url: "https://www.leonelngande.com"# the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 logo: "/assets/images/profile.jpg"
@@ -113,18 +113,21 @@ author:
 
 # Footer Links
 footer_links:
-  - title: Twitter
+  - title: Leonel on Twitter
     url: https://twitter.com/leonelngande
     icon: fab fa-twitter-square
-  - title: LinkedIn
+  - title: Leonel on LinkedIn
     url: https://www.linkedin.com/in/leonel-elimpe/
     icon: fab fa-linkedin
-#  - title: "leonelngande's DEV Profile"
-#    url: https://dev.to/leonelngande
-#    icon: fab fa-dev
-  - title: Mail
+  - title: Leonel on Github
+    url: https://github.com/leonelngande
+    icon: fab fa-github
+  - title: Leonel on Skype
+    url: skype:leonelngande
+    icon: fab fa-skype
+  - title: Leonel via Mail
     url: mailto:info@leonelngande.com
     icon: fas fa-envelope-square
-  - title: Feed
+  - title: RSS Feed
     url: atom.xml
     icon: fas fa-rss-square
