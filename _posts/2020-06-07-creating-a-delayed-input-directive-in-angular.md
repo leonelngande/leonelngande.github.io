@@ -24,6 +24,8 @@ tags:
 
 Here's a link to the [demo](https://leonelngande.github.io/ng-delayed-input-demo/), and source code on [Github](https://github.com/leonelngande/ng-delayed-input-demo).
 
+![](https://www.leonelngande.com/images/uploads/delayed-input.gif)
+
 ## <a name="introduction"></a>Introduction
 
 Imagine in your app there's a search input which triggers an http request on each keystroke as a user types in their query. As your userbase grows, search operations quickly become expensive due to the increased traffic to your server. 
