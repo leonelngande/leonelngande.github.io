@@ -6,19 +6,19 @@ author: Leonel Elimpe
 tags:
   - Angular
 ---
-[Demo and source code](#demo)
+* [Demo and source code](#demo)
 
-[Introduction](#introduction)
+* [Introduction](#introduction)
 
-[Generating the directive](#generating-the-directive)
+* [Generating the directive](#generating-the-directive)
 
-[Adding functionality](#adding-functionality)
+* [Adding functionality](#adding-functionality)
 
-[Usage example](#usage-example)
+* [Usage example](#usage-example)
 
-[Further reading](#further-reading)
+* [Further reading](#further-reading)
 
-[Special thanks](#thanks)
+* [Special thanks](#thanks)
 
 ## <a name="demo"></a>Demo and source code
 
