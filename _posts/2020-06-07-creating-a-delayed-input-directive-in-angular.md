@@ -203,25 +203,16 @@ export class AppComponent {
 
 ## <a name="further-reading"></a>Further reading
 
-- [Attribute Directives in Angular](https://angular.io/guide/attribute-directives)
-
-- [RxJS Subject](https://www.learnrxjs.io/learn-rxjs/subjects/subject)
-
-- [RxJS debounce operator](https://www.learnrxjs.io/learn-rxjs/operators/filtering/debounce)
-
-- [RxJS timer operator](https://www.learnrxjs.io/learn-rxjs/operators/creation/timer)
-
-- [RxJS distinctUntilChanged operator](https://www.learnrxjs.io/learn-rxjs/operators/filtering/distinctuntilchanged)
-
-- [RxJS takeWhile operator](https://www.learnrxjs.io/learn-rxjs/operators/filtering/takewhile)
-
-- [EventEmitter in Angular](https://angular.io/api/core/EventEmitter)
-
-- [The HostListener Decorator in Angular](https://angular.io/api/core/HostListener)
-
-- [The Input Decorator in Angular](https://angular.io/api/core/Input)
-
-- [The Output Decorator in Angular](https://angular.io/api/core/Output)
+1. [Angular - Attribute Directives](https://angular.io/guide/attribute-directives)
+2. [Subject - Learn RxJS](https://www.learnrxjs.io/learn-rxjs/subjects/subject)
+3. [debounce - Learn RxJS](https://www.learnrxjs.io/learn-rxjs/operators/filtering/debounce)
+4. [timer - Learn RxJS](https://www.learnrxjs.io/learn-rxjs/operators/creation/timer)
+5. [distinctUntilChanged - Learn RxJS](https://www.learnrxjs.io/learn-rxjs/operators/filtering/distinctuntilchanged)
+6. [takeWhile - Learn RxJS](https://www.learnrxjs.io/learn-rxjs/operators/filtering/takewhile)
+7. [Angular - EventEmitter](https://angular.io/api/core/EventEmitter)
+8. [Angular - HostListener](https://angular.io/api/core/HostListener)
+9. [Angular - Input](https://angular.io/api/core/Input)
+10. [Angular - Output](https://angular.io/api/core/Output)
 
 
 
