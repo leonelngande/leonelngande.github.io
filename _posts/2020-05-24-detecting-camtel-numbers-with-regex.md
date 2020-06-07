@@ -3,10 +3,43 @@ layout: post
 hidden: false
 title: Detecting CAMTEL Numbers with Regex
 author: Leonel Elimpe
+image:
+  path: /images/uploads/using-a-regex-to-detect-camtel-numbers.png
+  thumbnail: /images/uploads/using-a-regex-to-detect-camtel-numbers.png
 tags:
   - regex
   - PHP
+  - CAMTEL
 ---
+```php
+ <?php
+
+    /**
+     * Uses regex to determine if a number belongs to the CAMTEL network.
+     * Here's what CAMTEL numbers look like:
+     *      222 XX XX XX (fixed line camtel numbers)
+     *      233 XX XX XX (fixed line camtel numbers)
+     *      242 XX XX XX (CDMA camtel numbers)
+     *      243 XX XX XX (CDMA camtel numbers)
+     *      620 XX XX XX (mobile camtel numbers)
+     *
+     * @see https://www.cirt.cm/en/node/17?language=en
+     * @see http://www.camtel.cm/assistance-espace-client/
+     *
+     * @param \libphonenumber\PhoneNumber $number
+     * @return bool
+     */
+    public function isCamtelNumber(\libphonenumber\PhoneNumber $number)
+    {
+        // The regex reads: match all instances that start with 222 | 233 | 242 | 243 | 620, and followed by 6 digits
+        if (preg_match("/^(222|233|242|243|620)\d{6}$/", $number->getNationalNumber())) {
+            return true;
+        }
+
+        return false;
+    }
+```
+
 Am currently working on a project that deals with phone number validation and parsing so started out using Google's [libphonenumber](https://github.com/google/libphonenumber) (the PHP [port](https://github.com/giggsey/libphonenumber-for-php)). It works really well for MTN Cameroon, Orange, and NEXTTEL phone numbers.
 
 ```php
@@ -161,5 +194,4 @@ class PhoneNumberService
         return $this->phoneNumberUtil->parse($number, $defaultRegion);
     }
 }
-
 ```
