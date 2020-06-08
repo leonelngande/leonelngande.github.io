@@ -127,7 +127,7 @@ export class DelayedInputDirective implements OnInit, OnDestroy {
 
 
 
-* 4️⃣: Using Angular's `HostListener` decorator, we listen for `input` events on the directive's host element (an `HTMLInputElement`). We also provide a handler method - `inputEvent()` - to run when that event occurs. Inside this method, we call `this.userInput$.next(event)` to feed a new value - the input event - to the `userInput$` Subject.
+* 4️⃣: Using the `fromEvent` RxJS operator, we listen for `input` events on the directive's host element (an `HTMLInputElement`). We access to the host element - `this.elementRef.nativeElement` - through the element reference injected in the constructor.
 
 
 
