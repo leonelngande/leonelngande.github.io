@@ -3,12 +3,15 @@ layout: post
 hidden: false
 title: Creating a Delayed Input Directive in Angular
 author: Leonel Elimpe
+excerpt_separator: <!--more-->
 tags:
   - Angular
 ---
 [Demo and source code](#demo)
 
-[Introduction](#introduction) <!--more-->
+[Introduction](#introduction)
+
+<!--more-->
 
 [Generating the directive](#generating-the-directive)
 
