@@ -4,6 +4,7 @@ hidden: false
 title: Creating a Delayed Input Directive in Angular
 author: Leonel Elimpe
 excerpt_separator: <!--more-->
+last_modified_at: 2020-06-08T19:25:21.708Z
 tags:
   - Angular
 ---
@@ -72,59 +73,57 @@ export class DelayedInputModule { }
 Now let's flesh out the directive, `delayed-input.directive.ts`, as below. Notice I've added numbered comments to important code lines which we'll be reviewing.
 
 ```typescript
-import {Directive, EventEmitter, HostListener, Input, 
+import {Directive, ElementRef, EventEmitter, Input,
         OnDestroy, OnInit, Output} from '@angular/core';
-import {Subject, timer} from 'rxjs';
-import {debounce, distinctUntilChanged, takeWhile} from 'rxjs/operators';
+import {fromEvent, Subject, timer} from 'rxjs';
+import {debounce, distinctUntilChanged, takeUntil} from 'rxjs/operators';
 
 @Directive({
   selector: '[appDelayedInput]'
 })
 export class DelayedInputDirective implements OnInit, OnDestroy {
 
-    private userInput$ = new Subject<InputEvent>(); // 0️⃣
-    private alive = true; // 1️⃣
-    
-    @Input() delayTime = 500; // 2️⃣
-    @Output() delayedInput = new EventEmitter<InputEvent>(); // 3️⃣
+  private destroy$ = new Subject<void>(); // 0️⃣
 
-    constructor() { }
+  @Input() delayTime = 500; // 1️⃣
+  @Output() delayedInput = new EventEmitter<Event>();  // 2️⃣
 
-    ngOnInit() {
-        this.userInput$ // 5️⃣
-            .pipe(
-                debounce(() => timer(this.delayTime)), // 6️⃣
-                distinctUntilChanged(), // 7️⃣
-                takeWhile(() => this.alive),
-            )
-            .subscribe(e => this.delayedInput.emit(e)); // 8️⃣
-    }
+  constructor(private elementRef: ElementRef<HTMLInputElement>) { // 3️⃣
+  }
 
-    @HostListener('input', ['$event']) // 4️⃣
-    inputEvent(event: InputEvent) {
-        this.userInput$.next(event);
-    }
+  ngOnInit() {
+    fromEvent(this.elementRef.nativeElement, 'input') // 4️⃣
+      .pipe(
+        debounce(() => timer(this.delayTime)),  // 5️⃣
+        distinctUntilChanged(
+          null,
+          (event: Event) => (event.target as HTMLInputElement).value
+        ), // 6️⃣
+        takeUntil(this.destroy$), // 7️⃣
+      )
+      .subscribe(e => this.delayedInput.emit(e)); // 8️⃣
+  }
 
-    ngOnDestroy() {
-        this.alive = false; // 9️⃣
-    }
+  ngOnDestroy() {
+    this.destroy$.next(); // 9️⃣
+  }
 
 }
 ```
 
-* 0️⃣: We declare and initialize `userInput$` as an RxJS `Subject` such that it has no initial value or replay behaviour. It will enable us continuously store values coming in through an input event listener (see 4️⃣) attached to the directive's host element.
+* 0️⃣: We declare and initialize `destroy$` as an RxJS `Subject`. Used with the `takeUntil` operator, it will help us unsubscribe from RxJS subscriptions when the directive is destroyed.
 
 
 
-* 1️⃣: We declare and initialize `alive` to true. It will help us unsubscribe from RxJS subscriptions when the directive is destroyed.
+* 1️⃣: We declare `delayTime` and set it's value to `500` milliseconds. It represents the timeout duration in milliseconds for the window of time required to wait for emission silence before emitting the most recent source (`userInput$`) value. We'll use this together with RxJS's `debounce`  and `timer` operators to only emit a value from `userInput$` after 500 ms has passed without another emission from the subject. Notice we've decorated `delayTime` with `@Input()` so that a different value can be passed in when applying the directive.
 
 
 
-* 2️⃣: We declare `delayTime` and set it's value to `500` milliseconds. It represents the timeout duration in milliseconds for the window of time required to wait for emission silence before emitting the most recent source (`userInput$`) value. We'll use this together with RxJS's `debounce`  and `timer` operators to only emit a value from `userInput$` after 500 ms has passed without another emission from the subject. Notice we've decorated `delayTime` with `@Input()` so that a different value can be passed in when applying the directive.
+* 2️⃣: We declare `delayedInput`, decorate it with `@Output()`, and make it an `EventEmitter`. We'll use it push out a stream of delayed user inputs.
 
 
 
-* 3️⃣: We declare `delayedInput`, decorate it with `@Output()`, and make it an `EventEmitter`. We'll use it push out a stream of delayed user inputs.
+* 3️⃣: We get a reference to the host `HTMLInputElement` via constructor injection.
 
 
 
@@ -132,23 +131,23 @@ export class DelayedInputDirective implements OnInit, OnDestroy {
 
 
 
-* 5️⃣: When the directive initializes, we begin listening for emissions from the `userInput$` Subject.
+* 5️⃣: We apply a combination of the `debounce` and `timer` operators to enable us to emit a value from the source Observable only after a particular time span has passed without another source emission. It passes only the most  recent value from each burst of emissions, and has the effect of only emitting search queries after the user stops typing.  If wondering why we didn't use `debounceTime` instead, please read [this](https://stackoverflow.com/a/57306062/6924437).
 
 
 
-* 6️⃣: We apply a combination of the `debounce` and `timer` operators to enable us to emit a value from the source Observable (`userInput$`) only after a particular time span has passed without another source emission. It passes only the most  recent value from each burst of emissions, and has the effect of only emitting search queries after the user stops typing.  If wondering why we didn't use `debounceTime` instead, please read [this](https://stackoverflow.com/a/57306062/6924437).
+* 6️⃣: We apply the `distinctUntilChanged` operator which only emits when the current value is different from the last. This way, search queries not different from the last are dropped and not emitted. Note without the `keySelector` function passed in as the second argument, the `distinctUntilChanged` will not behave as we might expect it to. It will evaluate on the value reference. The `Event`s that are emitted over `fromEvent` will always be a different reference so it won't do anything. Thus, we pass in a `keySelector` function that takes in the current value and returns a `key` for use in comparing the current value to the previous value. In our case, we'll be returning the text in the input box, `event.target.value`. Of course a compare function can be passed in instead as the first argument, which I tried but was not able to get it working as expected. If you're able to, please do let me know you did it.
 
 
 
-* 7️⃣: We apply the `distinctUntilChanged()` operator which only emits when the current value is different from the last. This way, search queries not different from the last are dropped and not emitted.
+* 7️⃣: We make use of the `takeUntil` operator which emits values emitted the source Observable until a `notifier` Observable (`destroy$`) emits a value.
 
 
 
-* 8️⃣: We call `this.delayedInput.emit(e)` to emit an event containing the value in `e`, an `InputEvent` from `userInput$`.
+* 8️⃣: We call `this.delayedInput.emit(e)` to emit the delayed event.
 
 
 
-* 9️⃣: Last but not the least, we set `alive` to `false` in `ngOnDestroy()` to automatically unsubscribe the `userInput$` subscription when the directive is destroyed.
+* 9️⃣: Last but not the least, we call `next()` on the `destroy$` Subject in `ngOnDestroy` to automatically unsubscribe the `fromEvent` subscription when the directive is destroyed.
 
 ## <a name="usage-example"></a>Usage example
 
@@ -189,7 +188,7 @@ Followed by `app.component.ts` as below.
 })
 export class AppComponent {
 
-  search($event: InputEvent) {
+  search($event: Event) {
 	// Do something with the input value, maybe make an http request?
 	
     /**
@@ -207,16 +206,25 @@ export class AppComponent {
 
 ## <a name="further-reading"></a>Further reading
 
-1. [Angular - Attribute Directives](https://angular.io/guide/attribute-directives)
-2. [Subject - Learn RxJS](https://www.learnrxjs.io/learn-rxjs/subjects/subject)
-3. [debounce - Learn RxJS](https://www.learnrxjs.io/learn-rxjs/operators/filtering/debounce)
-4. [timer - Learn RxJS](https://www.learnrxjs.io/learn-rxjs/operators/creation/timer)
-5. [distinctUntilChanged - Learn RxJS](https://www.learnrxjs.io/learn-rxjs/operators/filtering/distinctuntilchanged)
-6. [takeWhile - Learn RxJS](https://www.learnrxjs.io/learn-rxjs/operators/filtering/takewhile)
-7. [Angular - EventEmitter](https://angular.io/api/core/EventEmitter)
-8. [Angular - HostListener](https://angular.io/api/core/HostListener)
-9. [Angular - Input](https://angular.io/api/core/Input)
-10. [Angular - Output](https://angular.io/api/core/Output)
+- [Angular - Attribute Directives](https://angular.io/guide/attribute-directives)
+
+- [Subject - Learn RxJS](https://www.learnrxjs.io/learn-rxjs/subjects/subject)
+
+- [fromEvent - Learn RxJS](https://www.learnrxjs.io/learn-rxjs/operators/creation/fromevent)
+
+- [debounce - Learn RxJS](https://www.learnrxjs.io/learn-rxjs/operators/filtering/debounce)
+
+- [timer - Learn RxJS](https://www.learnrxjs.io/learn-rxjs/operators/creation/timer)
+
+- [distinctUntilChanged - Learn RxJS](https://www.learnrxjs.io/learn-rxjs/operators/filtering/distinctuntilchanged)
+
+- [Angular - EventEmitter](https://angular.io/api/core/EventEmitter)
+
+- [Angular - ElementRef](https://angular.io/api/core/ElementRef)
+
+- [Angular - Input](https://angular.io/api/core/Input)
+
+- [Angular - Output](https://angular.io/api/core/Output)
 
 
 
@@ -224,5 +232,6 @@ export class AppComponent {
 
 - [Sam Vloeberghs](https://twitter.com/samvloeberghs)
 - [Santosh Yadav](https://twitter.com/SantoshYadavDev)
+- [Jan-Niklas Wortmann](https://twitter.com/niklas_wortmann)
 
 for reviewing this post and providing valuable and much-appreciated feedback!
