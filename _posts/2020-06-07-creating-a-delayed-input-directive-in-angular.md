@@ -8,7 +8,7 @@ tags:
 ---
 [Demo and source code](#demo)
 
-[Introduction](#introduction)
+[Introduction](#introduction) <!--more-->
 
 [Generating the directive](#generating-the-directive)
 
