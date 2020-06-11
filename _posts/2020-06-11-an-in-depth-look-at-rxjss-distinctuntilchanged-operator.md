@@ -7,30 +7,30 @@ tags:
   - RxJS
 ---
 * [Introduction](introduction)
-* [What is `distinctUntilChanged`](definition)
+* [What is distinctUntilChanged](definition)
   * [It's function signature(s)](signature)
-  * [The `compare` function](compare)
-  * [The `keySelector` function](keyselector)
+  * [The compare function](compare)
+  * [The keySelector function](keyselector)
 * [Usage Examples](usage)
   * [With value streams e.g. numbers, strings](usage-value-streams)
-  * [With value streams and the `compare` function](usage-value-streams-compare)
+  * [With value streams and the compare function](usage-value-streams-compare)
   * [With object streams](usage-object-streams)
-  * [With object streams and the `compare` function](usage-object-streams-compare)
-  * [With object streams and the `keySelector` function](usage-object-streams-keyselector)
-  * [With object streams + the `compare` and `keySelector` functions](usage-object-streams-compare-keyselector)
+  * [With object streams and the compare function](usage-object-streams-compare)
+  * [With object streams and the keySelector function](usage-object-streams-keyselector)
+  * [With object streams + the compare and keySelector functions](usage-object-streams-compare-keyselector)
 * [Conclusion](conclusion)
 * [Further reading](further-reading)
 * [Special thanks to](special-thanks)
 
 
-
+<br/>
 
 
 ## <a name="introduction"></a>Introduction
 
 In this post, we'll have an in-depth look at RxJS's `distinctUntilChanged` operator, it's signature and what it does, it's parameters `compare` and `keySelector`, and typical use cases for each of them and both of them.
 
-
+<br/>
 
 ## <a name="definition"></a>What is distinctUntilChanged?
 
@@ -50,7 +50,7 @@ From the official documentation, it
 >
 > If a comparator function is not provided, an equality check is used by default.
 
-
+<br/>
 
 ### <a name="signature"></a>It's function signature(s)
 
@@ -59,22 +59,20 @@ A function signature defines input and output of functions or methods, and can i
 Two signatures are presented in the RxJS official docs for `distinctUntilChanged`. 
 
 1. 
-
-```typescript
-distinctUntilChanged<T>(compare?: (x: T, y: T) => boolean): Observable<T>;
-```
-When this signature is used, `distinctUntilChanged` can be passed an optional `compare` function. Here, the generic `T` represents the **type** of the value `distinctUntilChanged` is operating on. 
+    ```typescript
+    distinctUntilChanged<T>(compare?: (x: T, y: T) => boolean): Observable<T>;
+    ```
+    When this signature is used, `distinctUntilChanged` can be passed an optional `compare` function. Here, the generic `T` represents the **type** of the value `distinctUntilChanged` is operating on. 
 
 2. 
-
-```typescript
-distinctUntilChanged<T, K>(compare: (x: K, y: K) => boolean, keySelector: (x: T) => K): Observable<T>;
-```
-When this signature is used, `distinctUntilChanged` can be passed an optional `compare` function as well as an optional `keySelector` function. Here, the generic `T` represents the **type** of the value returned by the `keySelector` function, while the generic `K` represents the **type** of the value `distinctUntilChanged` is operating on. 
+    ```typescript
+    distinctUntilChanged<T, K>(compare: (x: K, y: K) => boolean, keySelector: (x: T) => K): Observable<T>;
+    ```
+    When this signature is used, `distinctUntilChanged` can be passed an optional `compare` function as well as an optional `keySelector` function. Here, the generic `T` represents the **type** of the value returned by the `keySelector` function, while the generic `K` represents the **type** of the value `distinctUntilChanged` is operating on. 
 
 Let's have a deeper look at the `compare` and `keySelector` functions.
 
-
+<br/>
 
 ### <a name="compare"></a>The `compare` function
 
@@ -93,13 +91,13 @@ Below are a few use cases for a custom `compare` function.
 - You need to write custom comparison logic, e.g. converting all strings to lowercase before comparing them.
 - You're working with objects and would like to compare a specific key in the objects
 
-
+<br/>
 
 ### <a name="keyselector"></a>The `keySelector` function
 
 It's an optional function to select which value you want to check as distinct, a function to compute the comparison key for each element. It is called with one parameter - the current item from the source.
 
-
+<br/>
 
 ## <a name="usage"></a>Usage Examples
 
@@ -117,7 +115,7 @@ It's an optional function to select which value you want to check as distinct, a
 
 [Stackblitz](https://stackblitz.com/edit/distinctuntilchanged-with-value-streams)
 
-
+<br/>
 
 ### <a name="usage-value-streams-compare"></a>With value streams and the `compare` function
 
@@ -136,7 +134,7 @@ of('a', 'A', 'b', 'c', 'D', 'd', 'e', 'f', 'G', 'g', 'h').pipe(
 
 [Stackblitz](https://stackblitz.com/edit/distinctuntilchanged-with-value-streams-plus-compare-function)
 
-
+<br/>
 
 ### <a name="usage-object-streams"></a>With objects streams
 
@@ -190,7 +188,7 @@ source$
 
 When the reference of the second item from the `source$` observable is changed, it results in all the items being outputted to the console. This is because the first item has a unique reference, the second item has a unique reference, and the third item doesn't have a unique reference, but it has a reference different from that of the second item.
 
-
+<br/>
 
 ### <a name="usage-object-streams-compare"></a>With object streams and the `compare` function
 
@@ -217,7 +215,7 @@ from([
 
 [Stackblitz](https://stackblitz.com/edit/distinctuntilchanged-with-object-streams-plus-compare-function)
 
-
+<br/>
 
 ### <a name="usage-object-streams-keyselector"></a>With object streams and the `keySelector` function
 
@@ -241,7 +239,7 @@ from([
 
 [Stackblitz](https://stackblitz.com/edit/distinctuntilchanged-with-object-streams-plus-keyselector)
 
-
+<br/>
 
 ### <a name="usage-object-streams-compare-keyselector"></a>With object streams + the `compare` and `keySelector` functions
 
@@ -273,7 +271,7 @@ from([
 
 [Stackblitz](https://stackblitz.com/edit/distinctuntilchanged-with-object-streams-compare-n-keyselector)
 
-
+<br/>
 
 ## <a name="conclusion"></a>Conclusion
 
@@ -281,7 +279,7 @@ In this post, we've had an in-depth look at RxJS's `distinctUntilChanged` operat
 
 Did you like this post? Then you might also enjoy reading my recent post, [Creating a Delayed Input Directive in Angular](https://www.leonelngande.com/creating-a-delayed-input-directive-in-angular/) in which I apply `distinctUntilChanged` as discussed this post, do check it out.
 
-
+<br/>
 
 ## <a name="further-reading"></a>Further reading
 
@@ -289,7 +287,7 @@ Did you like this post? Then you might also enjoy reading my recent post, [Creat
 - [distinctUntilChanged source code](https://github.com/ReactiveX/rxjs/blob/master/src/internal/operators/distinctUntilChanged.ts)
 - [Operators - RxJS](https://rxjs-dev.firebaseapp.com/guide/operators)
 
-
+<br/>
 
 ## <a name="special-thanks"></a>Special thanks to
 
