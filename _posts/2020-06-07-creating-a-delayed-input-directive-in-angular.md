@@ -3,26 +3,18 @@ layout: post
 hidden: false
 title: Creating a Delayed Input Directive in Angular
 author: Leonel Elimpe
-excerpt_separator: <!--more-->
+excerpt: Imagine in your app there's a search input that triggers an http request on each keystroke as a user types in their query. As your userbase grows, search operations quickly become expensive due to the increased traffic to your server. 
 last_modified_at: 2020-06-08T19:25:21.708Z
 tags:
   - Angular
 ---
-[Demo and source code](#demo)
-
-[Introduction](#introduction)
-
-<!--more-->
-
-[Generating the directive](#generating-the-directive)
-
-[Adding functionality](#adding-functionality)
-
-[Usage example](#usage-example)
-
-[Further reading](#further-reading)
-
-[Special thanks](#thanks)
+* [Demo and source code](#demo)
+* [Introduction](#introduction)
+* [Generating the directive](#generating-the-directive)
+* [Adding functionality](#adding-functionality)
+* [Usage example](#usage-example)
+* [Further reading](#further-reading)
+* [Special thanks](#thanks)
 
 ## <a name="demo"></a>Demo and source code
 

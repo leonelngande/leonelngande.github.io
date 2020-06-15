@@ -3,8 +3,10 @@ layout: post
 hidden: false
 title: An in-depth look at RxJS's distinctUntilChanged Operator
 author: Leonel Elimpe
+excerpt: In this post, we'll have an in-depth look at RxJS's `distinctUntilChanged` operator, it's signature and what it does, it's parameters `compare` and `keySelector`, and typical use cases for each of them and both of them.
 image:
   path: /images/uploads/distinctuntilchanged-icon-cover.png
+  thumbnail: /images/uploads/distinctuntilchanged-icon-cover.png
 tags:
   - RxJS
 ---
