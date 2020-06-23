@@ -5,7 +5,6 @@ title: "Netlify: Redirect Users by Country or Language"
 author: Leonel Elimpe
 tags:
   - Netlify
-date: 2020-06-23 10:53:19
 last_modified_at: 2020-06-23 10:53:20
 ---
 Today at [Switchn](https://switchn.net) we had the need to redirect users by country and browser language on our Netlify hosted site.  That is, send those visiting our site from English speaking countries to `/en/` and those from French speaking countries to `/fr/`. Also if the user's browser sends an `accept-language` header in the request (e.g. `accept-language: en-US,en;q=0.9`), we'd like to take that into consideration too.
