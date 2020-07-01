@@ -3,12 +3,13 @@ layout: post
 hidden: false
 title: How to Set Nullable Types in PHP >= 7.1.x
 author: Leonel Elimpe
+excerpt_separator: "<!--more-->"
 tags:
   - PHP
 last_modified_at: 2020-06-30 01:28:05
 ---
 To set a function parameter or return type as nullable, add a question mark in front of the type declaration.
-
+<!--more-->
 ```php
 <?php
 

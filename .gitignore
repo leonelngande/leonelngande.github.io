@@ -13,3 +13,6 @@ node_modules
 npm-debug.log*
 .idea
 .tweet-cache
+
+# Local Netlify folder
+.netlify

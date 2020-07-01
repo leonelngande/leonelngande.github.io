@@ -3,6 +3,7 @@ layout: post
 hidden: false
 title: Add your Proxy Configuration File to angular.json - and forget it ever existed
 author: Leonel Elimpe
+excerpt_separator: "<!--more-->"
 image:
   path: /images/uploads/proxy-config-in-angular-dot-json.png
   thumbnail: /images/uploads/proxy-config-in-angular-dot-json.png
@@ -11,7 +12,7 @@ tags:
 last_modified_at: 2020-07-01 09:31:00
 ---
 What if you never have to write the --proxy-config CLI option again when serving your Angular application? 
-
+<!--more-->
 ```
 ng serve --proxy-config proxy.conf.json
 ```
