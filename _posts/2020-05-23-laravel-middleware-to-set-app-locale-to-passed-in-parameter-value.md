@@ -3,6 +3,7 @@ layout: post
 hidden: false
 title: Laravel Middleware to Set App Locale to Passed In Value
 author: Leonel Elimpe
+excerpt: This is a middleware that takes care of setting the app locale to the passed in locale string (e.g `en`, `fr`).
 tags:
   - Laravel
 ---

@@ -8,8 +8,6 @@ tags:
   - Laravel
 last_modified_at: 2020-06-23 11:53:20
 ---
-## Introduction
-
 I've spent like the last 30 minutes searching the web for how to convert dates to human-readable strings with Carbon in PHP/Laravel. Here's a compilation of a couple of useful Carbon methods for my future self.
 
 <br>
