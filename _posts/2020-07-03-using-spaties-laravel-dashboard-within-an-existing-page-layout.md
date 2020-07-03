@@ -14,7 +14,7 @@ I've recently added Spatie's [Laravel Dashboard](https://github.com/spatie/dashb
 
 This meant I couldn't just plug it into my existing page layout.
 
-```phtml
+```html
 @extends('layouts.app')
 
 @section('content')
@@ -24,7 +24,7 @@ This meant I couldn't just plug it into my existing page layout.
         <h1>Dashboard</h1>
     </section>
 
-    {{-- I WANT TO PLUG THE DASHBOARD IN HERE --}}
+    {%raw%}{{-- I WANT TO PLUG THE DASHBOARD IN HERE --}}{%endraw%}
     
 </div>
 @endsection
@@ -32,21 +32,18 @@ This meant I couldn't just plug it into my existing page layout.
 
 The above template is of my `home.blade.php` file, and I wanted to add the dashboard just below the `<h1>` section. I initially just added the `<x-dashboard>` tag in there as below.
 
-```phtml
+```html
 @extends('layouts.app')
 
 @section('content')
 <div class="container-fluid">
 
     <section class="content-header">
-        <h1>
-            Dashboard
-            {{--<small>Switchn Limited</small>--}}
-        </h1>
+        <h1>Dashboard</h1>
     </section>
 
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12">{%raw%}
             <x-dashboard>
                 <livewire:chart-tile chartFactory="{{\Fidum\ChartTile\Examples\ExamplePieChart::class}}" position="a1:a2" height="140%"/>
                 <livewire:chart-tile chartFactory="{{\Fidum\ChartTile\Examples\ExampleDoughnutChart::class}}" position="b1:b2" height="140%"/>
@@ -58,7 +55,7 @@ The above template is of my `home.blade.php` file, and I wanted to add the dashb
                 <livewire:chart-tile chartFactory="{{\Fidum\ChartTile\Examples\ExampleBarChart::class}}" position="c5:d6" />
                 <livewire:chart-tile chartFactory="{{\Fidum\ChartTile\Examples\ExampleBarChart::class}}" position="a7:b8" />
                 <livewire:chart-tile chartFactory="{{\Fidum\ChartTile\Examples\ExampleLineChart::class}}" position="c7:d8" />
-            </x-dashboard>
+            </x-dashboard>{%endraw%}
         </div>
     </div>
 </div>
@@ -71,11 +68,11 @@ Which didn't work as expected and produced not so good results.
 
 I then decided to create a new blade template and route for the dashboard, then embed the dashboard as an `iframe` in the homepage, adding custom styles to properly position it.
 
-<br>
 
 Here's the new blade template, `resources/views/dashboard.blade.php`:
 
-```phtml
+```html
+{%raw%}
 <x-dashboard>
     <livewire:chart-tile chartFactory="{{\Fidum\ChartTile\Examples\ExamplePieChart::class}}" position="a1:a2" height="140%"/>
     <livewire:chart-tile chartFactory="{{\Fidum\ChartTile\Examples\ExampleDoughnutChart::class}}" position="b1:b2" height="140%"/>
@@ -87,10 +84,9 @@ Here's the new blade template, `resources/views/dashboard.blade.php`:
     <livewire:chart-tile chartFactory="{{\Fidum\ChartTile\Examples\ExampleBarChart::class}}" position="c5:d6" />
     <livewire:chart-tile chartFactory="{{\Fidum\ChartTile\Examples\ExampleBarChart::class}}" position="a7:b8" />
     <livewire:chart-tile chartFactory="{{\Fidum\ChartTile\Examples\ExampleLineChart::class}}" position="c7:d8" />
-</x-dashboard>
+</x-dashboard>{%endraw%}
 ```
 
-<br>
 
 Here's the new route (that renders the above template):
 
@@ -102,15 +98,14 @@ Here's the new route (that renders the above template):
 Route::view('dashboard', 'dashboard')->name('dashboard')->middleware('auth');
 ```
 
-<br>
 
 And here's the updated `home.blade.php` file:
 
-```phtml
+```html
 @extends('layouts.app')
 
 @section('content')
-    {{-- @see https://stackoverflow.com/a/23027242/6924437 --}}
+    {%raw%}{{-- @see https://stackoverflow.com/a/23027242/6924437 --}}{%endraw%}
     <style>
         html,body {
             height:100%;
@@ -132,7 +127,7 @@ And here's the updated `home.blade.php` file:
     </section>
 
     <section class="h_iframe">
-        <iframe src="{{route('dashboard')}}" frameborder="0" allowfullscreen></iframe>
+        <iframe src="{%raw%}{{route('dashboard')}}{%endraw%}" frameborder="0" allowfullscreen></iframe>
     </section>
 </div>
 @endsection
