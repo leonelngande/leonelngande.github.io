@@ -93,12 +93,12 @@ defaults:
     values:
       layout: post
       share: true
-  - scope:
-      path: ""
-      type: posts
-    values:
-      image:
-        path: /images/uploads/ngande-consulting-linkedin-cover.png
+#  - scope:
+#      path: ""
+#      type: posts
+#    values:
+#      image:
+#        path: /images/uploads/ngande-consulting-linkedin-cover.png
 
 # Site Author
 author:
