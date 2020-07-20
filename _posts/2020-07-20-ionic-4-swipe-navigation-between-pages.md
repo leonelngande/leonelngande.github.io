@@ -3,14 +3,14 @@ layout: post
 hidden: false
 title: Ionic 4 Swipe Navigation Between Pages
 author: Leonel Elimpe
-image:
-  path: ""
-  thumbnail: ""
+excerpt: Imagine in your app there’s a page with a list of items, and clicking on an item navigates to and item details page. On the details page, you’d like to be able to swipe left to bring up the previous item, or right to bring up the next item. This post aims to provide an implementation for such functionality.
 tags:
   - Ionic
   - Angular
-last_modified_at: 2020-07-20 02:47:59
+last_modified_at: 2020-07-20 16:47:59
 ---
+{% include video name="ionic-4-page-swipe-navigation.webm" %}
+<br>
 Imagine in your app there's a page with a list of items, and clicking on an item navigates to and item details page. On the details page, you'd like to be able to swipe left to bring up the previous item, or right to bring up the next item. This post aims to provide an implementation for such functionality.
 
 Having gone through a good number of resources online in search of a way to implement swipe navigation between pages in Ionic 4, I've decided to put together what I've learned.
