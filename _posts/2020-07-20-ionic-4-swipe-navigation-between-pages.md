@@ -3,6 +3,9 @@ layout: post
 hidden: false
 title: Ionic 4 Swipe Navigation Between Pages
 author: Leonel Elimpe
+image:
+  path: /images/uploads/ionic4-page-swipe-navigation-demo-cover.png
+  thumbnail: /images/uploads/ionic4-page-swipe-navigation-demo-cover.png
 tags:
   - Ionic
   - Angular
