@@ -23,6 +23,7 @@ ul {
   }
 }
 
+/** @see https://css-tricks.com/fluid-width-video/ */
 video {
   /* override other styles to make responsive */
   width: 100%    !important;
