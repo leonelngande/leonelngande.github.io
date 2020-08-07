@@ -3,6 +3,7 @@ layout: post
 hidden: false
 title: Exploring Ionic Image Preloading Scenarios with ionic-image-loader
 author: Leonel Elimpe
+excerpt: "[ionic-image-loader](https://github.com/zyra/ionic-image-loader) is an Ionic 2+ component that loads images in a background thread and caches them for later use. It also makes available a service to manually preload images, which will be the focus of this post."
 tags:
   - Ionic
 last_modified_at: 2020-08-07 04:58:31
