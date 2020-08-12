@@ -9,6 +9,7 @@ image:
 tags:
   - ScullyIO
   - Angular
+  - Featured
 author: Leonel Elimpe
 ---
 * [Introduction](#introduction) 

@@ -1,0 +1,24 @@
+{% assign posts_limit = page.posts_limit | default: 10 %}
+
+{% comment %} @see https://stackoverflow.com/a/45927348/6924437 {% endcomment %}
+{% assign non_featured = "" | split: ',' %}
+
+{%- for item in site.posts -%}
+
+  {% if item.tags contains "Featured" %}
+
+    {% continue %}
+
+  {% endif %}
+
+  {% comment %} Push item into array {% endcomment %}
+  {% assign non_featured = non_featured | push: item %}
+
+{% endfor %}
+
+
+{%- for entry in non_featured limit: posts_limit -%}
+
+  {% include entry.html %}
+
+{%- endfor -%}

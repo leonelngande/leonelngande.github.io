@@ -1,0 +1,22 @@
+{% assign posts_limit = 9 %}
+
+{% comment %} @see https://stackoverflow.com/a/45927348/6924437 {% endcomment %}
+{% assign featured = "" | split: ',' %}
+
+{%- for item in site.posts -%}
+
+  {% if item.tags contains "Featured" %}
+
+    {% comment %} Push item into array {% endcomment %}
+    {% assign featured = featured | push: item %}
+
+  {% endif %}
+
+{% endfor %}
+
+
+{%- for entry in featured limit: posts_limit -%}
+
+  {% include entry.html %}
+
+{%- endfor -%}

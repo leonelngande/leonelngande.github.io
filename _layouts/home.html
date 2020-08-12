@@ -14,15 +14,40 @@ layout: page
 </section>
 
 <section id="recent-posts" class="taxonomy-section">
+
+  {%- comment -%}
+    If pagination is enabled, only display featured posts on page 1, else always display featured posts
+  {%- endcomment -%}
+  {%- if site.plugins contains 'jekyll-paginate' and page.paginate or site.gems contains 'jekyll-paginate' and page.paginate -%}
+    {% if paginator.page == 1 %}
+      <h2 class="taxonomy-title">Featured Posts</h2>
+      <div class="entries-list">
+        {% include posts-limit-featured.html %}
+      </div>
+
+      <br>
+    {% endif %}
+  {%- else -%}
+    <h2 class="taxonomy-title">Featured Posts</h2>
+    <div class="entries-{{ page.entries_layout | default: 'list' }}">
+      {% include posts-limit-featured.html %}
+    </div>
+
+    <br>
+  {%- endif -%}
+
   <h2 class="taxonomy-title">Recent Posts</h2>
   <div class="entries-{{ page.entries_layout | default: 'list' }}">
     {%- if site.plugins contains 'jekyll-paginate' and page.paginate or site.gems contains 'jekyll-paginate' and page.paginate -%}
       {%- comment -%}
         Add paginator.posts loop if jekyll-paginate plugin is enabled and page.paginate == true
       {%- endcomment -%}
-      {% include posts-paginated.html %}
+      {% include posts-paginated-non-featured.html %}
       {%- else -%}
-        {% include posts-limit.html %}
+      {%- comment -%}
+        Since we've included featured posts above, let's make sure to filter them from recent posts
+      {%- endcomment -%}
+        {% include posts-limit-non-featured.html %}
       {%- endif -%}
   </div>
   <a href="#page-title" class="back-to-top">{{ site.data.text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>

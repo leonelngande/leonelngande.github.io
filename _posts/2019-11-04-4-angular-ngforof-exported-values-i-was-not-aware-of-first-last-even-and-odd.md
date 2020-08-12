@@ -7,6 +7,7 @@ title: >-
 tags:
   - Angular
   - '*ngFor'
+  - Featured
 author: Leonel Elimpe
 ---
 Angular's [NgForOf](https://angular.io/api/common/NgForOf) provides exported values that can be aliased to local variables. Until today, I've only been aware of the `index` exported value, turns out there's [a couple more](https://angular.io/api/common/NgForOf#local-variables).

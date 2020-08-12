@@ -78,19 +78,20 @@ Additional [sample posts](https://mmistakes.github.io/so-simple-theme/posts/) ca
     1. [Starting Fresh](#starting-fresh)
     2. [Starting from `jekyll new`](#starting-from-jekyll-new)
 4. [Configuring](#configuring)
-    1. [Site Locale](#site-locale)
-    2. [Site URL](#site-url)
-    3. [Site Base URL](#site-base-url)
-    4. [Date Format](#date-format)
-    5. [Reading Time](#reading-time)
-    6. [Mathematics](#mathematics)
-    7. [Google Fonts](#google-fonts)
-    8. [Pagination](#pagination)
-    9. [Search](#search)
-    10. [Taxonomy Pages](#taxonomy-pages)
-    11. [Comments (via Disqus)](#comments-via-disqus)
-    12. [Google Analytics](#google-analytics)
-    13. [Other](#other)
+    1. [Site Skin](#site-skin)
+    2. [Site Locale](#site-locale)
+    3. [Site URL](#site-url)
+    4. [Site Base URL](#site-base-url)
+    5. [Date Format](#date-format)
+    6. [Reading Time](#reading-time)
+    7. [Mathematics](#mathematics)
+    8. [Google Fonts](#google-fonts)
+    9. [Pagination](#pagination)
+    10. [Search](#search)
+    11. [Taxonomy Pages](#taxonomy-pages)
+    12. [Comments (via Disqus)](#comments-via-disqus)
+    13. [Google Analytics](#google-analytics)
+    14. [Other](#other)
 5. [Layouts](#layouts)
     1. [`layout: default`](#layout-default)
     2. [`layout: post`](#layout-post)
@@ -172,7 +173,7 @@ GitHub Pages has added [full support](https://github.com/blog/2464-use-any-theme
 
 2. Run `bundle update` and verify that all gems install properly.
 
-3. Add `remote_theme: "mmistakes/so-simple-theme"` to your
+3. Add `remote_theme: "mmistakes/so-simple-theme@3.2.0"` to your
    `_config.yml` file. Remove any other `theme:` or `remote_theme:` entries.
 
 ---
@@ -223,7 +224,15 @@ Simply run `bundle update` if you're using Bundler (have a `Gemfile`) or `gem up
 
 ### Remote Theme
 
-When hosting with [GitHub Pages](https://pages.github.com/) you'll need to push up a commit to force a rebuild with the latest [theme release](https://github.com/mmistakes/so-simple-theme/releases).
+Verify you have the [latest version](https://github.com/mmistakes/so-simple-theme/releases) assigned in `_config.yml`
+
+```
+remote_theme: "mmistakes/so-simple-theme@3.2.0"
+```
+
+Note: If `@x.x.x` is omitted the theme's current `master` branch will be used. It is advised to ["lock" `remote_theme`](https://github.com/benbalter/jekyll-remote-theme#declaring-your-theme) at a specific version to avoid introducing breaking changes to your site.
+
+The next step requires rebuilding your [GitHub Pages](https://pages.github.com/) site so it can pull down the latest theme updates. This can be achieved by pushing up a commit to your GitHub repo.
 
 An empty commit will get the job done too if you don't have anything to push at the moment:
 
@@ -325,6 +334,26 @@ Configuration of site-wide elements (`locale`, `title`, `description`, `url`, `l
 | `url`         | The full URL to your site.                                               | `"https://your-site.com"`           |
 | `logo`        | Path to a site-wide logo used in masthead.                                | `/images/your-logo.png`             |
 
+### Site Skin
+
+Three skins (default, light, and dark) are available to change the color palette of the theme.
+
+| `default.css` | `light.css` | `dark.css` |
+| --- | --- | --- |
+| ![default skin](https://mmistakes.github.io/so-simple-theme/images/default-skin.png) | ![light skin](https://mmistakes.github.io/so-simple-theme/images/light-skin.png) | ![dark skin](https://mmistakes.github.io/so-simple-theme/images/dark-skin.png) |
+
+```yaml
+skin: "/assets/css/skins/default.css"
+skin: "/assets/css/skins/light.css"
+skin: "/assets/css/skins/dark.css"
+```
+
+To use a custom skin other than the ones provided:
+
+1. Copy and rename [`/assets/css/skins/default.scss`](https://github.com/mmistakes/so-simple-theme/blob/master/assets/css/skins/default.scss) to your local repo.
+2. Override and customize Sass variables as you see fit.
+3. Update the `skin` path in `_config.yml` to reference this new skin `.css` file.
+
 ### Site Locale
 
 **`site.locale`** is used to declare the primary language for each web page within the site.
@@ -378,7 +407,26 @@ words_per_minute: 200
 
 ### Mathematics
 
-Enable [**MathJax**](https://www.mathjax.org) (a JavaScript display engine for mathematics) site-wide with `mathjax: true`.
+Enable [**MathJax**](https://www.mathjax.org) (a JavaScript display engine for mathematics) site-wide with
+
+``` yaml
+mathjax:
+  enable: true
+```
+
+The `combo` option lets you to choose a [MathJax component
+combination](http://docs.mathjax.org/en/latest/web/components/combined.html)--the
+default is "tex-svg."  And, the `tags` option lets you control
+equation numbering--choices are "ams" (default), "all", and "none."
+
+Sample configuration:
+
+``` yaml
+mathjax:
+  enable: true             # MathJax equations, e.g. true, false (default)
+  combo: "tex-svg"         # "tex-svg" (default), "tex-mml-chtml", etc.
+  tags: "ams"              # "none", "ams" (default), "all"
+```
 
 ### Google Fonts
 

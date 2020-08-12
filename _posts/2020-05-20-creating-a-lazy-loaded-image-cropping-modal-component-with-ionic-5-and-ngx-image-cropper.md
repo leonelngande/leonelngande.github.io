@@ -10,6 +10,7 @@ image:
 tags:
   - Ionic
   - Angular
+  - Featured
 ---
 ## Demo and source code
 

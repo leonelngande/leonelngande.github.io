@@ -9,6 +9,8 @@ image:
   thumbnail: /images/uploads/distinctuntilchanged-icon-cover.png
 tags:
   - RxJS
+  - distinctUntilChanged
+  - Featured
 ---
 * [Introduction](introduction)
 * [What is distinctUntilChanged](definition)

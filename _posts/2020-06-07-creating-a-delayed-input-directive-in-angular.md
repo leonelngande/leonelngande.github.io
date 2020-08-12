@@ -7,6 +7,7 @@ excerpt: Imagine in your app there's a search input that triggers an http reques
 last_modified_at: 2020-06-08T19:25:21.708Z
 tags:
   - Angular
+  - Featured
 ---
 * [Demo and source code](#demo)
 * [Introduction](#introduction)
