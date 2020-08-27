@@ -7,7 +7,8 @@ tags:
   - Ionic
 last_modified_at: 2020-08-27 10:24:42
 ---
-<ion-item>CONTENT</ion-item>
+`<ion-item>CONTENT</ion-item>`
+
 
  If you've ever struggled with getting "CONTENT" above to render "predictable", I just found out if you wrap it in ion-row > ion-col, it will do just that.
 
