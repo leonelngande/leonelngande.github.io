@@ -7,6 +7,12 @@ tags:
   - Mapbox
 last_modified_at: 2020-09-10 10:29:43
 ---
+The `idle` event is fired after the last frame rendered before the map enters an "idle" state. When this event is fired, we are sure of the following things:
+
+- All currently requested tiles have loaded.
+- No camera transitions are in progress.
+- All fade/transition animations have completed.
+
 ```typescript
 import {Component, OnInit} from '@angular/core';
 import mapboxgl from 'mapbox-gl/dist/mapbox-gl.js';
@@ -35,12 +41,6 @@ export class MapboxComponent implements OnInit {
   }
 }
 ```
-
-The `idle` event is fired after the last frame rendered before the map enters an "idle" state. When this event is fired, we are sure of the following things:
-
-- All currently requested tiles have loaded.
-- No camera transitions are in progress.
-- All fade/transition animations have completed.
 
 I had a situation where I had to wait for all map tiles to load before proceeding, and after a while searching for the ideal map event came across `idle` in this [Stackoverflow answer](https://stackoverflow.com/a/54140160/6924437).
 
