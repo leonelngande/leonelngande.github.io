@@ -7,7 +7,7 @@ author: Leonel Elimpe
 tags: []
 last_modified_at: 2020-09-13 06:52:41
 ---
-Below is the validation language line we want to test, It's found in `resources/lang/en/validation.php`, my app supports just two languages at this time, English and French.
+Below is the validation language line we want to test, It's found in `resources/lang/en/validation.php` and `resources/lang/fr/validation.php` my app supports just two languages at this time, English and French.
 
 ```php
 <?php
@@ -56,7 +56,6 @@ class ValidationLanguageLinesTest extends TestCase
     
     // ...
 }
-
 ```
 
 And that's it! Should I forget to add a translation, I will be reminded by a failing unit test. 
