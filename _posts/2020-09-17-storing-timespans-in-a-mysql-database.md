@@ -7,7 +7,7 @@ tags:
   - MySQL
 last_modified_at: 2020-09-17 05:30:05
 ---
-I've been working on coupon/promotion codes functionality and one requirement is only allowing the re-use of a coupon code after a period of time has passed.
+I've been working on coupon/promotion codes functionality and one requirement is only allowing the re-use of a coupon code after a period of time has passed. It could be a couple of hours, a couple of days, or a month at most.
 
 Now how to persist this `period of time` a.k.a `timespan` to the database? After some time Googling I came across [this Stackoverflow answer](https://stackoverflow.com/a/3867631/6924437) which presents the best solution for my use case:
 
@@ -18,6 +18,7 @@ The time range supported by the TIME type is well within what I need, which is 3
 I equally considered the following solutions before going with the above:
 
 * [Laracasts - Store time intervals in database](https://laracasts.com/discuss/channels/laravel/store-time-intervals-in-database?reply=519170)
+* [Stackoverflow - Best way to store time interval values in MySQL?](https://stackoverflow.com/a/1540166/6924437)
 * [Stackoverflow - What is the way to store “Time only” values with php?](https://stackoverflow.com/a/4604417/6924437)
 
 <br>
