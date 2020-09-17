@@ -17,11 +17,12 @@ The time range supported by the TIME type is well within what I need, which is 3
 
 I equally considered the following solutions before going with the above:
 
-* [Laracasts - Store time intervals in database](https://laracasts.com/discuss/channels/laravel/store-time-intervals-in-database?reply=519170)
-* [Stackoverflow - What is the way to store “Time only” values with php?](https://stackoverflow.com/a/4604417/6924437)
+- [Laracasts - Store time intervals in database](https://laracasts.com/discuss/channels/laravel/store-time-intervals-in-database?reply=519170)
+- [Stackoverflow - Best way to store time interval values in MySQL?](https://stackoverflow.com/a/1540166/6924437)
+- [Stackoverflow - What is the way to store “Time only” values with php?](https://stackoverflow.com/a/4604417/6924437)
 
 <br>
 
 Regarding a user interface for inputting this time value, you can have a look at:
 
-* [Stackoverflow - Timefield with more than 24 hours ( timer )](https://stackoverflow.com/a/40127877/6924437)
+- [Stackoverflow - Timefield with more than 24 hours ( timer )](https://stackoverflow.com/a/40127877/6924437)
