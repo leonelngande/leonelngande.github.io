@@ -18,14 +18,6 @@ use Carbon\Carbon;
 // Create a date object
 $date = Carbon::now();
 
-/**
- * Make sure the date translation below is in the app's locale.
- *
- * Format Examples: `D, M j, Y H:i:s` --> mer., oct. 21, 2020 15:11:07,
- *  and `D, M j, Y g:i A` --> mer., oct. 21, 2020 3:26 PM
- *
- * @see \Carbon\Traits\Converter::toDayDateTimeString()
- */
 // Get the current app locale
 $locale = app()->getLocale();
 
@@ -51,9 +43,7 @@ $translatedDateString = $date->translatedFormat($format);
 // Now do something with the translated date string 🙂 👋🏻
 ```
 
-
-
 ### Further Reading:
 
-- [Stackoverflow - Convert AM/PM to 24 hours clock in Laravel input field](https://stackoverflow.com/a/51882771/6924437)
-- [Laracasts - Use the localisation of Laravel for Carbon](https://laracasts.com/discuss/channels/laravel/use-the-localisation-of-laravel-for-carbon?reply=591412)
+* [Stackoverflow - Convert AM/PM to 24 hours clock in Laravel input field](https://stackoverflow.com/a/51882771/6924437)
+* [Laracasts - Use the localisation of Laravel for Carbon](https://laracasts.com/discuss/channels/laravel/use-the-localisation-of-laravel-for-carbon?reply=591412)
