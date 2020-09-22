@@ -7,7 +7,7 @@ tags:
   - Laravel
 last_modified_at: 2020-09-22 05:56:44
 ---
-I wanted to return a translated date string from a Carbon object and after some research, used the below solution which worked for me. It is quite brief, do leave a comment if you've got a question.
+I wanted to return a translated date string from a Carbon date object and after some research, used the below solution which worked for me. It is quite brief, do leave a comment if you've got a question.
 
 ```php
 <?php
