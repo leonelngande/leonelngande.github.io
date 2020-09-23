@@ -98,7 +98,7 @@ P.S., my project uses the [Laravel Collective](https://github.com/laravelcollect
 
 I have a `views/promotions/fields.blade.php` partial that contains the core promotion creation and editing form fields as seen below (only the parts related to the `phone_restrictions` input). 
 
-```phtml
+```html
 <!-- Phone Restrictions [] Field -->
 <div class="col-sm-12">
     <br>
@@ -159,7 +159,7 @@ The partial `fields.blade.php` is imported into two views:
 
 * `views/promotions/create.blade.php` for creating new promotion records.
 
-  ```phtml
+  ```html
   @extends('layouts.app')
 
   @section('content')
@@ -172,7 +172,7 @@ The partial `fields.blade.php` is imported into two views:
   ```
 * `views/promotions/edit.blade.php` for updating promotion records.
 
-  ```phtml
+  ```html
   @extends('layouts.app')
 
   @section('content')
