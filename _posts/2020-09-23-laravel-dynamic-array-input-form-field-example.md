@@ -98,7 +98,7 @@ P.S., my project uses the [Laravel Collective](https://github.com/laravelcollect
 
 I have a `views/promotions/fields.blade.php` partial that contains the core promotion creation and editing form fields as seen below (only the parts related to the `phone_restrictions` input). 
 
-```phtml
+```html
 <!-- Phone Restrictions [] Field -->
 <div class="col-sm-12">
     <br>
@@ -106,10 +106,10 @@ I have a `views/promotions/fields.blade.php` partial that contains the core prom
         <legend>Phone Restrictions</legend>
         <div class="row">
             <div class="input_fields_wrap">
-                {{--  @see https://gist.github.com/whoisryosuke/04731177e772fefe08929e809f4fef05#gistcomment-3256172 --}}
+                <!--  @see https://gist.github.com/whoisryosuke/04731177e772fefe08929e809f4fef05#gistcomment-3256172 -->
                 @foreach(old('phone_restrictions', isset($promotion) ? $promotion->phone_restrictions : []) as $key => $item)
                     <div class="form-group col-sm-2">
-                        <input class="form-control" name="phone_restrictions[]" type="text" value="{{$item}}">
+                        <input class="form-control" name="phone_restrictions[]" type="text" value="{% raw %}{{$item}}{% endraw %}">
                     </div>
                 @endforeach
 
@@ -127,7 +127,7 @@ I have a `views/promotions/fields.blade.php` partial that contains the core prom
 @push('scripts')
     <script type="text/javascript">
         
-        {{--    @see https://stackoverflow.com/a/36973538/6924437    --}}
+        <!--    @see https://stackoverflow.com/a/36973538/6924437    -->
           
         $(document).ready(function() {
             var wrapper         = $(".input_fields_wrap"); //Fields wrapper
@@ -159,7 +159,7 @@ The partial `fields.blade.php` is imported into two views:
 
 * `views/promotions/create.blade.php` for creating new promotion records.
 
-  ```phtml
+  ```html
   @extends('layouts.app')
 
   @section('content')
@@ -172,7 +172,7 @@ The partial `fields.blade.php` is imported into two views:
   ```
 * `views/promotions/edit.blade.php` for updating promotion records.
 
-  ```phtml
+  ```html
   @extends('layouts.app')
 
   @section('content')
