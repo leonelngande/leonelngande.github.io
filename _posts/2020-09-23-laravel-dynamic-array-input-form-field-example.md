@@ -106,7 +106,7 @@ I have a `views/promotions/fields.blade.php` partial that contains the core prom
         <legend>Phone Restrictions</legend>
         <div class="row">
             <div class="input_fields_wrap">
-                {{--  @see https://gist.github.com/whoisryosuke/04731177e772fefe08929e809f4fef05#gistcomment-3256172 --}}
+                <!--  @see https://gist.github.com/whoisryosuke/04731177e772fefe08929e809f4fef05#gistcomment-3256172 -->
                 @foreach(old('phone_restrictions', isset($promotion) ? $promotion->phone_restrictions : []) as $key => $item)
                     <div class="form-group col-sm-2">
                         <input class="form-control" name="phone_restrictions[]" type="text" value="{{$item}}">
@@ -127,7 +127,7 @@ I have a `views/promotions/fields.blade.php` partial that contains the core prom
 @push('scripts')
     <script type="text/javascript">
         
-        {{--    @see https://stackoverflow.com/a/36973538/6924437    --}}
+        <!--    @see https://stackoverflow.com/a/36973538/6924437    -->
           
         $(document).ready(function() {
             var wrapper         = $(".input_fields_wrap"); //Fields wrapper
