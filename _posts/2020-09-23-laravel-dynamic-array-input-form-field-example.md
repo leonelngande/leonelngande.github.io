@@ -109,7 +109,7 @@ I have a `views/promotions/fields.blade.php` partial that contains the core prom
                 <!--  @see https://gist.github.com/whoisryosuke/04731177e772fefe08929e809f4fef05#gistcomment-3256172 -->
                 @foreach(old('phone_restrictions', isset($promotion) ? $promotion->phone_restrictions : []) as $key => $item)
                     <div class="form-group col-sm-2">
-                        <input class="form-control" name="phone_restrictions[]" type="text" value="{{$item}}">
+                        <input class="form-control" name="phone_restrictions[]" type="text" value="{% raw %}{{$item}}{% endraw %}">
                     </div>
                 @endforeach
 
