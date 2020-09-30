@@ -1,7 +1,7 @@
 ---
 layout: post
 hidden: false
-title: "Create a 10 Seconds PHP DateInterval "
+title: "Create a Seconds-Only PHP DateInterval "
 author: Leonel Elimpe
 tags:
   - PHP
