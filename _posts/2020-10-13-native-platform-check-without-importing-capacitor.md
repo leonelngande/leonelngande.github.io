@@ -56,7 +56,7 @@ const nativeRoutes: Routes = [
 const routes = isNative() ? nativeRoutes : webRoutes;
 
 @NgModule({
-  imports: [RouterModule.forRoot(activeRoutes)],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
 export class AppRoutingModule {
