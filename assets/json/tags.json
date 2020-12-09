@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Angular",
+    "image": "https://www.leonelngande.com/assets/images/angular.svg"
+  },
+  {
+    "name": "Ionic",
+    "image": "https://www.leonelngande.com/assets/images/ionic.svg"
+  },
+  {
+    "name": "Laravel",
+    "image": "https://www.leonelngande.com/assets/images/laravel.svg"
+  },
+  {
+    "name": "PHP",
+    "image": "https://www.leonelngande.com/assets/images/php.svg"
+  },
+  {
+    "name": "Typescript",
+    "image": "https://www.leonelngande.com/assets/images/typescript.png"
+  },
+  {
+    "name": "Jekyll",
+    "image": "https://www.leonelngande.com/assets/images/jekyll.png"
+  },
+  {
+    "name": "Mapbox",
+    "image": "https://www.leonelngande.com/assets/images/mapbox.svg"
+  },
+  {
+    "name": "Netlify",
+    "image": "https://www.leonelngande.com/assets/images/netlify.svg"
+  },
+  {
+    "name": "PWA",
+    "image": "https://www.leonelngande.com/assets/images/pwa.svg"
+  },
+  {
+    "name": "RxJS",
+    "image": "https://www.leonelngande.com/assets/images/rxjs.svg"
+  },
+  {
+    "name": "ScullyIO",
+    "image": "https://www.leonelngande.com/assets/images/scullyio.svg"
+  }
+]
