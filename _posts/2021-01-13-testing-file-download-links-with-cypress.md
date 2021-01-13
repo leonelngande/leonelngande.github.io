@@ -7,7 +7,7 @@ tags:
   - Cypress
 last_modified_at: 2021-01-13 08:14:53
 ---
-Say my homepage contains the below snippet, which allows a user to download vcard files.
+Say my homepage contains the below snippet, which allows a user to download vcard files. I'd like to make sure the file download links are valid and point to existing files.
 
 ```html
 <a href="./assets/vcards/mtn.vcf"
@@ -22,7 +22,7 @@ Say my homepage contains the below snippet, which allows a user to download vcar
 </a>
 ```
 
-I'd like to make sure the file download links are valid and point to existing files. Here's how I would do it with Cypress.
+Here's how I would accomplish this with Cypress.
 
 ```javascript
 describe("Home page test", () => {
