@@ -14,12 +14,12 @@ Say my homepage contains the below snippet, which allows a user to download vcar
 <a href="./assets/vcards/mtn.vcf"
    data-cy="mtn-vcard"
    download>
-    MTN: 679 38 54 15
+    Download MTN Vcard
 </a>
 <a href="./assets/vcards/orange.vcf"
    data-cy="orange-vcard"
    download>
-    Orange: 655 15 42 48
+    Download Orange Vcard
 </a>
 ```
 
