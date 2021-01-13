@@ -3,6 +3,7 @@ layout: post
 hidden: false
 title: Testing File Download Links with Cypress
 author: Leonel Elimpe
+excerpt: Say my homepage contains the below snippet, which allows a user to download vcard files. I'd like to make sure the file download links are valid and point to existing files.
 tags:
   - Cypress
 last_modified_at: 2021-01-13 08:14:53
