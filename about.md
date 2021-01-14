@@ -9,7 +9,7 @@ Hey! Am Leonel, a cat lover 🐈 and Cameroon 🇨🇲 based freelance Web Devel
 
 I currently focus on helping businesses build cross-platform web and mobile applications, leveraging a single codebase and web technologies to deploy to the app stores, cutting down time and costs.
 
-I enjoy working with Angular, Ionic, the Google Maps Javascript API, Mapbox, Firebase, PWAs, RxJS, and Typescript. 
+I enjoy working with Angular, Ionic, Capacitor, the Google Maps Javascript API, Mapbox, Firebase, PWAs, RxJS, and Typescript. 
 
 When not doing client work, I put time into building and improving [fun projects](/work/)! Like [Switchn](https://switchn.net), a platform which enables you to buy airtime for CAMTEL, Orange Cameroon, NEXTTEL, and MTN Cameroon, using your preferred payment method (MTN Mobile Money or Orange Money).
 
