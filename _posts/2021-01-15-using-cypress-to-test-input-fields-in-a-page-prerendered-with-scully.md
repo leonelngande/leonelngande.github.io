@@ -10,14 +10,12 @@ last_modified_at: 2021-01-15 03:05:53
 ---
 When testing form inputs in pages prerendered with Scully, Cypress seems to detect the input field twice, once when the prerendered HTML is loaded, and a second time when Angular finishes loading and re-renders the page.
 
-For example, say I have a page that is used to verify phone numbers. The page's URL can contain query parameters `code` and `phone`, that should be read and appropriate form input fields auto filled. The form looks something like this (simplified):
+For example, say I have a page that is used to verify phone numbers. The page's URL can contain query parameters `code` and `phone`, that should be read and appropriate form input fields auto-filled. The form looks something like this (simplified):
 
 ```html
 <form>
-    <input
-           formControlName="code"
+    <input formControlName="code"
            type="text"
-           matInput
            name="code"
            data-cy="code">
   
