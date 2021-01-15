@@ -20,8 +20,7 @@ For example, say I have a page that is used to verify phone numbers. The page's 
            matInput
            name="code"
            data-cy="code">
-                                
-
+  
     <input formControlName="phone"
            type="tel"
            name="phone"
@@ -76,4 +75,3 @@ describe("Verification page test", () => {
 ```
 
 Notice I've added `.last()` to the `cy.get()` query so it returns the latest input field, the one created after Angular loaded and re-rendered the page.
-
