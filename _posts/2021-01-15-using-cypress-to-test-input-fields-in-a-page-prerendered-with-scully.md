@@ -51,7 +51,7 @@ If the page is not prerendered, the tests pass with flying colors.
 
 After the page is prerendered however, these tests fail due to Cypress finding more than one input element for each field, as mentioned at the beginning.
 
-I don't fully understand why this happens, if you do, please let me know by reach out or leave a comment so I update the post.
+I don't fully understand why this happens, if you do, please let me know by reaching out or leaving a comment so I update the post.
 
 To get the tests passing, I had to update them as below.
 
