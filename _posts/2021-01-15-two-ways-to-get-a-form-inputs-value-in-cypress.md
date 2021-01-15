@@ -21,8 +21,6 @@ Given the below form, how do we get any individual input's value inside a Cypres
 </form>
 ```
 
-
-
 <br>
 
 ## Using Cypress's API methods
@@ -46,8 +44,6 @@ cy.get('[data-cy=code]').invoke('val').should((value) => {
 })
 ```
 
-
-
 <br>
 
 ## Querying the DOM
@@ -62,12 +58,11 @@ cy.document().then((doc) => {
 });
 ```
 
-Note that to access the test page's `document`, we have to use the `cy.document()` command to obtain a reference. The `document` you access as a global belongs to the Cypress runner, but the test page is inside an iFrame which has a different document reference.
+Note that to access the test page's [document](https://developer.mozilla.org/en-US/docs/Web/API/Document), we have to use the `cy.document()` command to obtain a reference. The `document` you access as a global belongs to the Cypress runner, but the test page is inside an iFrame which has a different document reference.
 
 <br>
 
 ### Further reading
 
-- [How do I get an input’s value?](https://docs.cypress.io/faq/questions/using-cypress-faq.html#How-do-I-get-an-input%E2%80%99s-value)
-- [document.querySelectorAll doesn't work in cypress](https://stackoverflow.com/a/60440805/6924437)
-
+* [How do I get an input’s value? - Cypress Documentation](https://docs.cypress.io/faq/questions/using-cypress-faq.html#How-do-I-get-an-input%E2%80%99s-value)
+* [document.querySelectorAll doesn't work in cypress - Stackoverflow](https://stackoverflow.com/a/60440805/6924437)
