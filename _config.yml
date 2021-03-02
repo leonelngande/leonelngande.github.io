@@ -18,7 +18,7 @@ theme: jekyll-theme-so-simple
 skin: "/assets/css/skins/default.css"
 locale: en-US
 title: "Leonel Elimpe"
-description: "I'm a Cameroon 🇨🇲 based freelance web developer currently focused on Angular."
+description: "I'm a Cameroon 🇨🇲 based freelance web developer and Internet entrepreneur, currently focusing on frontend technologies."
 baseurl: # the subpath of your site, e.g. "/blog"
 url: "https://www.leonelngande.com"# the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 logo: "/assets/images/profile.jpg"
@@ -129,9 +129,6 @@ footer_links:
   - title: Leonel on Skype
     url: skype:leonelngande
     icon: fab fa-skype
-  - title: Leonel via Mail
-    url: mailto:info@leonelngande.com
-    icon: fas fa-envelope-square
   - title: RSS Feed
     url: atom.xml
     icon: fas fa-rss-square
