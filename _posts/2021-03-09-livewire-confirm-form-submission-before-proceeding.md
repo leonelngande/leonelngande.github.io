@@ -23,7 +23,7 @@ Spent the last couple of hours trying to get this working. Here's what finally w
                    value="{% raw %}{{ old('username') }}{% endraw %}"
                    class="form-control" />
 
-            @error('username') <span class="text-danger">{{ $message }}</span> @enderror
+            @error('username') <span class="text-danger">{% raw %}{{ $message }}{% endraw %}</span> @enderror
         </div>
 
         <button onclick="confirm('Are you sure?!') || event.preventDefault();"
@@ -36,7 +36,7 @@ Spent the last couple of hours trying to get this working. Here's what finally w
 </div>
 ```
 
-The most relevant piece being the addition of `onclick="confirm('Are you sure?!') || event.preventDefault();"` to the submit button. Also notice the user of `event.preventDefault()` instead of `event.stopImmediatePropagation()` as you probably might have seen in many blog posts as well as the Livewire documentation. Something like this:
+The most relevant piece being the addition of `onclick="confirm('Are you sure?!') || event.preventDefault();"` to the submit button. Also, notice the use of `event.preventDefault()` instead of `event.stopImmediatePropagation()` as you probably might have seen in many blog posts as well as the Livewire documentation. Something like this:
 
 ```html
 <button onclick="confirm('Are you sure?!') || event.stopImmediatePropagation();"
