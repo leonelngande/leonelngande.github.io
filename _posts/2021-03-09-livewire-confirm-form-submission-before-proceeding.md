@@ -20,7 +20,7 @@ Spent the last couple of hours trying to get this working. Here's what finally w
                    type="text"
                    name="username"
                    placeholder="Username"
-                   value="{{ old('username') }}"
+                   value="{% raw %}{{ old('username') }}{% endraw %}"
                    class="form-control" />
 
             @error('username') <span class="text-danger">{{ $message }}</span> @enderror
