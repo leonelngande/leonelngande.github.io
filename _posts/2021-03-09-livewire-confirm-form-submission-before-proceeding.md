@@ -9,7 +9,7 @@ last_modified_at: 2021-03-09 06:39:20
 ---
 Spent the last couple of hours trying to get this working. Here's what finally worked:
 
-```phtml
+```html
 <div>
 
     <form wire:submit.prevent="submit">
