@@ -4,7 +4,7 @@ hidden: false
 title: Laravel HTTP Client Retry Without Throwing an Exception
 author: Leonel Elimpe
 image:
-  path: /images/uploads/laravel-http-retry-without-throwing-an-exception-snippet.svg
+  path: /images/uploads/laravel-http-retry.svg
 tags:
   - Laravel
 last_modified_at: 2021-03-22 11:31:08
