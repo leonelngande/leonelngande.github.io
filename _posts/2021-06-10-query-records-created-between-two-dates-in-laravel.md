@@ -48,7 +48,6 @@ Using `whereBetween()` did the trick though! It worked exactly as wanted it to.
 <?php
 
 ModelName::query()
-    
     ->whereBetween(
         'created_at',
         [
@@ -59,6 +58,7 @@ ModelName::query()
     ->get();
 ```
 
+<br>
 ## Further reading
 
 * [How to query between two dates using Laravel and Eloquent? - Stackoverflow](https://stackoverflow.com/a/33361741/6924437)
